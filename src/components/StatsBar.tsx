@@ -31,7 +31,7 @@ export default function StatsBar() {
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(2rem, 4vw, 3rem)",
                 fontWeight: 900,
-                color: "var(--gold)",
+                color: "var(--blue-light)",
                 lineHeight: 1,
                 marginBottom: "0.5rem",
               }}>

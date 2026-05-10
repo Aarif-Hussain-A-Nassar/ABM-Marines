@@ -80,7 +80,7 @@ export default function ServicesSection() {
               <div style={{
                 width: 56, height: 56,
                 borderRadius: "12px",
-                background: "rgba(197,160,90,0.1)",
+                background: "rgba(25,118,210,0.1)",
                 border: "1px solid var(--border)",
                 display: "flex",
                 alignItems: "center",
@@ -114,7 +114,7 @@ export default function ServicesSection() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.4rem",
-                color: "var(--gold)",
+                color: "var(--blue-light)",
                 fontFamily: "var(--font-heading)",
                 fontSize: "0.8rem",
                 fontWeight: 700,

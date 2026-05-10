@@ -1,31 +1,36 @@
 "use client";
-// Footer — full footer with links, contact info, and copyright
+import Image from "next/image";
 
 const footerLinks = {
   "Quick Links": [
-    { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Products", href: "/products" },
-    { label: "Careers", href: "/careers" },
-    { label: "Blogs", href: "/blogs" },
+    { label: "Home",       href: "/" },
+    { label: "About Us",   href: "/about" },
+    { label: "Services",   href: "/services" },
+    { label: "Products",   href: "/products" },
     { label: "Contact Us", href: "/contact" },
   ],
   "Our Services": [
-    { label: "Ship Chandelling", href: "/services/ship-chandelling" },
-    { label: "Crew Management", href: "/services/crew-management" },
-    { label: "Technical Services", href: "/services/technical-services" },
-    { label: "Ship Agency", href: "/services/ship-agency" },
-    { label: "Marine Insurance", href: "/services/marine-insurance" },
-    { label: "Logistics", href: "/services/logistics" },
+    { label: "Ship Chandelling",    href: "/services/ship-chandelling" },
+    { label: "Crew Management",     href: "/services/crew-management" },
+    { label: "Technical Services",  href: "/services/technical-services" },
+    { label: "Ship Agency",         href: "/services/ship-agency" },
+    { label: "Marine Insurance",    href: "/services/marine-insurance" },
+    { label: "Logistics",           href: "/services/logistics" },
   ],
 };
 
 const contactInfo = [
   { icon: "📍", label: "Head Office", value: "123 Marine Road, Dubai, UAE" },
-  { icon: "📞", label: "Phone", value: "+971 XX XXX XXXX" },
-  { icon: "✉️", label: "Email", value: "info@abmmarine.com" },
-  { icon: "🕐", label: "Hours", value: "Mon–Sat: 8:00 AM – 6:00 PM" },
+  { icon: "📞", label: "Phone",       value: "+971 XX XXX XXXX" },
+  { icon: "✉️", label: "Email",       value: "info@abmmarine.com" },
+  { icon: "🕐", label: "Hours",       value: "Mon–Sat: 8:00 AM – 6:00 PM" },
+];
+
+const socials = [
+  { id: "social-linkedin",  icon: "in", href: "https://linkedin.com" },
+  { id: "social-facebook",  icon: "f",  href: "https://facebook.com" },
+  { id: "social-instagram", icon: "ig", href: "https://instagram.com" },
+  { id: "social-twitter",   icon: "𝕏",  href: "https://twitter.com" },
 ];
 
 export default function Footer() {
@@ -35,11 +40,7 @@ export default function Footer() {
     <footer
       id="footer"
       aria-label="Site footer"
-      style={{
-        background: "#060c18",
-        borderTop: "1px solid var(--border)",
-        paddingTop: "4rem",
-      }}
+      style={{ background: "#020a17", borderTop: "1px solid var(--border)", paddingTop: "4rem" }}
     >
       <div className="container-wide">
         <div style={{
@@ -47,23 +48,21 @@ export default function Footer() {
           gridTemplateColumns: "2fr 1fr 1fr 1.5fr",
           gap: "3rem",
           paddingBottom: "3rem",
-          borderBottom: "1px solid rgba(197,160,90,0.12)",
+          borderBottom: "1px solid rgba(25,118,210,0.12)",
         }}>
 
           {/* ── Column 1: Brand ── */}
           <div>
-            {/* Logo */}
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
-              <div style={{
-                width: 44, height: 44, borderRadius: "50%",
-                background: "linear-gradient(135deg, #C5A05A, #A07C3A)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontFamily: "var(--font-heading)", fontWeight: 900, fontSize: "0.9rem", color: "#000",
-              }}>
-                ABM
-              </div>
-              <span style={{ fontFamily: "var(--font-heading)", fontWeight: 800, fontSize: "1.1rem", color: "#f5f5f5" }}>
-                ABM <span style={{ color: "var(--gold)" }}>Marine</span>
+              <Image
+                src="/logo.jpeg"
+                alt="ABM Marine logo"
+                width={48}
+                height={48}
+                style={{ objectFit: "contain", borderRadius: "6px" }}
+              />
+              <span style={{ fontFamily: "var(--font-heading)", fontWeight: 800, fontSize: "1.1rem", color: "var(--text-primary)" }}>
+                ABM <span style={{ color: "var(--blue-light)" }}>Marine</span>
               </span>
             </div>
 
@@ -74,12 +73,7 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div style={{ display: "flex", gap: "0.75rem" }}>
-              {[
-                { id: "social-linkedin", icon: "in", href: "https://linkedin.com" },
-                { id: "social-facebook", icon: "f", href: "https://facebook.com" },
-                { id: "social-instagram", icon: "ig", href: "https://instagram.com" },
-                { id: "social-twitter", icon: "𝕏", href: "https://twitter.com" },
-              ].map((s) => (
+              {socials.map((s) => (
                 <a
                   key={s.id}
                   id={s.id}
@@ -99,14 +93,16 @@ export default function Footer() {
                     transition: "all 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.background = "var(--gold)";
-                    (e.currentTarget as HTMLElement).style.color = "#000";
-                    (e.currentTarget as HTMLElement).style.borderColor = "var(--gold)";
+                    const el = e.currentTarget as HTMLElement;
+                    el.style.background   = "var(--blue)";
+                    el.style.color        = "#fff";
+                    el.style.borderColor  = "var(--blue)";
                   }}
                   onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.background = "var(--card-bg)";
-                    (e.currentTarget as HTMLElement).style.color = "var(--text-secondary)";
-                    (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
+                    const el = e.currentTarget as HTMLElement;
+                    el.style.background   = "var(--card-bg)";
+                    el.style.color        = "var(--text-secondary)";
+                    el.style.borderColor  = "var(--border)";
                   }}
                 >
                   {s.icon}
@@ -124,7 +120,7 @@ export default function Footer() {
                 fontWeight: 700,
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "var(--gold)",
+                color: "var(--blue-light)",
                 marginBottom: "1.25rem",
               }}>
                 {groupTitle}
@@ -132,13 +128,10 @@ export default function Footer() {
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.65rem" }}>
                 {links.map((link) => (
                   <li key={link.href}>
-                    <a href={link.href} style={{
-                      color: "var(--text-secondary)",
-                      fontSize: "0.875rem",
-                      textDecoration: "none",
-                      transition: "color 0.25s ease",
-                    }}
-                      onMouseEnter={(e) => (e.currentTarget.style.color = "var(--gold)")}
+                    <a
+                      href={link.href}
+                      style={{ color: "var(--text-secondary)", fontSize: "0.875rem", textDecoration: "none", transition: "color 0.25s ease" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "var(--blue-light)")}
                       onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
                     >
                       {link.label}
@@ -157,18 +150,17 @@ export default function Footer() {
               fontWeight: 700,
               letterSpacing: "0.2em",
               textTransform: "uppercase",
-              color: "var(--gold)",
+              color: "var(--blue-light)",
               marginBottom: "1.25rem",
             }}>
               Contact Us
             </h3>
-
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "1rem" }}>
               {contactInfo.map((item, i) => (
                 <li key={i} style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
                   <span style={{ fontSize: "1rem", flexShrink: 0, marginTop: "0.1rem" }}>{item.icon}</span>
                   <div>
-                    <div style={{ fontFamily: "var(--font-heading)", fontSize: "0.7rem", letterSpacing: "0.1em", color: "var(--gold)", textTransform: "uppercase", marginBottom: "0.2rem" }}>
+                    <div style={{ fontFamily: "var(--font-heading)", fontSize: "0.7rem", letterSpacing: "0.1em", color: "var(--blue-light)", textTransform: "uppercase", marginBottom: "0.2rem" }}>
                       {item.label}
                     </div>
                     <div style={{ color: "var(--text-secondary)", fontSize: "0.875rem" }}>
@@ -182,7 +174,7 @@ export default function Footer() {
 
         </div>
 
-        {/* ── Bottom bar ── */}
+        {/* ── Bottom Bar ── */}
         <div style={{
           padding: "1.5rem 0",
           display: "flex",
@@ -196,13 +188,11 @@ export default function Footer() {
           </p>
           <div style={{ display: "flex", gap: "1.5rem" }}>
             {["Privacy Policy", "Terms of Service", "Sitemap"].map((item) => (
-              <a key={item} href="#" style={{
-                color: "var(--text-secondary)",
-                fontSize: "0.8rem",
-                textDecoration: "none",
-                transition: "color 0.25s",
-              }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--gold)")}
+              <a
+                key={item}
+                href="#"
+                style={{ color: "var(--text-secondary)", fontSize: "0.8rem", textDecoration: "none", transition: "color 0.25s" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--blue-light)")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
               >
                 {item}

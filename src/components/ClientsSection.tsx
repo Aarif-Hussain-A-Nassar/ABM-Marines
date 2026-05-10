@@ -71,8 +71,8 @@ export default function ClientsSection() {
                   transition: "border-color 0.3s ease, color 0.3s ease",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(197,160,90,0.6)";
-                  (e.currentTarget as HTMLElement).style.color = "var(--gold)";
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(25,118,210,0.6)";
+                  (e.currentTarget as HTMLElement).style.color = "var(--blue-light)";
                 }}
                 onMouseLeave={(e) => {
                   (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
@@ -103,7 +103,7 @@ export default function ClientsSection() {
                 {/* Quote mark */}
                 <div style={{
                   fontSize: "4rem",
-                  color: "var(--gold)",
+                  color: "var(--blue-light)",
                   fontFamily: "Georgia, serif",
                   lineHeight: 0.8,
                   marginBottom: "1.25rem",
@@ -126,7 +126,7 @@ export default function ClientsSection() {
                   {/* Avatar placeholder */}
                   <div style={{
                     width: 44, height: 44, borderRadius: "50%",
-                    background: "rgba(197,160,90,0.15)",
+                    background: "rgba(25,118,210,0.15)",
                     border: "1px solid var(--border)",
                     display: "flex", alignItems: "center", justifyContent: "center",
                     fontSize: "1.2rem",
@@ -137,7 +137,7 @@ export default function ClientsSection() {
                     <div style={{ fontFamily: "var(--font-heading)", fontSize: "0.9rem", fontWeight: 700, color: "var(--text-primary)" }}>
                       {t.name}
                     </div>
-                    <div style={{ fontSize: "0.8rem", color: "var(--gold)", fontFamily: "var(--font-heading)", letterSpacing: "0.05em" }}>
+                    <div style={{ fontSize: "0.8rem", color: "var(--blue-light)", fontFamily: "var(--font-heading)", letterSpacing: "0.05em" }}>
                       {t.role}
                     </div>
                   </div>

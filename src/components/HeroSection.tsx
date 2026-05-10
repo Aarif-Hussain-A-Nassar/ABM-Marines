@@ -37,7 +37,7 @@ export default function HeroSection() {
       <div aria-hidden="true" style={{
         position: "absolute", top: 0, left: 0,
         width: "400px", height: "400px",
-        background: "radial-gradient(circle at 0% 0%, rgba(197,160,90,0.12) 0%, transparent 70%)",
+        background: "radial-gradient(circle at 0% 0%, rgba(25,118,210,0.12) 0%, transparent 70%)",
         pointerEvents: "none",
       }} />
 
@@ -63,7 +63,7 @@ export default function HeroSection() {
           }}
         >
           Premier Marine Services{" "}
-          <span style={{ color: "var(--gold)" }}>Delivered Worldwide</span>
+          <span style={{ color: "var(--blue-light)" }}>Delivered Worldwide</span>
         </h1>
 
         <p
@@ -98,12 +98,12 @@ export default function HeroSection() {
             opacity: 0.6,
           }}
         >
-          <span style={{ fontFamily: "var(--font-heading)", fontSize: "0.65rem", letterSpacing: "0.2em", color: "var(--gold)", textTransform: "uppercase" }}>
+          <span style={{ fontFamily: "var(--font-heading)", fontSize: "0.65rem", letterSpacing: "0.2em", color: "var(--blue-light)", textTransform: "uppercase" }}>
             Scroll
           </span>
           <div style={{
             width: 1, height: 50,
-            background: "linear-gradient(180deg, var(--gold), transparent)",
+            background: "linear-gradient(180deg, var(--blue-light), transparent)",
           }} />
         </div>
       </div>

@@ -101,7 +101,7 @@ export default function ProductsSection() {
                   position: "absolute",
                   top: "0.75rem",
                   left: "0.75rem",
-                  background: "var(--gold)",
+                  background: "var(--blue-light)",
                   color: "#000",
                   padding: "0.25rem 0.6rem",
                   borderRadius: "4px",

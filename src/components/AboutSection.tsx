@@ -41,7 +41,7 @@ export default function AboutSection() {
                 <li key={i} style={{ display: "flex", alignItems: "center", gap: "0.75rem", color: "var(--text-secondary)", fontSize: "0.95rem" }}>
                   <span style={{
                     width: 8, height: 8, borderRadius: "50%",
-                    background: "var(--gold)", flexShrink: 0,
+                    background: "var(--blue-light)", flexShrink: 0,
                   }} />
                   {item}
                 </li>
@@ -60,7 +60,7 @@ export default function AboutSection() {
               right: "-16px",
               width: "100%",
               height: "100%",
-              border: "2px solid rgba(197,160,90,0.3)",
+              border: "2px solid rgba(25,118,210,0.3)",
               borderRadius: "8px",
               pointerEvents: "none",
               zIndex: 0,
@@ -91,7 +91,7 @@ export default function AboutSection() {
               bottom: "-24px",
               left: "-24px",
               zIndex: 2,
-              background: "linear-gradient(135deg, var(--gold-dark), var(--gold))",
+              background: "linear-gradient(135deg, var(--blue-dark), var(--blue-light))",
               color: "#000",
               padding: "1.25rem 1.75rem",
               borderRadius: "8px",

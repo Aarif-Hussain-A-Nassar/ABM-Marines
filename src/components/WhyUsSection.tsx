@@ -64,7 +64,7 @@ export default function WhyUsSection() {
               padding: "1.5rem",
               width: "180px",
             }}>
-              <div style={{ color: "var(--gold)", fontSize: "1.75rem", fontFamily: "var(--font-heading)", fontWeight: 900 }}>ISO</div>
+              <div style={{ color: "var(--blue-light)", fontSize: "1.75rem", fontFamily: "var(--font-heading)", fontWeight: 900 }}>ISO</div>
               <div style={{ color: "var(--text-secondary)", fontSize: "0.75rem", fontFamily: "var(--font-heading)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Certified Operations</div>
             </div>
           </div>
@@ -87,14 +87,14 @@ export default function WhyUsSection() {
                     gap: "1.5rem",
                     alignItems: "flex-start",
                     paddingBottom: "2rem",
-                    borderBottom: "1px solid rgba(197,160,90,0.1)",
+                    borderBottom: "1px solid rgba(25,118,210,0.1)",
                   }}
                 >
                   <span style={{
                     fontFamily: "var(--font-heading)",
                     fontSize: "2.5rem",
                     fontWeight: 900,
-                    color: "rgba(197,160,90,0.2)",
+                    color: "rgba(25,118,210,0.2)",
                     lineHeight: 1,
                     flexShrink: 0,
                   }}>

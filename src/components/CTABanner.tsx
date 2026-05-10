@@ -18,7 +18,7 @@ export default function CTABanner() {
       <div aria-hidden="true" style={{
         position: "absolute",
         inset: 0,
-        background: "radial-gradient(ellipse 70% 80% at 50% 50%, rgba(197,160,90,0.08) 0%, transparent 70%)",
+        background: "radial-gradient(ellipse 70% 80% at 50% 50%, rgba(25,118,210,0.08) 0%, transparent 70%)",
         pointerEvents: "none",
       }} />
 
