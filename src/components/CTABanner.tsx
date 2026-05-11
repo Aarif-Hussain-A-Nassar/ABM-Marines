@@ -1,4 +1,4 @@
-// CTA / Banner Section — full-width call-to-action banner
+// CTA / Banner Section — ABM Marine real call-to-action
 
 export default function CTABanner() {
   return (
@@ -23,7 +23,7 @@ export default function CTABanner() {
       }} />
 
       <div className="container-wide" style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
-        <p className="section-label" style={{ marginBottom: "1rem" }}>Ready to Work Together?</p>
+        <p className="section-label" style={{ marginBottom: "1rem" }}>Ready to Place an Order?</p>
 
         <h2 style={{
           fontFamily: "var(--font-heading)",
@@ -33,18 +33,18 @@ export default function CTABanner() {
           marginBottom: "1.25rem",
           lineHeight: 1.15,
         }}>
-          Let Us Handle Your{" "}
-          <span className="text-gold">Marine Needs</span>
+          Explore the Marine{" "}
+          <span className="text-gold">Treasures of Kerala</span>
         </h2>
 
         <p className="section-subtitle" style={{ margin: "0 auto 2.5rem", color: "rgba(180,200,230,0.8)" }}>
-          Get in touch with our expert team today for a customized quote,
-          technical consultation, or to discuss your fleet requirements.
+          Enquire online or get in touch with our team for competitive pricing on
+          Block Frozen &amp; IQF seafood — Shrimps, Cuttlefish, Squid, Octopus, Reef Cod &amp; more.
         </p>
 
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-          <a href="/contact" className="btn-gold">Get a Free Quote</a>
-          <a href="tel:+971XXXXXXXX" className="btn-outline">📞 Call Us Now</a>
+          <a href="/contact" className="btn-gold">Enquiry &amp; Order Online</a>
+          <a href="tel:+919846079833" className="btn-outline">📞 +91 98460 79833</a>
         </div>
       </div>
     </section>

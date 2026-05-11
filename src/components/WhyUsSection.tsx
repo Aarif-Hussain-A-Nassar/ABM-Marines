@@ -1,25 +1,25 @@
-// Why Choose Us / Features Section — alternating highlight points
+// Why Choose Us — ABM Marine's real competitive advantages
 
 const features = [
   {
     number: "01",
-    title: "Global Reach, Local Expertise",
-    description: "With a presence in 50+ countries and partnerships at every major port, we combine worldwide coverage with deep local knowledge to serve your vessels wherever they sail.",
+    title: "EU Approved Factory with HACCP Standards",
+    description: "Our factory in Kerala's Aroor Industrial Development Area is EU approved and fully HACCP endorsed, ensuring every product meets the strictest food safety and quality control requirements for international export.",
   },
   {
     number: "02",
-    title: "Quality You Can Count On",
-    description: "Our ISO-certified processes and rigorous quality control ensure that every supply, service, and crew member meets the highest international maritime standards.",
+    title: "Direct-Source Raw Materials — No Middleman",
+    description: "ABM has long-term arrangements with suppliers to purchase raw materials directly from source. We make direct sales, eliminating the middleman — reducing cost and passing the savings on to our customers.",
   },
   {
     number: "03",
-    title: "24/7 Dedicated Support",
-    description: "Marine operations never stop, and neither do we. Our global team is available around the clock to handle emergencies, special requests, and time-sensitive operations.",
+    title: "Expertise-Driven Management Since 2004",
+    description: "Founded by three veterans of the Fisheries field, ABM has an expertise-driven managing team with over 20 years of experience in the seafood industry, ensuring the highest production control and packing standards.",
   },
   {
     number: "04",
-    title: "Competitive & Transparent Pricing",
-    description: "We believe in straightforward pricing with no hidden fees. Our cost-effective solutions help vessel operators maximize efficiency without compromising on quality.",
+    title: "USFDA Registered · MPEDA Authorized Exporter",
+    description: "Registered with the United States Food and Drug Administration (USFDA), certified by FSSAI, and authorized by MPEDA — ABM Marine Products is recognized at international levels with a record of satisfied customers.",
   },
 ];
 
@@ -27,7 +27,6 @@ export default function WhyUsSection() {
   return (
     <section id="why-us" className="section-pad" aria-label="Why choose ABM Marine">
       <div className="container-wide">
-        {/* image column first on desktop, stacked below on mobile */}
         <div className="grid-2col">
 
           {/* ── Left: Image / Visual ── */}
@@ -43,9 +42,9 @@ export default function WhyUsSection() {
               alignItems: "center",
               justifyContent: "center",
             }}>
-              {/* <Image src="/images/why-us.jpg" alt="Marine vessel at sea" fill style={{ objectFit: "cover" }} /> */}
+              {/* <Image src="/images/why-us.jpg" alt="ABM Marine seafood processing" fill style={{ objectFit: "cover" }} /> */}
               <p style={{ color: "var(--text-secondary)", fontFamily: "var(--font-heading)", fontSize: "0.8rem", letterSpacing: "0.1em" }}>
-                [ WHY US IMAGE ]
+                [ FACTORY IMAGE ]
               </p>
             </div>
 
@@ -63,8 +62,8 @@ export default function WhyUsSection() {
                 width: "180px",
               }}
             >
-              <div style={{ color: "var(--blue-light)", fontSize: "1.75rem", fontFamily: "var(--font-heading)", fontWeight: 900 }}>ISO</div>
-              <div style={{ color: "var(--text-secondary)", fontSize: "0.75rem", fontFamily: "var(--font-heading)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Certified Operations</div>
+              <div style={{ color: "var(--blue-light)", fontSize: "1.25rem", fontFamily: "var(--font-heading)", fontWeight: 900 }}>EU</div>
+              <div style={{ color: "var(--text-secondary)", fontSize: "0.75rem", fontFamily: "var(--font-heading)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Approved Factory · HACCP</div>
             </div>
           </div>
 

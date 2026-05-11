@@ -10,28 +10,30 @@ export default function AboutSection() {
           <div>
             <p className="section-label" style={{ marginBottom: "1rem" }}>Who We Are</p>
             <h2 className="section-title" style={{ marginBottom: "1.25rem" }}>
-              A Decade of Marine{" "}
-              <span className="text-gold">Excellence</span>
+              A Brand Name for Quality in{" "}
+              <span className="text-gold">Frozen Marine Products</span>
             </h2>
             <div className="gold-divider" style={{ marginBottom: "1.75rem" }} />
             <p className="section-subtitle" style={{ marginBottom: "1.5rem" }}>
-              ABM Marine is a leading marine services company committed to delivering
-              world-class solutions to the global shipping and offshore industries.
-              Our deep-rooted expertise, combined with an uncompromising focus on
-              quality and safety, sets us apart.
+              ABM Marine Products, commonly known as ABM, has been into the Seafood industry
+              with sustained quality standards and competitive pricing since its launch in 2004.
+              Our resourceful backup of skilled personnel and advanced infrastructure ensure
+              quality products with superior production control and packing.
             </p>
             <p className="section-subtitle" style={{ marginBottom: "2.5rem", fontSize: "0.95rem" }}>
-              From ship chandelling and crew management to technical support and
-              logistics, we are a single point of contact for all your maritime needs.
+              Founded by three veterans of the Fisheries field, ABM has the advantage of an
+              expertise-driven managing team. We make direct sales eliminating the middleman,
+              reducing cost and passing the savings on to the customer. ABM is a brand of
+              Indo French Shellfish Co. Private Limited.
             </p>
 
             {/* ── Feature bullets ── */}
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.85rem", marginBottom: "2.5rem" }}>
               {[
-                "ISO Certified Operations",
-                "Round-the-clock global support",
-                "Expert team of marine professionals",
-                "Trusted by 500+ vessel operators",
+                "EU Approved Factory",
+                "HACCP Endorsed · USFDA Registered",
+                "Block Frozen & IQF Seafood Processing",
+                "Direct-source raw materials — no middleman",
               ].map((item, i) => (
                 <li key={i} style={{ display: "flex", alignItems: "center", gap: "0.75rem", color: "var(--text-secondary)", fontSize: "0.95rem" }}>
                   <span style={{

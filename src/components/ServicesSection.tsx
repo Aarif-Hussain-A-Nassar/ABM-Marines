@@ -1,41 +1,42 @@
-// Services Section — grid of service cards with icons
+// Services / Products Section — grid of seafood product cards
+// ABM Marine Products: Block Frozen & IQF seafood exporter since 2004
 
-const services = [
+const products = [
   {
-    id: "ship-chandelling",
-    icon: "⚓",
-    title: "Ship Chandelling",
-    description: "Complete supply of provisions, deck and engine stores, safety equipment, and consumables for vessels at all major ports.",
+    id: "shrimps",
+    icon: "🦐",
+    title: "Shrimps",
+    description: "Premium White & Tiger Shrimps — Block Frozen and IQF processed. Sourced directly from trusted suppliers for consistent size, freshness, and superior shelf life.",
   },
   {
-    id: "crew-management",
-    icon: "👥",
-    title: "Crew Management",
-    description: "End-to-end crew recruitment, training, documentation, and welfare services for officers and ratings worldwide.",
+    id: "cuttlefish",
+    icon: "🦑",
+    title: "Cuttlefish",
+    description: "High-quality Cuttlefish processed to international export standards. Available in whole and cleaned formats, Block Frozen and IQF, for markets worldwide.",
   },
   {
-    id: "technical-services",
-    icon: "🔧",
-    title: "Technical Services",
-    description: "Comprehensive technical support including repairs, maintenance, dry-docking, and class survey assistance.",
+    id: "squid",
+    icon: "🦑",
+    title: "Squid",
+    description: "Fresh-caught Squid processed with stringent quality controls. Available in Block Frozen and IQF formats to meet the demand of discerning global buyers.",
   },
   {
-    id: "ship-agency",
-    icon: "🏢",
-    title: "Ship Agency",
-    description: "Port agency services covering husbandry, cargo operations, documentation, and customs clearance at major ports.",
+    id: "octopus",
+    icon: "🐙",
+    title: "Octopus",
+    description: "Premium Octopus — carefully selected, cleaned, and frozen to preserve natural taste and texture. A popular product across European and Asian export markets.",
   },
   {
-    id: "marine-insurance",
-    icon: "🛡️",
-    title: "Marine Insurance",
-    description: "Tailored marine insurance solutions covering hull & machinery, P&I, cargo, and liability for vessel operators.",
+    id: "reef-cod",
+    icon: "🐟",
+    title: "Reef Cod",
+    description: "Kerala's prized Reef Cod (Hamour), frozen at peak freshness. An internationally sought-after species for its firm white flesh and excellent taste.",
   },
   {
-    id: "logistics",
-    icon: "🚢",
-    title: "Logistics & Forwarding",
-    description: "Specialized freight forwarding and logistics solutions for marine spare parts and equipment globally.",
+    id: "other-fish",
+    icon: "🐠",
+    title: "Red & White Snapper · Ribbon Fish · Tuna",
+    description: "A wide range of premium finfish including Red Snapper, White Snapper, Ribbon Fish, and Tuna — all processed to the highest EU and HACCP standards.",
   },
 ];
 
@@ -44,7 +45,7 @@ export default function ServicesSection() {
     <section
       id="services"
       className="section-pad"
-      aria-label="Our services"
+      aria-label="Our products"
       style={{
         background: "linear-gradient(180deg, var(--navy-mid) 0%, var(--navy) 100%)",
       }}
@@ -53,27 +54,27 @@ export default function ServicesSection() {
 
         {/* ── Header ── */}
         <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-          <p className="section-label" style={{ marginBottom: "1rem" }}>What We Do</p>
+          <p className="section-label" style={{ marginBottom: "1rem" }}>What We Export</p>
           <h2 className="section-title" style={{ marginBottom: "1rem" }}>
-            Our Core <span className="text-gold">Services</span>
+            Our Marine <span className="text-gold">Products</span>
           </h2>
           <div className="gold-divider" style={{ margin: "0 auto 1.5rem" }} />
           <p className="section-subtitle" style={{ margin: "0 auto" }}>
-            A comprehensive suite of marine services tailored to meet the evolving
-            demands of the global shipping industry.
+            Block Frozen &amp; IQF seafood sourced directly from Kerala&apos;s rich coastal waters,
+            processed in our EU-approved factory, and exported to markets worldwide.
           </p>
         </div>
 
-        {/* ── Service Cards Grid ── */}
+        {/* ── Product Cards Grid ── */}
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
           gap: "1.5rem",
         }}>
-          {services.map((service) => (
+          {products.map((product) => (
             <div
-              key={service.id}
-              id={`service-${service.id}`}
+              key={product.id}
+              id={`product-${product.id}`}
               className="card-dark"
               style={{ padding: "2rem" }}
             >
@@ -88,7 +89,7 @@ export default function ServicesSection() {
                 fontSize: "1.75rem",
                 marginBottom: "1.25rem",
               }}>
-                {service.icon}
+                {product.icon}
               </div>
 
               <h3 style={{
@@ -98,7 +99,7 @@ export default function ServicesSection() {
                 color: "var(--text-primary)",
                 marginBottom: "0.75rem",
               }}>
-                {service.title}
+                {product.title}
               </h3>
 
               <p style={{
@@ -107,10 +108,10 @@ export default function ServicesSection() {
                 lineHeight: 1.7,
                 marginBottom: "1.25rem",
               }}>
-                {service.description}
+                {product.description}
               </p>
 
-              <a href={`/services/${service.id}`} style={{
+              <a href={`/products#${product.id}`} style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.4rem",
@@ -131,7 +132,7 @@ export default function ServicesSection() {
 
         {/* ── CTA ── */}
         <div style={{ textAlign: "center", marginTop: "3.5rem" }}>
-          <a href="/services" className="btn-outline">View All Services</a>
+          <a href="/products" className="btn-outline">View All Products</a>
         </div>
       </div>
     </section>

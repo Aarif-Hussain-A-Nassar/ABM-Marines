@@ -1,47 +1,47 @@
-// Products Section — grid of product category cards
+// Products Section — ABM Marine real product categories with descriptions
 
 const products = [
   {
-    id: "provisions",
-    title: "Provisions & Bonded Stores",
-    image: "/images/products/provisions.jpg",
-    description: "Quality food provisions, beverages, and bonded stores for all vessel types.",
-    tag: "Chandelling",
+    id: "shrimps",
+    title: "Shrimps",
+    image: "/images/products/shrimps.jpg",
+    description: "Premium White & Tiger Shrimps, Block Frozen and IQF. Sourced direct from Kerala's coastal waters for consistent quality and freshness.",
+    tag: "IQF / Block Frozen",
   },
   {
-    id: "deck-stores",
-    title: "Deck & Engine Stores",
-    image: "/images/products/deck-stores.jpg",
-    description: "Complete range of deck hardware, engine spares, consumables, and lubricants.",
-    tag: "Technical",
+    id: "cuttlefish",
+    title: "Cuttlefish",
+    image: "/images/products/cuttlefish.jpg",
+    description: "Whole and cleaned Cuttlefish processed under HACCP guidelines. Available in Block Frozen and IQF formats for international export.",
+    tag: "IQF / Block Frozen",
   },
   {
-    id: "safety-equipment",
-    title: "Safety Equipment",
-    image: "/images/products/safety.jpg",
-    description: "SOLAS-compliant life-saving appliances, fire-fighting equipment, and PPE.",
-    tag: "Safety",
+    id: "squid",
+    title: "Squid",
+    image: "/images/products/squid.jpg",
+    description: "Fresh-caught Squid processed with stringent EU-standard quality controls. Available Block Frozen and IQF for global buyers.",
+    tag: "IQF / Block Frozen",
   },
   {
-    id: "medical-stores",
-    title: "Medical & Medicines",
-    image: "/images/products/medical.jpg",
-    description: "Approved ship medicine chests, medical equipment, and onboard pharmacy needs.",
-    tag: "Medical",
+    id: "octopus",
+    title: "Octopus",
+    image: "/images/products/octopus.jpg",
+    description: "Premium Octopus, carefully selected and cleaned. Frozen to preserve natural taste and texture — widely exported to European and Asian markets.",
+    tag: "Block Frozen",
   },
   {
-    id: "electronics",
-    title: "Marine Electronics",
-    image: "/images/products/electronics.jpg",
-    description: "Navigation instruments, communication systems, and electrical equipment.",
-    tag: "Electronics",
+    id: "reef-cod",
+    title: "Reef Cod (Hamour)",
+    image: "/images/products/reef-cod.jpg",
+    description: "Kerala's prized Reef Cod — frozen at peak freshness. Internationally sought after for its firm white flesh and excellent flavour.",
+    tag: "Block Frozen",
   },
   {
-    id: "uniforms",
-    title: "Uniforms & Workwear",
-    image: "/images/products/uniforms.jpg",
-    description: "Professional maritime uniforms, protective workwear, and personal gear.",
-    tag: "Apparel",
+    id: "finfish",
+    title: "Snapper · Ribbon Fish · Tuna",
+    image: "/images/products/finfish.jpg",
+    description: "Red Snapper, White Snapper, Ribbon Fish, and Tuna — all processed to EU and HACCP standards in our approved factory in Cochin, Kerala.",
+    tag: "Block Frozen",
   },
 ];
 
@@ -59,12 +59,12 @@ export default function ProductsSection() {
         <div style={{ textAlign: "center", marginBottom: "4rem" }}>
           <p className="section-label" style={{ marginBottom: "1rem" }}>What We Supply</p>
           <h2 className="section-title" style={{ marginBottom: "1rem" }}>
-            Our <span className="text-gold">Products</span>
+            Our <span className="text-gold">Seafood Products</span>
           </h2>
           <div className="gold-divider" style={{ margin: "0 auto 1.5rem" }} />
           <p className="section-subtitle" style={{ margin: "0 auto" }}>
-            Sourced globally, delivered promptly — we supply an extensive range of
-            marine products to keep your fleet operational and compliant.
+            Sourced from Kerala&apos;s abundant coastal waters and processed in our EU-approved
+            factory — delivering Block Frozen &amp; IQF seafood to global markets since 2004.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function ProductsSection() {
               }}>
                 {/* <Image src={product.image} alt={product.title} fill style={{ objectFit: "cover" }} /> */}
                 <p style={{ color: "var(--text-secondary)", fontSize: "0.75rem", fontFamily: "var(--font-heading)", letterSpacing: "0.1em" }}>
-                  [ {product.title.toUpperCase()} IMAGE ]
+                  [ {product.title.toUpperCase()} ]
                 </p>
 
                 {/* Tag */}

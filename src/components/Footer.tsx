@@ -3,35 +3,33 @@ import Image from "next/image";
 
 const footerLinks = {
   "Quick Links": [
-    { label: "Home",       href: "/" },
-    { label: "About Us",   href: "/about" },
-    { label: "Services",   href: "/services" },
-    { label: "Products",   href: "/products" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "Home",            href: "/" },
+    { label: "About Us",        href: "/about" },
+    { label: "Products",        href: "/products" },
+    { label: "Factory",         href: "/factory" },
+    { label: "Quality Control", href: "/quality-control" },
+    { label: "Certifications",  href: "/certifications" },
+    { label: "Gallery",         href: "/gallery" },
+    { label: "Contact",         href: "/contact" },
   ],
-  "Our Services": [
-    { label: "Ship Chandelling",    href: "/services/ship-chandelling" },
-    { label: "Crew Management",     href: "/services/crew-management" },
-    { label: "Technical Services",  href: "/services/technical-services" },
-    { label: "Ship Agency",         href: "/services/ship-agency" },
-    { label: "Marine Insurance",    href: "/services/marine-insurance" },
-    { label: "Logistics",           href: "/services/logistics" },
+  "Our Products": [
+    { label: "Shrimps",            href: "/products#shrimps" },
+    { label: "Cuttlefish",         href: "/products#cuttlefish" },
+    { label: "Squid",              href: "/products#squid" },
+    { label: "Octopus",            href: "/products#octopus" },
+    { label: "Reef Cod (Hamour)",  href: "/products#reef-cod" },
+    { label: "Finfish",            href: "/products#finfish" },
   ],
 };
 
 const contactInfo = [
-  { icon: "📍", label: "Head Office", value: "123 Marine Road, Dubai, UAE" },
-  { icon: "📞", label: "Phone",       value: "+971 XX XXX XXXX" },
-  { icon: "✉️", label: "Email",       value: "info@abmmarine.com" },
-  { icon: "🕐", label: "Hours",       value: "Mon–Sat: 8:00 AM – 6:00 PM" },
+  { icon: "📍", label: "Address", value: "19/2084-E, Nambiapuram, Pallurthy, Cochin – 682 006, Kerala, India" },
+  { icon: "📞", label: "Phone",   value: "+91 98460 79833" },
+  { icon: "✉️", label: "Email",   value: "info@abmmarine.com" },
+  { icon: "✉️", label: "Email",   value: "paxavierbiju@gmail.com" },
 ];
 
-const socials = [
-  { id: "social-linkedin",  icon: "in", href: "https://linkedin.com" },
-  { id: "social-facebook",  icon: "f",  href: "https://facebook.com" },
-  { id: "social-instagram", icon: "ig", href: "https://instagram.com" },
-  { id: "social-twitter",   icon: "𝕏",  href: "https://twitter.com" },
-];
+const socials: { id: string; icon: string; href: string }[] = [];
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -67,8 +65,9 @@ export default function Footer() {
             </div>
 
             <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: 1.8, marginBottom: "1.75rem", maxWidth: "280px" }}>
-              Your trusted partner for comprehensive marine services, delivering
-              excellence across global waters for over two decades.
+              ABM Marine Products — EU Approved, HACCP endorsed seafood exporter
+              from Cochin, Kerala. Delivering premium Block Frozen &amp; IQF seafood
+              to global markets since 2004.
             </p>
 
             {/* Social Icons */}
@@ -184,7 +183,7 @@ export default function Footer() {
           gap: "0.75rem",
         }}>
           <p style={{ color: "var(--text-secondary)", fontSize: "0.8rem" }}>
-            © {year} ABM Marine. All rights reserved.
+            © {year} ABM Marine Products (Indo French Shellfish Co. Pvt. Ltd.). All rights reserved.
           </p>
           <div style={{ display: "flex", gap: "1.5rem" }}>
             {["Privacy Policy", "Terms of Service", "Sitemap"].map((item) => (

@@ -1,52 +1,52 @@
 "use client";
-// Clients / Partners Section — logo strip / testimonials
+// Clients / Certifications Section — ABM Marine real certifications + testimonial
 
-const partners = [
-  "Maersk Line",
-  "MSC",
-  "CMA CGM",
-  "Evergreen",
-  "COSCO",
-  "NYK Line",
-  "MOL",
-  "K Line",
+const certifications = [
+  "EU Approved Factory",
+  "HACCP Endorsed",
+  "USFDA Registered",
+  "FSSAI Certified",
+  "MPEDA Authorized Exporter",
+  "ISO Certified",
+  "EIA Approved",
+  "BIS Certified",
 ];
 
 const testimonials = [
   {
     id: "t1",
-    quote: "ABM Marine has been our trusted chandelling partner for over 8 years. Their reliability and quality of supply is unmatched in the region.",
-    name: "Capt. R. Sharma",
-    role: "Fleet Manager, Pacific Shipping Co.",
+    quote: "Ours is a brand name for quality in the field of production and exports of Frozen Marine Products. With a rich range of marine products that include Shrimps, Cuttlefish, Squid, Octopus, Reef Cod etc., ABM serves the industry with a record of satisfied customers.",
+    name: "Managing Director",
+    role: "ABM Marine Products",
   },
   {
     id: "t2",
-    quote: "The technical team at ABM Marine resolved a critical engine issue within 24 hours, keeping our vessel on schedule. Truly professional.",
-    name: "Mr. K. Ibrahim",
-    role: "Operations Director, Gulf Marine Services",
+    quote: "ABM Marine Products has been into the Seafood industry with sustained quality standards and competitive pricing since its launch in 2004. Our resourceful backup of skilled personnel and advanced infrastructure ensure quality products with superior production control and packing.",
+    name: "Founding Team",
+    role: "ABM Marine Products — Since 2004",
   },
   {
     id: "t3",
-    quote: "Their crew management services are outstanding — well-trained, certified seafarers delivered exactly when we need them.",
-    name: "Ms. J. Chen",
-    role: "HR Manager, Orient Bulk Carriers",
+    quote: "We make direct sales eliminating the middleman, thereby reducing our cost and passing the savings on to the customer. Long-term arrangements with suppliers ensure a steady flow of raw materials directly from source.",
+    name: "Operations Team",
+    role: "ABM Marine Products, Cochin, Kerala",
   },
 ];
 
 export default function ClientsSection() {
   return (
-    <section id="clients" className="section-pad" aria-label="Our clients and testimonials">
+    <section id="clients" className="section-pad" aria-label="Our certifications and company statements">
       <div className="container-wide">
 
-        {/* ── Partner Logos ── */}
+        {/* ── Certifications ── */}
         <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-          <p className="section-label" style={{ marginBottom: "1rem" }}>Trusted By</p>
+          <p className="section-label" style={{ marginBottom: "1rem" }}>Internationally Recognized</p>
           <h2 className="section-title" style={{ marginBottom: "1rem" }}>
-            Our Global <span className="text-gold">Partners</span>
+            Our <span className="text-gold">Certifications</span>
           </h2>
           <div className="gold-divider" style={{ margin: "0 auto 2.5rem" }} />
 
-          {/* Logo strip */}
+          {/* Certification strip */}
           <div style={{
             display: "flex",
             flexWrap: "wrap",
@@ -54,7 +54,7 @@ export default function ClientsSection() {
             justifyContent: "center",
             alignItems: "center",
           }}>
-            {partners.map((name) => (
+            {certifications.map((name) => (
               <div
                 key={name}
                 style={{
@@ -85,11 +85,11 @@ export default function ClientsSection() {
           </div>
         </div>
 
-        {/* ── Testimonials ── */}
+        {/* ── Company Statements ── */}
         <div>
-          <p className="section-label" style={{ textAlign: "center", marginBottom: "1rem" }}>What They Say</p>
+          <p className="section-label" style={{ textAlign: "center", marginBottom: "1rem" }}>What We Stand For</p>
           <h2 className="section-title" style={{ textAlign: "center", marginBottom: "1rem" }}>
-            Client <span className="text-gold">Testimonials</span>
+            From the <span className="text-gold">ABM Team</span>
           </h2>
           <div className="gold-divider" style={{ margin: "0 auto 3rem" }} />
 
@@ -123,7 +123,6 @@ export default function ClientsSection() {
                 </p>
 
                 <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-                  {/* Avatar placeholder */}
                   <div style={{
                     width: 44, height: 44, borderRadius: "50%",
                     background: "rgba(25,118,210,0.15)",
@@ -131,7 +130,7 @@ export default function ClientsSection() {
                     display: "flex", alignItems: "center", justifyContent: "center",
                     fontSize: "1.2rem",
                   }}>
-                    👤
+                    🐟
                   </div>
                   <div>
                     <div style={{ fontFamily: "var(--font-heading)", fontSize: "0.9rem", fontWeight: 700, color: "var(--text-primary)" }}>

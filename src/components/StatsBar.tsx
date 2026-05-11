@@ -1,10 +1,10 @@
-// Stats / Key Highlights Bar — quick-glance numbers row
+// Stats / Key Highlights Bar — ABM Marine real numbers
 
 const stats = [
-  { value: "20+", label: "Years of Experience" },
-  { value: "500+", label: "Vessels Served" },
-  { value: "50+", label: "Countries Covered" },
-  { value: "24/7", label: "Global Support" },
+  { value: "2004", label: "Founded" },
+  { value: "EU",   label: "Approved Factory" },
+  { value: "HACCP", label: "Certified & USFDA Registered" },
+  { value: "20+",  label: "Years of Experience" },
 ];
 
 export default function StatsBar() {

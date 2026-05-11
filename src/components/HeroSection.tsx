@@ -1,5 +1,4 @@
 // Hero Section — Full-screen background with headline + CTA
-// Replace the background image with an actual high-res marine/vessel photo
 
 export default function HeroSection() {
   return (
@@ -33,7 +32,7 @@ export default function HeroSection() {
       {/* ── Dark gradient overlay ── */}
       <div className="overlay-dark" aria-hidden="true" />
 
-      {/* ── Gold corner accent ── */}
+      {/* ── Blue corner accent ── */}
       <div aria-hidden="true" style={{
         position: "absolute", top: 0, left: 0,
         width: "400px", height: "400px",
@@ -47,7 +46,7 @@ export default function HeroSection() {
         style={{ position: "relative", zIndex: 10, textAlign: "center", paddingTop: "6rem", paddingBottom: "2rem" }}
       >
         <p className="section-label animate-fade" style={{ marginBottom: "1.25rem" }}>
-          Your Trusted Marine Partner
+          EU Approved · HACCP Endorsed · USFDA Registered
         </p>
 
         <h1
@@ -62,25 +61,26 @@ export default function HeroSection() {
             animationDelay: "0.15s",
           }}
         >
-          Premier Marine Services{" "}
-          <span style={{ color: "var(--blue-light)" }}>Delivered Worldwide</span>
+          Premium Frozen{" "}
+          <span style={{ color: "var(--blue-light)" }}>Seafood Export</span>
+          {" "}Worldwide
         </h1>
 
         <p
           className="section-subtitle animate-fade-up"
           style={{ margin: "0 auto 2.5rem", color: "rgba(200,210,230,0.85)", animationDelay: "0.3s" }}
         >
-          ABM Marine provides world-class marine solutions — from vessel supply and
-          ship chandelling to crewing and technical services — with decades of
-          expertise across global waters.
+          ABM Marine Products has been delivering world-class Block Frozen &amp; IQF seafood —
+          Shrimps, Cuttlefish, Squid, Octopus, Reef Cod and more — with sustained quality
+          standards and competitive pricing since 2004.
         </p>
 
         <div
           className="animate-fade-up"
           style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", animationDelay: "0.45s" }}
         >
-          <a href="/services" className="btn-gold">Explore Services</a>
-          <a href="/contact" className="btn-outline">Contact Us</a>
+          <a href="/products" className="btn-gold">Explore Products</a>
+          <a href="/contact" className="btn-outline">Enquiry &amp; Order Online</a>
         </div>
 
         {/* ── Scroll indicator ── */}
