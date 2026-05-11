@@ -4,12 +4,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="section-pad" aria-label="About ABM Marine">
       <div className="container-wide">
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "5rem",
-          alignItems: "center",
-        }}>
+        <div className="grid-2col">
 
           {/* ── Left: Text Content ── */}
           <div>
@@ -53,7 +48,7 @@ export default function AboutSection() {
 
           {/* ── Right: Image ── */}
           <div style={{ position: "relative" }}>
-            {/* Gold border accent */}
+            {/* Blue border accent */}
             <div aria-hidden="true" style={{
               position: "absolute",
               top: "-16px",
@@ -66,7 +61,7 @@ export default function AboutSection() {
               zIndex: 0,
             }} />
 
-            {/* Image placeholder — replace src with real image */}
+            {/* Image placeholder */}
             <div style={{
               position: "relative",
               zIndex: 1,
@@ -86,18 +81,21 @@ export default function AboutSection() {
             </div>
 
             {/* Experience badge */}
-            <div style={{
-              position: "absolute",
-              bottom: "-24px",
-              left: "-24px",
-              zIndex: 2,
-              background: "linear-gradient(135deg, var(--blue-dark), var(--blue-light))",
-              color: "#000",
-              padding: "1.25rem 1.75rem",
-              borderRadius: "8px",
-              fontFamily: "var(--font-heading)",
-              textAlign: "center",
-            }}>
+            <div
+              className="about-badge"
+              style={{
+                position: "absolute",
+                bottom: "-24px",
+                left: "-24px",
+                zIndex: 2,
+                background: "linear-gradient(135deg, var(--blue-dark), var(--blue-light))",
+                color: "#fff",
+                padding: "1.25rem 1.75rem",
+                borderRadius: "8px",
+                fontFamily: "var(--font-heading)",
+                textAlign: "center",
+              }}
+            >
               <div style={{ fontSize: "2.5rem", fontWeight: 900, lineHeight: 1 }}>20+</div>
               <div style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}>Years<br/>Experience</div>
             </div>

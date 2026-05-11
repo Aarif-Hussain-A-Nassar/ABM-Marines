@@ -20,11 +20,14 @@ export default function StatsBar() {
       }}
     >
       <div className="container-wide">
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "2rem",
-        }}>
+        <div
+          className="stats-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
+            gap: "2rem",
+          }}
+        >
           {stats.map((stat, i) => (
             <div key={i} style={{ textAlign: "center" }}>
               <div style={{

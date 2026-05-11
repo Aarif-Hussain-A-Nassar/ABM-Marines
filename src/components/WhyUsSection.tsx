@@ -27,12 +27,8 @@ export default function WhyUsSection() {
   return (
     <section id="why-us" className="section-pad" aria-label="Why choose ABM Marine">
       <div className="container-wide">
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1.2fr",
-          gap: "5rem",
-          alignItems: "center",
-        }}>
+        {/* image column first on desktop, stacked below on mobile */}
+        <div className="grid-2col">
 
           {/* ── Left: Image / Visual ── */}
           <div style={{ position: "relative" }}>
@@ -54,16 +50,19 @@ export default function WhyUsSection() {
             </div>
 
             {/* Floating accent card */}
-            <div style={{
-              position: "absolute",
-              top: "2rem",
-              right: "-2rem",
-              background: "var(--card-bg)",
-              border: "1px solid var(--border)",
-              borderRadius: "8px",
-              padding: "1.5rem",
-              width: "180px",
-            }}>
+            <div
+              className="why-float-card"
+              style={{
+                position: "absolute",
+                top: "2rem",
+                right: "-2rem",
+                background: "var(--card-bg)",
+                border: "1px solid var(--border)",
+                borderRadius: "8px",
+                padding: "1.5rem",
+                width: "180px",
+              }}
+            >
               <div style={{ color: "var(--blue-light)", fontSize: "1.75rem", fontFamily: "var(--font-heading)", fontWeight: 900 }}>ISO</div>
               <div style={{ color: "var(--text-secondary)", fontSize: "0.75rem", fontFamily: "var(--font-heading)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Certified Operations</div>
             </div>

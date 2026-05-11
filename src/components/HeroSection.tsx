@@ -44,7 +44,7 @@ export default function HeroSection() {
       {/* ── Content ── */}
       <div
         className="container-wide"
-        style={{ position: "relative", zIndex: 10, textAlign: "center", padding: "0 2rem" }}
+        style={{ position: "relative", zIndex: 10, textAlign: "center", paddingTop: "6rem", paddingBottom: "2rem" }}
       >
         <p className="section-label animate-fade" style={{ marginBottom: "1.25rem" }}>
           Your Trusted Marine Partner

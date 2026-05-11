@@ -43,13 +43,13 @@ export default function Footer() {
       style={{ background: "#020a17", borderTop: "1px solid var(--border)", paddingTop: "4rem" }}
     >
       <div className="container-wide">
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "2fr 1fr 1fr 1.5fr",
-          gap: "3rem",
-          paddingBottom: "3rem",
-          borderBottom: "1px solid rgba(25,118,210,0.12)",
-        }}>
+        <div
+          className="grid-footer"
+          style={{
+            paddingBottom: "3rem",
+            borderBottom: "1px solid rgba(25,118,210,0.12)",
+          }}
+        >
 
           {/* ── Column 1: Brand ── */}
           <div>
