@@ -1,46 +1,27 @@
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import ExpertiseSection from "@/components/ExpertiseSection";
-import QualitySection from "@/components/QualitySection";
-import SustainabilitySection from "@/components/SustainabilitySection";
-import GlobalReachSection from "@/components/GlobalReachSection";
-import CertificationsSection from "@/components/CertificationsSection";
-import ProductsSection from "@/components/ProductsSection";
-import InfrastructureSection from "@/components/InfrastructureSection";
-import ContactSection from "@/components/ContactSection";
+import HeroSection          from "@/components/sections/hero";
+import AboutSection         from "@/components/sections/about";
+import ExpertiseSection     from "@/components/sections/expertise";
+import QualitySection       from "@/components/sections/quality";
+import SustainabilitySection from "@/components/sections/sustainability";
+import GlobalReachSection   from "@/components/sections/global-reach";
+import CertificationsSection from "@/components/sections/certifications";
+import ProductsSection      from "@/components/sections/products";
+import InfrastructureSection from "@/components/sections/infrastructure";
+import ContactSection       from "@/components/sections/contact";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
-      {/* 1. Full-screen cinematic hero */}
+    <main>
       <HeroSection />
-
-      {/* 2. About — Kerala story & timeline */}
       <AboutSection />
-
-      {/* 3. Expertise — 6 animated cards */}
       <ExpertiseSection />
-
-      {/* 4. Quality Control — 6-step process */}
       <QualitySection />
-
-      {/* 5. Sustainability — ocean-themed */}
       <SustainabilitySection />
-
-      {/* 6. Global Reach — world map */}
       <GlobalReachSection />
-
-      {/* 7. Certifications — cert showcase */}
       <CertificationsSection />
-
-      {/* 8. Products — filterable grid (modular) */}
       <ProductsSection />
-
-      {/* 9. Infrastructure — facility cards */}
       <InfrastructureSection />
-
-      {/* 10. Contact — form + map + WhatsApp */}
       <ContactSection />
-    </>
+    </main>
   );
 }
