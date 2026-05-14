@@ -4,10 +4,10 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 const stats = [
-  { value: "2004", label: "Established", icon: "🏆" },
-  { value: "4+",   label: "Export Markets", icon: "🌍" },
-  { value: "HACCP", label: "Certified",   icon: "✅" },
-  { value: "IQF",  label: "Technology",   icon: "❄️" },
+  { value: "2004", label: "Established",     icon: "🏆" },
+  { value: "4+",   label: "Export Markets",  icon: "🌍" },
+  { value: "HACCP", label: "Certified",      icon: "✅" },
+  { value: "IQF",  label: "Technology",      icon: "❄️" },
 ];
 
 export default function HeroSection() {
@@ -16,8 +16,7 @@ export default function HeroSection() {
   useEffect(() => {
     const handleScroll = () => {
       if (videoRef.current) {
-        const scrollY = window.scrollY;
-        videoRef.current.style.transform = `translateY(${scrollY * 0.3}px)`;
+        videoRef.current.style.transform = `translateY(${window.scrollY * 0.3}px)`;
       }
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -39,7 +38,7 @@ export default function HeroSection() {
         background: "var(--ocean-900)",
       }}
     >
-      {/* ── Parallax Background ── */}
+      {/* Parallax Background */}
       <div
         ref={videoRef}
         aria-hidden="true"
@@ -49,36 +48,29 @@ export default function HeroSection() {
           backgroundImage: "url('/hero-bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center 30%",
-          backgroundRepeat: "no-repeat",
           opacity: 0.45,
           transition: "transform 0.1s linear",
         }}
       />
 
-      {/* ── Multi-layer gradient overlay ── */}
+      {/* Gradient overlays */}
       <div
         aria-hidden="true"
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(180deg, rgba(2,11,24,0.7) 0%, rgba(2,11,24,0.3) 40%, rgba(2,11,24,0.6) 70%, rgba(2,11,24,0.95) 100%)",
+            "linear-gradient(180deg,rgba(2,11,24,0.7) 0%,rgba(2,11,24,0.3) 40%,rgba(2,11,24,0.6) 70%,rgba(2,11,24,0.95) 100%)",
         }}
       />
 
-      {/* ── Glow Orbs ── */}
-      <div
-        aria-hidden="true"
-        className="orb orb-cyan"
-        style={{ top: "10%", left: "-5%", width: "400px", height: "400px", opacity: 0.25 }}
-      />
-      <div
-        aria-hidden="true"
-        className="orb orb-teal"
-        style={{ bottom: "20%", right: "-5%", width: "350px", height: "350px", opacity: 0.2 }}
-      />
+      {/* Glow Orbs */}
+      <div className="orb orb-cyan" aria-hidden="true"
+        style={{ top: "10%", left: "-5%", width: "400px", height: "400px", opacity: 0.25 }} />
+      <div className="orb orb-teal" aria-hidden="true"
+        style={{ bottom: "20%", right: "-5%", width: "350px", height: "350px", opacity: 0.2 }} />
 
-      {/* ── Content ── */}
+      {/* Content */}
       <div
         className="container-xl"
         style={{
@@ -91,6 +83,7 @@ export default function HeroSection() {
           flexDirection: "column",
           alignItems: "center",
           gap: "1.5rem",
+          width: "100%",
         }}
       >
         {/* Label */}
@@ -104,12 +97,13 @@ export default function HeroSection() {
           className="animate-fade-up"
           style={{
             fontFamily: "var(--font-display)",
-            fontSize: "clamp(2.8rem, 6.5vw, 5.5rem)",
+            fontSize: "clamp(2.2rem, 6vw, 5.5rem)",
             fontWeight: 900,
             lineHeight: 1.08,
             color: "#f0f9ff",
             maxWidth: "900px",
             animationDelay: "0.1s",
+            wordBreak: "break-word",
           }}
         >
           Premium Seafood Exports{" "}
@@ -123,21 +117,21 @@ export default function HeroSection() {
           className="animate-fade-up"
           style={{
             fontFamily: "var(--font-sans)",
-            fontSize: "clamp(1rem, 1.8vw, 1.2rem)",
-            color: "rgba(148, 163, 184, 0.9)",
-            maxWidth: "680px",
+            fontSize: "clamp(0.9rem, 2vw, 1.15rem)",
+            color: "rgba(148,163,184,0.9)",
+            maxWidth: "640px",
             lineHeight: 1.8,
             animationDelay: "0.2s",
           }}
         >
-          Delivering world-class Block Frozen & IQF seafood — Shrimps, Cuttlefish,
-          Squid, Octopus & more — with trusted quality, sustainability, and
+          Delivering world-class Block Frozen &amp; IQF seafood — Shrimps, Cuttlefish,
+          Squid, Octopus &amp; more — with trusted quality, sustainability, and
           international compliance since 2004.
         </p>
 
         {/* CTAs */}
         <div
-          className="animate-fade-up"
+          className="hero-ctas animate-fade-up"
           style={{
             display: "flex",
             gap: "1rem",
@@ -148,10 +142,7 @@ export default function HeroSection() {
         >
           <a
             href="#products"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector("#products")?.scrollIntoView({ behavior: "smooth" });
-            }}
+            onClick={(e) => { e.preventDefault(); document.querySelector("#products")?.scrollIntoView({ behavior: "smooth" }); }}
             className="btn-primary"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -161,10 +152,7 @@ export default function HeroSection() {
           </a>
           <a
             href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-            }}
+            onClick={(e) => { e.preventDefault(); document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" }); }}
             className="btn-ghost"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -174,13 +162,11 @@ export default function HeroSection() {
           </a>
         </div>
 
-        {/* Floating Stats */}
+        {/* Floating Stats — uses CSS class for responsive 4→2 cols */}
         <div
-          className="animate-fade-up"
+          id="hero-stats-grid"
+          className="rg-stats animate-fade-up"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "1rem",
             width: "100%",
             maxWidth: "800px",
             marginTop: "2rem",
@@ -188,7 +174,11 @@ export default function HeroSection() {
           }}
         >
           {stats.map((stat, idx) => (
-            <div key={stat.label} className="stat-card animate-float" style={{ animationDelay: `${idx * 0.5}s` }}>
+            <div
+              key={stat.label}
+              className="stat-card animate-float"
+              style={{ animationDelay: `${idx * 0.5}s` }}
+            >
               <div style={{ fontSize: "1.5rem", marginBottom: "0.25rem" }}>{stat.icon}</div>
               <div
                 style={{
@@ -219,7 +209,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* ── Scroll Indicator ── */}
+      {/* Scroll Indicator */}
       <div
         aria-hidden="true"
         style={{
@@ -235,35 +225,13 @@ export default function HeroSection() {
           zIndex: 10,
         }}
       >
-        <span
-          style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: "0.6rem",
-            letterSpacing: "0.25em",
-            textTransform: "uppercase",
-            color: "var(--cyan-400)",
-          }}
-        >
+        <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.6rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--cyan-400)" }}>
           Scroll
         </span>
-        <div
-          style={{
-            width: "1px",
-            height: "50px",
-            background: "linear-gradient(180deg, var(--cyan-400), transparent)",
-          }}
-        />
+        <div style={{ width: "1px", height: "50px", background: "linear-gradient(180deg, var(--cyan-400), transparent)" }} />
       </div>
 
-      {/* ── Bottom fade ── */}
       <div className="section-gradient-bottom" aria-hidden="true" />
-
-      {/* ── Responsive Stats Grid ── */}
-      <style>{`
-        @media (max-width: 640px) {
-          #hero .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-      `}</style>
     </section>
   );
 }
