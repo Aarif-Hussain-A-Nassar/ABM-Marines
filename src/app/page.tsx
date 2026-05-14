@@ -11,13 +11,11 @@ import GlobalReachSection from "@/components/sections/global-reach";
 import CertificationsSection from "@/components/sections/certifications";
 import ProductsPreview from "@/components/sections/products/ProductsPreview";
 import InfrastructureSection from "@/components/sections/infrastructure";
-import ContactSection from "@/components/sections/contact";
+import ContactPreview from "@/components/sections/contact/ContactPreview";
 
 export default function Home() {
   return (
     <main style={{ background: "var(--ocean-900)" }}>
-      <Navbar />
-      
       <HeroSection />
       
       <AboutPreview />
@@ -44,9 +42,7 @@ export default function Home() {
       <CertificationsSection />
       
       <div className="section-divider" />
-      <ContactSection />
-      
-      <Footer />
+      <ContactPreview />
     </main>
   );
 }
