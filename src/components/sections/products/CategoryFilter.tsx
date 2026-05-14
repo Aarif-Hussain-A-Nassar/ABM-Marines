@@ -1,24 +1,41 @@
 "use client";
 
-import type { Product } from "@/types";
-import type { ProductCategory } from "@/data/products";
-import { productCategories } from "@/data/products";
+import { catalogCategories } from "@/data/catalog";
+import type { CatalogCategory } from "@/types/catalog";
 
-interface CategoryFilterProps {
-  active:   ProductCategory;
-  onChange: (cat: ProductCategory) => void;
+interface CategoryTabsProps {
+  active:   string; // "all" | category id
+  onChange: (id: string) => void;
 }
 
-export default function CategoryFilter({ active, onChange }: CategoryFilterProps) {
+export default function CategoryTabs({ active, onChange }: CategoryTabsProps) {
   return (
-    <div style={{ display: "flex", justifyContent: "center", gap: "0.75rem", flexWrap: "wrap" }}>
-      {productCategories.map((cat) => (
+    <div
+      style={{
+        display:        "flex",
+        justifyContent: "center",
+        gap:            "0.5rem",
+        flexWrap:       "wrap",
+        marginBottom:   "1.5rem",
+      }}
+    >
+      {/* All tab */}
+      <button
+        onClick={() => onChange("all")}
+        className={`filter-chip${active === "all" ? " active" : ""}`}
+        style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}
+      >
+        <span>🌊</span> All Products
+      </button>
+
+      {catalogCategories.map((cat: CatalogCategory) => (
         <button
-          key={cat}
-          onClick={() => onChange(cat)}
-          className={`filter-chip${active === cat ? " active" : ""}`}
+          key={cat.id}
+          onClick={() => onChange(cat.id)}
+          className={`filter-chip${active === cat.id ? " active" : ""}`}
+          style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}
         >
-          {cat}
+          <span>{cat.icon}</span> {cat.label}
         </button>
       ))}
     </div>

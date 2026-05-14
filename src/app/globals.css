@@ -285,6 +285,31 @@ body {
   box-shadow: 0 10px 40px rgba(34, 211, 238, 0.5);
 }
 
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2.5rem;
+  background: transparent;
+  color: var(--cyan-400);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(34,211,238,0.4);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-outline:hover {
+  background: rgba(34,211,238,0.08);
+  border-color: var(--cyan-400);
+  transform: translateY(-2px);
+}
+
 .btn-ghost {
   display: inline-flex;
   align-items: center;

@@ -1,0 +1,55 @@
+import type { CatalogProduct } from "@/types/catalog";
+
+export const cuttlefishProducts: CatalogProduct[] = [
+  {
+    id:           "cuttlefish-whole-cleaned",
+    slug:         "cuttlefish-whole-cleaned",
+    name:         "Cuttlefish — Whole Cleaned",
+    categoryId:   "cuttlefish",
+    subcategory:  "Whole Cleaned Cuttlefish",
+    species:      "Sepia pharaonis",
+    presentation: "Raw",
+    freezeType:   "Both",
+    shortDesc:    "Premium whole cleaned cuttlefish — IQF & block frozen, EU & Far East grade.",
+    description:  "Sepia pharaonis (Pharaoh Cuttlefish) from the Arabian Sea — cleaned, ink-sac removed, skin-on, IQF and block frozen. Excellent texture and rich flavour profile. A top export line for Spain, Portugal, Italy, and Japanese seafood processors.",
+    sizes:        ["100-200g", "200-300g", "300-500g", "500g+"],
+    markets:      ["EU", "Far East", "US"],
+    tags:         ["Premium", "IQF", "EU Approved", "High Demand"],
+    emoji:        "🦑",
+  },
+  {
+    id:           "baby-cuttlefish",
+    slug:         "baby-cuttlefish-whole-cleaned",
+    name:         "Baby Cuttlefish — Whole Cleaned",
+    categoryId:   "cuttlefish",
+    subcategory:  "Baby Cuttlefish",
+    species:      "Sepia pharaonis",
+    presentation: "Raw",
+    freezeType:   "IQF",
+    shortDesc:    "Petite whole cleaned baby cuttlefish — prized for Mediterranean & Asian cuisine.",
+    description:  "Small whole cleaned cuttlefish (baby grade), IQF frozen individually for portion control and visual presentation. Highly sought after for Mediterranean tapas, Asian hot-pot, and premium restaurant menus.",
+    sizes:        ["20-50g", "50-100g"],
+    markets:      ["EU", "Far East"],
+    tags:         ["Premium", "IQF", "Restaurant Grade"],
+    emoji:        "🦑",
+  },
+];
+
+export const octopusProducts: CatalogProduct[] = [
+  {
+    id:           "octopus-whole-cleaned",
+    slug:         "octopus-whole-cleaned",
+    name:         "Octopus — Whole Cleaned",
+    categoryId:   "octopus",
+    subcategory:  "Whole Cleaned Octopus",
+    species:      "Octopus vulgaris / Cistopus indicus",
+    presentation: "Raw",
+    freezeType:   "Both",
+    shortDesc:    "Wild-caught whole cleaned octopus — premium Mediterranean & Asian export grade.",
+    description:  "Indian Ocean octopus, whole cleaned and frozen within hours of catch to preserve tenderness and colour. Supplied as whole cleaned (beak removed, ink-sac removed) in IQF and block frozen formats. Exported to Spain, Portugal, Italy, and Japan.",
+    sizes:        ["500g-1kg", "1-2kg", "2-3kg", "3-5kg", "5kg+"],
+    markets:      ["EU", "Far East"],
+    tags:         ["Premium", "Wild Caught", "IQF", "Best Seller"],
+    emoji:        "🐙",
+  },
+];
