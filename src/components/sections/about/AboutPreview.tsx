@@ -24,7 +24,7 @@ export default function AboutPreview() {
               {highlights.slice(0, 2).map((item) => (
                 <div key={item.text} className="glass-card" style={{ padding: "1.5rem" }}>
                   <div style={{ fontSize: "1.5rem", marginBottom: "0.75rem" }}>{item.icon}</div>
-                  <h4 style={{ color: "#fff", marginBottom: "0.5rem", fontSize: "1rem" }}>{item.text}</h4>
+                  <h4 style={{ color: "var(--text-primary)", marginBottom: "0.5rem", fontSize: "1rem" }}>{item.text}</h4>
                   <p style={{ color: "var(--text-secondary)", fontSize: "0.85rem", lineHeight: 1.5 }}>Global standard quality control and sourcing.</p>
                 </div>
               ))}

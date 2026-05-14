@@ -9,8 +9,8 @@ export default function WorldMap() {
         <rect width="900" height="450" fill="url(#oceanGrad)" rx="16" />
         <defs>
           <radialGradient id="oceanGrad" cx="50%" cy="50%" r="70%">
-            <stop offset="0%" stopColor="rgba(10,31,58,0.4)" />
-            <stop offset="100%" stopColor="rgba(2,11,24,0.2)" />
+            <stop offset="0%" stopColor="var(--ocean-800)" stopOpacity="0.4" />
+            <stop offset="100%" stopColor="var(--ocean-900)" stopOpacity="0.2" />
           </radialGradient>
         </defs>
 

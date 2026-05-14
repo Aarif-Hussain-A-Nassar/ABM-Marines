@@ -16,7 +16,7 @@ const scrollToContact = (onClose: () => void) => {
 export default function ProductModal({ product, onClose }: ProductModalProps) {
   return (
     <div
-      style={{ position: "fixed", inset: 0, background: "rgba(2,11,24,0.92)", backdropFilter: "blur(20px)", zIndex: 2000, display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem" }}
+      style={{ position: "fixed", inset: 0, background: "var(--modal-overlay)", backdropFilter: "blur(20px)", zIndex: 2000, display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem" }}
       onClick={onClose}
     >
       <div

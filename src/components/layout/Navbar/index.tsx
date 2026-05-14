@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import { navLinks } from "@/data/nav";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 export default function Navbar() {
   const [scrolled, setScrolled]   = useState(false);
@@ -66,11 +67,11 @@ export default function Navbar() {
         style={{
           position: "fixed", top: 0, left: 0, right: 0, zIndex: 2500,
           transition: "all 0.4s ease",
-          background: scrolled ? "rgba(2, 11, 24, 0.98)" : "transparent",
+          background: scrolled ? "var(--glass-bg)" : "transparent",
           backdropFilter: scrolled ? "blur(20px)" : "none",
           WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
-          borderBottom: scrolled ? "1px solid rgba(34, 211, 238, 0.1)" : "1px solid transparent",
-          boxShadow: scrolled ? "0 4px 30px rgba(0,0,0,0.4)" : "none",
+          borderBottom: scrolled ? "1px solid var(--glass-border)" : "1px solid transparent",
+          boxShadow: scrolled ? "0 4px 30px rgba(0,0,0,0.1)" : "none",
         }}
       >
         <div
@@ -89,7 +90,7 @@ export default function Navbar() {
               <Image src="/logo.jpeg" alt="ABM Marine Products" width={52} height={52} style={{ objectFit: "contain", width: "100%", height: "100%" }} priority />
             </div>
             <div>
-              <div style={{ fontFamily: "var(--font-sans)", fontWeight: 800, fontSize: scrolled ? "1rem" : "1.1rem", color: "#f0f9ff", lineHeight: 1.2, letterSpacing: "-0.01em", transition: "font-size 0.4s ease" }}>ABM Marine</div>
+              <div style={{ fontFamily: "var(--font-sans)", fontWeight: 800, fontSize: scrolled ? "1rem" : "1.1rem", color: "var(--text-primary)", lineHeight: 1.2, letterSpacing: "-0.01em", transition: "font-size 0.4s ease" }}>ABM Marine</div>
               <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.65rem", fontWeight: 500, color: "var(--cyan-400)", letterSpacing: "0.18em", textTransform: "uppercase" }}>Products</div>
             </div>
           </Link>
@@ -118,6 +119,7 @@ export default function Navbar() {
               </svg>
               WhatsApp
             </a>
+            <ThemeToggle />
           </nav>
 
           {/* Hamburger */}

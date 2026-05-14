@@ -20,7 +20,7 @@ export default function AboutSplit({ highlights }: AboutSplitProps) {
             height={480}
             style={{ width: "100%", height: "auto", display: "block" }}
           />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(2,11,24,0.6) 0%, transparent 50%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "var(--fade-grad)" }} />
         </div>
 
         {/* Floating badge */}

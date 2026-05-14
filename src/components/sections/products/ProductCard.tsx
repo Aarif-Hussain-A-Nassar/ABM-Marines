@@ -21,7 +21,7 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
       onKeyDown={(e) => e.key === "Enter" && onClick(product)}
     >
       {/* Image area */}
-      <div style={{ aspectRatio: "4/3", background: "linear-gradient(135deg, rgba(6,22,41,0.9), rgba(10,31,58,0.7))", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "4.5rem", position: "relative", overflow: "hidden" }}>
+      <div style={{ aspectRatio: "4/3", background: "var(--card-grad)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "4.5rem", position: "relative", overflow: "hidden" }}>
         <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at 50% 50%, rgba(34,211,238,0.08), transparent 70%)" }} />
         <span style={{ position: "relative", zIndex: 1, filter: "drop-shadow(0 4px 20px rgba(34,211,238,0.3))" }}>{product.emoji}</span>
 

@@ -42,7 +42,7 @@ export default function HeroSection() {
           backgroundPosition: "center", 
           opacity: 0.35, 
           y: bgY,
-          filter: "brightness(0.4) contrast(1.2)"
+          filter: "var(--hero-bg-filter, brightness(0.4) contrast(1.2))"
         }} 
       />
 
@@ -69,7 +69,7 @@ export default function HeroSection() {
               fontSize: "clamp(2.8rem, 6vw, 5.5rem)", 
               fontWeight: 900, 
               lineHeight: 1.05, 
-              color: "#f8fafc", 
+              color: "var(--text-primary)", 
               marginBottom: "1.5rem"
             }}>
               Mastering The Art Of <br />
@@ -81,7 +81,7 @@ export default function HeroSection() {
             <p style={{ 
               fontFamily: "var(--font-sans)", 
               fontSize: "clamp(1rem, 2vw, 1.2rem)", 
-              color: "rgba(203, 213, 225, 0.85)", 
+              color: "var(--text-secondary)", 
               maxWidth: "580px", 
               lineHeight: 1.8,
               marginBottom: "2.5rem",

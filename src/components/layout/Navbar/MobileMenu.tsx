@@ -1,6 +1,7 @@
 "use client";
 
 import type { NavLinkItem } from "@/types";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 interface MobileMenuProps {
   links:   NavLinkItem[];
@@ -15,7 +16,7 @@ export default function MobileMenu({ links, isOpen, scrollTo }: MobileMenuProps)
       onClick={() => scrollTo("")} 
       style={{
         position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
-        backgroundColor: "#010810", 
+        backgroundColor: "var(--ocean-900)", 
         backdropFilter: "blur(30px)", 
         WebkitBackdropFilter: "blur(30px)",
         display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
@@ -33,7 +34,7 @@ export default function MobileMenu({ links, isOpen, scrollTo }: MobileMenuProps)
         onClick={(e) => { e.stopPropagation(); scrollTo(""); }}
         style={{
           position: "absolute", top: "2rem", right: "2rem",
-          background: "none", border: "none", color: "#fff", cursor: "pointer",
+          background: "none", border: "none", color: "var(--text-primary)", cursor: "pointer",
           padding: "1rem"
         }}
         aria-label="Close menu"
@@ -62,7 +63,7 @@ export default function MobileMenu({ links, isOpen, scrollTo }: MobileMenuProps)
               fontFamily: "var(--font-display)", 
               fontSize: "2rem", 
               fontWeight: 800, 
-              color: "#fff", 
+              color: "var(--text-primary)", 
               textDecoration: "none",
               letterSpacing: "0.02em",
               transition: "transform 0.3s ease"
@@ -72,15 +73,20 @@ export default function MobileMenu({ links, isOpen, scrollTo }: MobileMenuProps)
           </a>
         ))}
         
-        <a
-          href="https://wa.me/919846079833"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-primary"
-          style={{ marginTop: "1rem", padding: "1rem 2.5rem" }}
-        >
-          WhatsApp Us
-        </a>
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginTop: "1rem" }}>
+          <a
+            href="https://wa.me/919846079833"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+            style={{ padding: "0.8rem 2rem" }}
+          >
+            WhatsApp Us
+          </a>
+          <div style={{ background: "rgba(255,255,255,0.1)", borderRadius: "50%", padding: "0.2rem" }}>
+            <ThemeToggle />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ export default function SustainabilitySection() {
   return (
     <section id="sustainability" className="section-pad" style={{ position: "relative", overflow: "hidden", background: "var(--ocean-900)" }}>
       <div aria-hidden="true" style={{ position: "absolute", inset: 0, backgroundImage: "url('/sustainability-bg.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed", opacity: 0.18 }} />
-      <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(2,11,24,0.85) 0%, rgba(2,11,24,0.6) 50%, rgba(2,11,24,0.9) 100%)" }} />
+      <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "var(--overlay-grad)" }} />
 
       <div className="container-xl" style={{ position: "relative", zIndex: 2 }}>
         <SectionHeader

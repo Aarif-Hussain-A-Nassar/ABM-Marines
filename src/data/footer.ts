@@ -1,13 +1,13 @@
 import type { FooterLink, FooterMarket } from "@/types";
 
 export const quickLinks: FooterLink[] = [
-  { href: "#about",          label: "About Us" },
-  { href: "#expertise",      label: "Our Expertise" },
-  { href: "#quality",        label: "Quality Control" },
-  { href: "#sustainability", label: "Sustainability" },
-  { href: "#global-reach",  label: "Global Reach" },
+  { href: "/",               label: "Home" },
+  { href: "#about",          label: "About" },
   { href: "#products",       label: "Products" },
-  { href: "#infrastructure", label: "Infrastructure" },
+  { href: "#sustainability", label: "Commitment" },
+  { href: "#infrastructure", label: "Facilities" },
+  { href: "#global-reach",  label: "Global" },
+  { href: "#certifications", label: "Certs" },
   { href: "#contact",        label: "Contact" },
 ];
 

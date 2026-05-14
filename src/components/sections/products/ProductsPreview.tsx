@@ -22,12 +22,12 @@ export default function ProductsPreview() {
             <div key={p.id} className="product-card glass-card">
               <div style={{ position: "relative", height: "240px", overflow: "hidden", background: "var(--ocean-800)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <div style={{ fontSize: "5rem" }}>{p.emoji}</div>
-                <div style={{ position: "absolute", top: "1rem", right: "1rem", background: "rgba(1, 8, 16, 0.8)", padding: "0.4rem 0.8rem", borderRadius: "100px", fontSize: "0.7rem", fontWeight: 700, color: "var(--brand-light)", border: "1px solid var(--brand-light)" }}>
+                <div style={{ position: "absolute", top: "1rem", right: "1rem", background: "var(--glass-bg)", padding: "0.4rem 0.8rem", borderRadius: "100px", fontSize: "0.7rem", fontWeight: 700, color: "var(--brand-light)", border: "1px solid var(--glass-border)" }}>
                   {p.category}
                 </div>
               </div>
               <div style={{ padding: "1.5rem" }}>
-                <h3 style={{ color: "#fff", fontSize: "1.25rem", marginBottom: "0.5rem" }}>{p.name}</h3>
+                <h3 style={{ color: "var(--text-primary)", fontSize: "1.25rem", marginBottom: "0.5rem" }}>{p.name}</h3>
                 <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: 1.6, marginBottom: "1.25rem" }}>{p.description}</p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
                   {p.tags?.slice(0, 2).map(s => (
