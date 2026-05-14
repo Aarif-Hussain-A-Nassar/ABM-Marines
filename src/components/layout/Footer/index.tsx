@@ -56,7 +56,14 @@ export default function Footer() {
             <h4 style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--blue-400)", marginBottom: "1rem" }}>Markets</h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.6rem" }}>
               {footerMarkets.map((m) => (
-                <li key={m.region} style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>{m.flag} {m.region}</li>
+                <li key={m.region} style={{ fontSize: "0.875rem", color: "var(--text-secondary)", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                  <span
+                    className={`fi fi-${m.flagCode}`}
+                    title={m.region}
+                    style={{ display: "inline-block", width: "1.25rem", height: "0.9rem", borderRadius: "2px", boxShadow: "0 1px 4px rgba(0,0,0,0.35)", flexShrink: 0 }}
+                  />
+                  {m.region}
+                </li>
               ))}
             </ul>
           </div>
@@ -93,9 +100,16 @@ export default function Footer() {
           </div>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "0.25rem" }}>
             <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>Palluruthy, Kochi, Kerala 682006, India</span>
-            <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
-              <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>Exporting to:</span>
-              <span style={{ fontSize: "1rem" }}>🇪🇺 🇺🇸 🌏 🇦🇺</span>
+            <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
+              <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginRight: "0.15rem" }}>Exporting to:</span>
+              {footerMarkets.map((m) => (
+                <span
+                  key={m.region}
+                  className={`fi fi-${m.flagCode}`}
+                  title={m.region}
+                  style={{ display: "inline-block", width: "1.4rem", height: "1rem", borderRadius: "3px", boxShadow: "0 1px 5px rgba(0,0,0,0.4)" }}
+                />
+              ))}
             </div>
           </div>
         </div>

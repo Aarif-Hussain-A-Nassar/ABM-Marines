@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
+import "flag-icons/css/flag-icons.min.css";
 
 const inter = Inter({
   subsets: ["latin"],

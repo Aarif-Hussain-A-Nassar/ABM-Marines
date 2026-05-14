@@ -44,10 +44,11 @@ export interface GlobalStat {
   icon:  string;
 }
 export interface ExportMarket {
-  region:   string;
-  flag:     string;
-  products: string;
-  color:    string;
+  region:    string;
+  flag:      string;  // emoji fallback
+  flagCode:  string;  // ISO 3166-1 alpha-2 for flag-icons
+  products:  string;
+  color:     string;
 }
 
 // ── Certifications ────────────────────────────────────────────────────────────
@@ -93,6 +94,7 @@ export interface FooterLink {
   label: string;
 }
 export interface FooterMarket {
-  region: string;
-  flag:   string;
+  region:   string;
+  flag:     string;  // emoji fallback
+  flagCode: string;  // ISO 3166-1 alpha-2
 }

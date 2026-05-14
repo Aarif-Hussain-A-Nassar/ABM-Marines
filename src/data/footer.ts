@@ -21,10 +21,10 @@ export const footerProducts: FooterLink[] = [
 ];
 
 export const footerMarkets: FooterMarket[] = [
-  { region: "Europe",        flag: "🇪🇺" },
-  { region: "United States", flag: "🇺🇸" },
-  { region: "Far East",      flag: "🌏" },
-  { region: "Australia",     flag: "🇦🇺" },
+  { region: "Europe",        flag: "🇪🇺", flagCode: "eu" },
+  { region: "United States", flag: "🇺🇸", flagCode: "us" },
+  { region: "Far East",      flag: "🌏",  flagCode: "jp" },
+  { region: "Australia",     flag: "🇦🇺", flagCode: "au" },
 ];
 
 export const footerCerts = ["HACCP", "USFDA", "BRCGS", "FSSAI", "EU Approved", "BAP"];

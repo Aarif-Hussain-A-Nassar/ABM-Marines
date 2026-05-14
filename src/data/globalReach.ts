@@ -8,8 +8,8 @@ export const globalStats: GlobalStat[] = [
 ];
 
 export const exportMarkets: ExportMarket[] = [
-  { region: "Europe",        flag: "🇪🇺", products: "Cuttlefish, Squid, Octopus, Prawns",    color: "var(--blue-400)" },
-  { region: "United States", flag: "🇺🇸", products: "Shrimp, Reef Cod, Value-Added Products", color: "var(--cyan-400)" },
-  { region: "Far East",      flag: "🌏",  products: "Octopus, Cuttlefish, Tiger Prawns",       color: "var(--teal-400)" },
-  { region: "Australia",     flag: "🇦🇺", products: "Prawns, Mixed Seafood Packs",             color: "var(--blue-400)" },
+  { region: "Europe",        flag: "🇪🇺", flagCode: "eu", products: "Cuttlefish, Squid, Octopus, Prawns",    color: "var(--blue-400)" },
+  { region: "United States", flag: "🇺🇸", flagCode: "us", products: "Shrimp, Reef Cod, Value-Added Products", color: "var(--cyan-400)" },
+  { region: "Far East",      flag: "🌏",  flagCode: "jp", products: "Octopus, Cuttlefish, Tiger Prawns",       color: "var(--teal-400)" },
+  { region: "Australia",     flag: "🇦🇺", flagCode: "au", products: "Prawns, Mixed Seafood Packs",             color: "var(--blue-400)" },
 ];

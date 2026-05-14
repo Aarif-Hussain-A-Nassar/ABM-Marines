@@ -10,7 +10,20 @@ export default function MarketCard({ market }: MarketCardProps) {
       className="glass-card"
       style={{ padding: "1.75rem 1.25rem", borderRadius: "20px", display: "flex", flexDirection: "column", gap: "0.75rem" }}
     >
-      <div style={{ fontSize: "2rem" }}>{market.flag}</div>
+      {/* Flag icon */}
+      <span
+        className={`fi fi-${market.flagCode}`}
+        title={market.region}
+        style={{
+          display: "inline-block",
+          width: "2.5rem",
+          height: "1.875rem",
+          borderRadius: "4px",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.35)",
+          flexShrink: 0,
+        }}
+      />
+
       <h3 style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1rem", color: market.color }}>
         {market.region}
       </h3>
