@@ -1,27 +1,52 @@
-import HeroSection          from "@/components/sections/hero";
-import AboutSection         from "@/components/sections/about";
-import ExpertiseSection     from "@/components/sections/expertise";
-import QualitySection       from "@/components/sections/quality";
-import SustainabilitySection from "@/components/sections/sustainability";
-import GlobalReachSection   from "@/components/sections/global-reach";
+"use client";
+
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import HeroSection from "@/components/sections/hero";
+import AboutPreview from "@/components/sections/about/AboutPreview";
+import ExpertiseSection from "@/components/sections/expertise";
+import QualitySection from "@/components/sections/quality";
+import SustainabilityPreview from "@/components/sections/sustainability/SustainabilityPreview";
+import GlobalReachSection from "@/components/sections/global-reach";
 import CertificationsSection from "@/components/sections/certifications";
-import ProductsSection      from "@/components/sections/products";
+import ProductsPreview from "@/components/sections/products/ProductsPreview";
 import InfrastructureSection from "@/components/sections/infrastructure";
-import ContactSection       from "@/components/sections/contact";
+import ContactSection from "@/components/sections/contact";
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ background: "var(--ocean-900)" }}>
+      <Navbar />
+      
       <HeroSection />
-      <AboutSection />
+      
+      <AboutPreview />
+      
+      <div className="section-divider" />
       <ExpertiseSection />
+      
+      <div className="section-divider" />
+      <ProductsPreview />
+      
+      <div className="section-divider" />
       <QualitySection />
-      <SustainabilitySection />
-      <GlobalReachSection />
-      <CertificationsSection />
-      <ProductsSection />
+      
+      <div className="section-divider" />
+      <SustainabilityPreview />
+      
+      <div className="section-divider" />
       <InfrastructureSection />
+      
+      <div className="section-divider" />
+      <GlobalReachSection />
+      
+      <div className="section-divider" />
+      <CertificationsSection />
+      
+      <div className="section-divider" />
       <ContactSection />
+      
+      <Footer />
     </main>
   );
 }

@@ -1,0 +1,35 @@
+"use client";
+
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import SustainabilitySection from "@/components/sections/sustainability";
+import { motion } from "framer-motion";
+
+export default function SustainabilityPage() {
+  return (
+    <main style={{ background: "var(--ocean-900)" }}>
+      <Navbar />
+      
+      <div style={{ paddingTop: "160px", paddingBottom: "60px", background: "linear-gradient(180deg, #011a1d 0%, var(--ocean-900) 100%)", textAlign: "center" }}>
+        <div className="container-xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <div className="label-tag" style={{ display: "inline-flex", marginBottom: "1.5rem", background: "rgba(45, 212, 191, 0.1)", color: "#5eead4", borderColor: "rgba(45, 212, 191, 0.3)" }}>Our Commitment</div>
+            <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 900, color: "#fff", marginBottom: "1rem" }}>
+              Sustainable <span className="gradient-text" style={{ backgroundImage: "linear-gradient(to right, #2dd4bf, #0096d6)" }}>Ocean Stewardship</span>
+            </h1>
+            <p style={{ color: "var(--text-secondary)", maxWidth: "700px", margin: "0 auto", lineHeight: 1.8 }}>
+              Preserving our marine ecosystems for future generations. At ABM Marine Products, sustainability is not a choice — it&apos;s our responsibility.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+
+      <SustainabilitySection />
+      
+      <Footer />
+    </main>
+  );
+}

@@ -26,9 +26,16 @@ export default function Navbar() {
 
   // Active-section tracker
   useEffect(() => {
-    const sections = navLinks.map((l) => document.querySelector(l.href)).filter(Boolean) as Element[];
+    // Only observe links that are anchors on the current page
+    const sections = navLinks
+      .filter(l => l.href.startsWith("#") || l.href.startsWith("/#"))
+      .map((l) => document.querySelector(l.href.replace("/", "")))
+      .filter(Boolean) as Element[];
+      
     const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) setActive(`#${e.target.id}`); }),
+      (entries) => entries.forEach((e) => { 
+        if (e.isIntersecting) setActive(navLinks.find(l => l.href.includes(e.target.id))?.href || ""); 
+      }),
       { threshold: 0.3 }
     );
     sections.forEach((s) => observer.observe(s));
@@ -36,8 +43,11 @@ export default function Navbar() {
   }, []);
 
   const scrollTo = useCallback((href: string) => {
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    setMenuOpen(false);
+    if (href.startsWith("/#") || href.startsWith("#")) {
+      const id = href.replace("/", "");
+      document.querySelector(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      setMenuOpen(false);
+    }
   }, []);
 
   return (
@@ -72,15 +82,20 @@ export default function Navbar() {
           {/* Desktop nav */}
           <nav id="desktop-nav" style={{ display: "flex", alignItems: "center", gap: "2rem" }} aria-label="Main navigation">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                onClick={(e) => { e.preventDefault(); scrollTo(link.href); }}
+                onClick={(e) => {
+                  if (link.href.includes("#")) {
+                    e.preventDefault();
+                    scrollTo(link.href);
+                  }
+                }}
                 className={`nav-link${activeSection === link.href ? " active" : ""}`}
                 style={{ fontSize: "0.82rem", letterSpacing: "0.03em" }}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <a href="https://wa.me/919846079833" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: "0.6rem 1.5rem", fontSize: "0.78rem" }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
