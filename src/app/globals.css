@@ -451,6 +451,9 @@ body {
   :root {
     --mobile-cta-pad: 1.5rem;
   }
+  .nav-fixed {
+    padding: 0.8rem 0 !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -704,6 +707,16 @@ body {
   transition: all 0.3s ease;
   text-decoration: none;
   cursor: pointer;
+  bottom: calc(2rem + env(safe-area-inset-bottom));
+}
+
+@media (max-width: 640px) {
+  .whatsapp-float {
+    bottom: calc(5rem + env(safe-area-inset-bottom)); /* Move up to clear browser tabs */
+    right: 1.5rem;
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .whatsapp-float:hover {
@@ -1050,7 +1063,7 @@ section:nth-of-type(odd) {
     display: none !important;
   }
 
-  #mobile-menu-btn {
+  #mobile-nav-group {
     display: flex !important;
   }
 }

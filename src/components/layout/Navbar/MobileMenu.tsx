@@ -20,7 +20,8 @@ export default function MobileMenu({ links, isOpen, scrollTo }: MobileMenuProps)
         backdropFilter: "blur(30px)", 
         WebkitBackdropFilter: "blur(30px)",
         display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
-        gap: "2.5rem",
+        padding: "2rem 1.5rem calc(4rem + env(safe-area-inset-bottom))",
+        gap: "1rem",
         zIndex: 9999, 
         opacity: isOpen ? 1 : 0,
         visibility: isOpen ? "visible" : "hidden",
@@ -47,7 +48,7 @@ export default function MobileMenu({ links, isOpen, scrollTo }: MobileMenuProps)
 
       <div 
         onClick={(e) => e.stopPropagation()} 
-        style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", width: "100%" }}
+        style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem", width: "100%" }}
       >
         {links.map((link) => (
           <a
@@ -61,19 +62,20 @@ export default function MobileMenu({ links, isOpen, scrollTo }: MobileMenuProps)
             }}
             style={{ 
               fontFamily: "var(--font-display)", 
-              fontSize: "2rem", 
-              fontWeight: 800, 
+              fontSize: "1.5rem", 
+              fontWeight: 700, 
               color: "var(--text-primary)", 
               textDecoration: "none",
               letterSpacing: "0.02em",
-              transition: "transform 0.3s ease"
+              transition: "transform 0.3s ease",
+              padding: "0.5rem"
             }}
           >
             {link.label}
           </a>
         ))}
         
-        <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginTop: "1rem" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", marginTop: "1rem" }}>
           <a
             href="https://wa.me/919846079833"
             target="_blank"
@@ -83,9 +85,6 @@ export default function MobileMenu({ links, isOpen, scrollTo }: MobileMenuProps)
           >
             WhatsApp Us
           </a>
-          <div style={{ background: "rgba(255,255,255,0.1)", borderRadius: "50%", padding: "0.2rem" }}>
-            <ThemeToggle />
-          </div>
         </div>
       </div>
     </div>

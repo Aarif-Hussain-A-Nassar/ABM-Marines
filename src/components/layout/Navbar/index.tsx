@@ -138,27 +138,29 @@ export default function Navbar() {
             <ThemeToggle />
           </nav>
 
-          {/* Hamburger */}
-          {isHome && (
-            <button
-              id="mobile-menu-btn"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle mobile menu"
-              aria-expanded={menuOpen}
-              style={{ display: "none", flexDirection: "column", gap: "5px", padding: "0.5rem", background: "none", border: "none", cursor: "pointer", zIndex: 10000 }}
-            >
-              {[0, 1, 2].map((i) => (
-                <span key={i} style={{ display: "block", width: "24px", height: "2px", background: menuOpen && i === 1 ? "transparent" : "var(--cyan-400)", borderRadius: "2px", transition: "all 0.3s ease", transform: menuOpen && i === 0 ? "rotate(45deg) translate(5px, 5px)" : menuOpen && i === 2 ? "rotate(-45deg) translate(5px, -5px)" : "none" }} />
-              ))}
-            </button>
-          )}
-
-          {!isHome && (
-            <Link href="/" id="mobile-back-btn" style={{ display: "none", alignItems: "center", gap: "0.5rem", fontSize: "0.85rem", textDecoration: "none", color: "var(--cyan-400)", fontWeight: 700 }}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-              Home
-            </Link>
-          )}
+          {/* Mobile UI */}
+          <div id="mobile-nav-group" style={{ display: "none", alignItems: "center", gap: "1rem" }}>
+            <ThemeToggle />
+            
+            {isHome ? (
+              <button
+                id="mobile-menu-btn"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle mobile menu"
+                aria-expanded={menuOpen}
+                style={{ display: "flex", flexDirection: "column", gap: "5px", padding: "0.5rem", background: "none", border: "none", cursor: "pointer", zIndex: 10000 }}
+              >
+                {[0, 1, 2].map((i) => (
+                  <span key={i} style={{ display: "block", width: "24px", height: "2px", background: menuOpen && i === 1 ? "transparent" : "var(--cyan-400)", borderRadius: "2px", transition: "all 0.3s ease", transform: menuOpen && i === 0 ? "rotate(45deg) translate(5px, 5px)" : menuOpen && i === 2 ? "rotate(-45deg) translate(5px, -5px)" : "none" }} />
+                ))}
+              </button>
+            ) : (
+              <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.85rem", textDecoration: "none", color: "var(--cyan-400)", fontWeight: 700 }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Home
+              </Link>
+            )}
+          </div>
         </div>
       </header>
 
