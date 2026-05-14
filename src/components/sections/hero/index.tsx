@@ -37,7 +37,7 @@ export default function HeroSection() {
         style={{ 
           position: "absolute", 
           inset: "-10%", 
-          backgroundImage: "url('/hero-bg.png')", 
+          backgroundImage: "var(--hero-bg-image)", 
           backgroundSize: "cover", 
           backgroundPosition: "center", 
           opacity: 0.35, 
@@ -117,7 +117,7 @@ export default function HeroSection() {
                 src="/hero-item.png" 
                 alt="Premium Seafood" 
                 fill 
-                style={{ objectFit: "contain", filter: "drop-shadow(0 20px 60px rgba(0,0,0,0.5))" }}
+                style={{ objectFit: "contain", filter: "var(--hero-item-shadow)" }}
                 priority
               />
             </motion.div>
