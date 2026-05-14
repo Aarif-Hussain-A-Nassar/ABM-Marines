@@ -1125,3 +1125,84 @@ section:nth-of-type(odd) {
     font-size: 0.9rem !important;
   }
 }
+
+/* ─── Quality Steps Mobile Timeline ─────────────────────────────────────────── */
+
+/* Desktop / tablet: show card grid, hide mobile list */
+.quality-steps-desktop     { display: grid; }
+.quality-steps-mobile-list { display: none; }
+
+@media (max-width: 640px) {
+  /* Hide desktop card grid */
+  .quality-steps-desktop {
+    display: none !important;
+  }
+
+  /* Show mobile timeline list */
+  .quality-steps-mobile-list {
+    display: block;
+    margin-bottom: 2.5rem !important;
+  }
+
+  /* Each timeline row */
+  .quality-step-mobile {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+    padding-bottom: 1.75rem;
+  }
+
+  /* Vertical connector line */
+  .quality-step-mobile:not(.quality-step-mobile--last)::before {
+    content: "";
+    position: absolute;
+    left: 17px;           /* centre of the 36px pill */
+    top: 36px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(34,211,238,0.45), rgba(34,211,238,0.04));
+  }
+
+  /* Numbered pill */
+  .quality-step-mobile__pill {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(34,211,238,0.22), rgba(45,212,191,0.12));
+    border: 1.5px solid rgba(34,211,238,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: var(--cyan-400);
+    letter-spacing: 0.04em;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Text body */
+  .quality-step-mobile__body {
+    flex: 1;
+    padding-top: 0.15rem;
+  }
+
+  .quality-step-mobile__title {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.3rem 0;
+  }
+
+  .quality-step-mobile__desc {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+  }
+}

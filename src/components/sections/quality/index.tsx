@@ -14,11 +14,20 @@ export default function QualitySection() {
           sub="Our 6-step quality control system ensures every product that leaves our facility meets the stringent demands of global buyers and regulators."
         />
 
-        <div className="rg-3" style={{ marginBottom: "4rem" }}>
+        {/* Desktop / tablet: 3-col glass cards */}
+        <div className="rg-3 quality-steps-desktop" style={{ marginBottom: "4rem" }}>
           {qualitySteps.map((step) => (
-            <QualityStepCard key={step.num} step={step} />
+            <QualityStepCard key={step.num} step={step} cardOnly />
           ))}
         </div>
+
+        {/* Mobile: vertical timeline list */}
+        <div className="quality-steps-mobile-list" style={{ marginBottom: "2.5rem" }}>
+          {qualitySteps.map((step, idx) => (
+            <QualityStepCard key={step.num} step={step} mobileOnly isLast={idx === qualitySteps.length - 1} />
+          ))}
+        </div>
+
 
         {/* Culture statement */}
         <div style={{ textAlign: "center", padding: "2.5rem", background: "linear-gradient(135deg, rgba(34,211,238,0.06), rgba(45,212,191,0.04))", border: "1px solid rgba(34,211,238,0.12)", borderRadius: "20px" }}>
