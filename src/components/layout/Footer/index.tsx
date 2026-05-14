@@ -12,7 +12,7 @@ export default function Footer() {
     <footer style={{ background: "var(--ocean-900)", borderTop: "1px solid rgba(34,211,238,0.08)", position: "relative", overflow: "hidden" }}>
       <div aria-hidden="true" style={{ position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", width: "600px", height: "200px", background: "radial-gradient(ellipse, rgba(34,211,238,0.05), transparent 70%)", pointerEvents: "none" }} />
 
-      <div className="container-xl" style={{ paddingTop: "5rem", paddingBottom: "3rem", position: "relative", zIndex: 2 }}>
+      <div className="container-xl footer-compact-mobile" style={{ paddingTop: "5rem", paddingBottom: "3rem", position: "relative", zIndex: 2 }}>
 
         {/* rg-footer: 4col → 2col tablet → 1col mobile */}
         <div className="rg-footer" style={{ marginBottom: "4rem" }}>
