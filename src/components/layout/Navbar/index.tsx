@@ -18,11 +18,20 @@ export default function Navbar() {
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize);
+
+    // Lock scroll when menu is open
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
+      document.body.style.overflow = "auto";
     };
-  }, []);
+  }, [menuOpen]);
 
   // Active-section tracker
   useEffect(() => {
@@ -55,9 +64,9 @@ export default function Navbar() {
       <header
         id="navbar"
         style={{
-          position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000,
+          position: "fixed", top: 0, left: 0, right: 0, zIndex: 2500,
           transition: "all 0.4s ease",
-          background: scrolled ? "rgba(2, 11, 24, 0.92)" : "transparent",
+          background: scrolled ? "rgba(2, 11, 24, 0.98)" : "transparent",
           backdropFilter: scrolled ? "blur(20px)" : "none",
           WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
           borderBottom: scrolled ? "1px solid rgba(34, 211, 238, 0.1)" : "1px solid transparent",
@@ -66,7 +75,13 @@ export default function Navbar() {
       >
         <div
           className="container-xl"
-          style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: scrolled ? "68px" : "80px", transition: "height 0.4s ease" }}
+          style={{ 
+            display: "flex", 
+            alignItems: "center", 
+            justifyContent: "space-between", 
+            height: (scrolled || menuOpen) ? "68px" : "80px", 
+            transition: "height 0.4s ease" 
+          }}
         >
           {/* Logo */}
           <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}>
@@ -111,16 +126,16 @@ export default function Navbar() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle mobile menu"
             aria-expanded={menuOpen}
-            style={{ display: "none", flexDirection: "column", gap: "5px", padding: "0.5rem", background: "none", border: "none", cursor: "pointer", zIndex: 1100 }}
+            style={{ display: "none", flexDirection: "column", gap: "5px", padding: "0.5rem", background: "none", border: "none", cursor: "pointer", zIndex: 10000 }}
           >
             {[0, 1, 2].map((i) => (
               <span key={i} style={{ display: "block", width: "24px", height: "2px", background: menuOpen && i === 1 ? "transparent" : "var(--cyan-400)", borderRadius: "2px", transition: "all 0.3s ease", transform: menuOpen && i === 0 ? "rotate(45deg) translate(5px, 5px)" : menuOpen && i === 2 ? "rotate(-45deg) translate(5px, -5px)" : "none" }} />
             ))}
           </button>
         </div>
-
-        <MobileMenu links={navLinks} isOpen={menuOpen} scrollTo={scrollTo} />
       </header>
+
+      <MobileMenu links={navLinks} isOpen={menuOpen} scrollTo={scrollTo} />
 
       <style>{`
         @media (min-width: 1025px) {
