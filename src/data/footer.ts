@@ -27,6 +27,6 @@ export const footerMarkets: FooterMarket[] = [
   { region: "Australia",     flag: "🇦🇺", flagCode: "au" },
 ];
 
-export const footerCerts = ["HACCP", "USFDA", "BRCGS", "FSSAI", "EU Approved", "BAP"];
+export const footerCerts = ["HACCP", "USFDA", "BRCGS", "FSSAI", "EIC", "BAP"];
 
 export const brandValues = ["Quality", "Trust", "Sustainability", "Innovation"];

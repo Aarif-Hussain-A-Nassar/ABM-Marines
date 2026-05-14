@@ -53,11 +53,13 @@ export interface ExportMarket {
 
 // ── Certifications ────────────────────────────────────────────────────────────
 export interface Certification {
-  abbr:  string;
-  name:  string;
-  desc:  string;
-  color: string;
-  icon:  string;
+  abbr:    string;
+  name:    string;
+  desc:    string;
+  color:   string;
+  icon:    string;
+  logo?:   string; // path to PNG/SVG in /public
+  logoBg?: string; // override background behind the logo (e.g. for white-fill SVGs)
 }
 
 // ── Products ──────────────────────────────────────────────────────────────────
