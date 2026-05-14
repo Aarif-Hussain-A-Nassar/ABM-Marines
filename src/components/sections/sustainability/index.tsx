@@ -11,7 +11,7 @@ export default function SustainabilitySection() {
       <div className="container-xl" style={{ position: "relative", zIndex: 2 }}>
         <SectionHeader
           label="Our Commitment"
-          heading={<>Seafood With a <span className="gradient-text">Conscience</span></>}
+          heading={<>Seafood With a <span style={{ color: "var(--brand-vibrant)" }}>Conscience</span></>}
           sub="We believe in protecting the oceans that sustain our business. Sustainability is embedded in every decision we make — from sourcing to shipping."
         />
 
@@ -21,11 +21,11 @@ export default function SustainabilitySection() {
         </div>
 
         {/* Promise banner — rg-split */}
-        <div className="rg-split" style={{ padding: "3rem", background: "linear-gradient(135deg, rgba(34,211,238,0.08), rgba(45,212,191,0.05))", border: "1px solid rgba(34,211,238,0.15)", borderRadius: "24px" }}>
+        <div className="rg-split" style={{ padding: "3rem", background: "var(--ocean-800)", border: "1px solid var(--glass-border)", borderRadius: "24px" }}>
           <div>
             <div className="label-tag" style={{ display: "inline-flex", marginBottom: "1rem" }}>Our Promise</div>
             <h3 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.3rem, 2.5vw, 2rem)", fontWeight: 700, color: "var(--text-primary)", marginBottom: "1rem", lineHeight: 1.3 }}>
-              Fishing Today, <span className="gradient-text">Preserving Tomorrow</span>
+              Fishing Today, <span style={{ color: "var(--brand-vibrant)" }}>Preserving Tomorrow</span>
             </h3>
             <p style={{ color: "var(--text-secondary)", lineHeight: 1.8, maxWidth: "500px" }}>
               Every shipment from ABM Marine Products is a commitment — not just to quality, but to the future of our oceans. We trace every product back to its sustainable source.

@@ -25,14 +25,14 @@ export default function InfrastructureSection() {
         </div>
 
         {/* Visit CTA — rg-cta */}
-        <div 
-          className="rg-cta" 
-          style={{ 
-            marginTop: "4rem", 
-            padding: "var(--mobile-cta-pad, 2rem)", 
-            background: "linear-gradient(135deg, rgba(34,211,238,0.06), rgba(45,212,191,0.04))", 
-            border: "1px solid rgba(34,211,238,0.12)", 
-            borderRadius: "20px" 
+        <div
+          className="rg-cta"
+          style={{
+            marginTop: "4rem",
+            padding: "var(--mobile-cta-pad, 2rem)",
+            background: "linear-gradient(135deg, rgba(34,211,238,0.06), rgba(45,212,191,0.04))",
+            border: "1px solid rgba(34,211,238,0.12)",
+            borderRadius: "20px"
           }}
         >
           <div>

@@ -16,9 +16,9 @@ export default function SustainabilityPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <div className="label-tag" style={{ display: "inline-flex", marginBottom: "1.5rem", background: "rgba(45, 212, 191, 0.1)", color: "var(--teal-400)", borderColor: "rgba(45, 212, 191, 0.3)" }}>Our Commitment</div>
+            <div className="label-tag" style={{ display: "inline-flex", marginBottom: "1.5rem" }}>Our Commitment</div>
             <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 900, color: "var(--text-primary)", marginBottom: "1rem" }}>
-              Sustainable <span className="gradient-text" style={{ backgroundImage: "linear-gradient(to right, #2dd4bf, #0096d6)" }}>Ocean Stewardship</span>
+              Sustainable <span style={{ color: "var(--brand-vibrant)" }}>Ocean Stewardship</span>
             </h1>
             <p style={{ color: "var(--text-secondary)", maxWidth: "700px", margin: "0 auto", lineHeight: 1.8 }}>
               Preserving our marine ecosystems for future generations. At ABM Marine Products, sustainability is not a choice — it&apos;s our responsibility.

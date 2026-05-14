@@ -57,7 +57,7 @@
   --btn-text: #020b18;
   --hero-bg-filter: brightness(0.4) contrast(1.2);
   --hero-bg-image: url('/hero-bg.png');
-  --hero-item-shadow: drop-shadow(0 20px 60px rgba(0,0,0,0.5));
+  --hero-item-shadow: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5));
 
   /* Gradients */
   --overlay-grad: linear-gradient(180deg, rgba(2, 11, 24, 0.85) 0%, rgba(2, 11, 24, 0.6) 50%, rgba(2, 11, 24, 0.9) 100%);
@@ -68,10 +68,13 @@
 
 [data-theme='light'] {
   /* Ocean Palette - Premium Coastal Light Theme */
-  --ocean-900:    #f1f5f9;  /* Dark white background */
-  --ocean-800:    #ffffff;  /* Pure white for cards */
-  --ocean-700:    #cbd5e1;  /* Deeper borders */
-  --ocean-600:    #94a3b8;
+  --ocean-900: #f1f5f9;
+  /* Dark white background */
+  --ocean-800: #ffffff;
+  /* Pure white for cards */
+  --ocean-700: #cbd5e1;
+  /* Deeper borders */
+  --ocean-600: #94a3b8;
 
   /* Brand Accents - Deep and saturated for light mode */
   --cyan-400: #005da3;
@@ -106,7 +109,7 @@
   --btn-text: #ffffff;
   --hero-bg-filter: brightness(0.95) contrast(1.05) saturate(0.9);
   --hero-bg-image: url('/hero-bg-light.png');
-  --hero-item-shadow: drop-shadow(0 15px 40px rgba(0,93,163,0.15));
+  --hero-item-shadow: drop-shadow(0 15px 40px rgba(0, 93, 163, 0.15));
 
   /* Gradients - Light mode */
   --overlay-grad: linear-gradient(180deg, rgba(253, 254, 254, 0.85) 0%, rgba(253, 254, 254, 0.5) 50%, rgba(253, 254, 254, 0.95) 100%);
@@ -1017,7 +1020,7 @@ section:nth-of-type(odd) {
 }
 
 #sustainability {
-  background: linear-gradient(180deg, var(--ocean-900), #011a1d, var(--ocean-900)) !important;
+  background: var(--ocean-900) !important;
 }
 
 #contact {

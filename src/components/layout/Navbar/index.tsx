@@ -107,7 +107,11 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => {
-                      if (link.href.includes("#")) {
+                      if (link.href === "/" && isHome) {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        setMenuOpen(false);
+                      } else if (link.href.includes("#")) {
                         e.preventDefault();
                         scrollTo(link.href);
                       }
