@@ -7,7 +7,7 @@ interface SectionHeaderProps {
 
 export default function SectionHeader({ label, heading, sub, centered = true }: SectionHeaderProps) {
   return (
-    <div style={{ textAlign: centered ? "center" : "left", marginBottom: "4rem" }}>
+    <div className="section-header-wrap" style={{ textAlign: centered ? "center" : "left" }}>
       <div className="label-tag" style={{ display: "inline-flex", marginBottom: "1.25rem" }}>
         {label}
       </div>

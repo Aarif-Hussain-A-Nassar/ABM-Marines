@@ -571,14 +571,14 @@ body {
 /* Mobile ≤ 640px */
 @media (max-width: 640px) {
   .rg-4        { grid-template-columns: repeat(2, 1fr) !important; gap: 0.75rem !important; }
-  .rg-3        { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .rg-3        { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem !important; }
   .rg-2        { grid-template-columns: 1fr !important; gap: 1rem !important; }
   .rg-2-tight  { grid-template-columns: 1fr !important; gap: 0.5rem !important; }
   .rg-split    { grid-template-columns: 1fr !important; gap: 2rem !important; }
   .rg-split-lg { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
   .rg-footer   { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
   .rg-form-row { grid-template-columns: 1fr !important; gap: 1rem !important; }
-  .rg-timeline { grid-template-columns: 1fr !important; }
+  .rg-timeline { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem !important; }
   .rg-vm       { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
   .rg-stats    { grid-template-columns: repeat(2, 1fr) !important; gap: 0.75rem !important; }
   .rg-cta      { grid-template-columns: 1fr !important; }
@@ -588,6 +588,42 @@ body {
 @media (max-width: 480px) {
   .section-pad { padding: 3rem 0 !important; }
   .container-xl, .container-lg { padding: 0 1rem !important; }
+}
+
+/* ─── Section Separation ─────────────────────────────────────────────────────── */
+.section-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(89, 194, 238, 0.2), transparent);
+  margin: 0 auto;
+}
+
+section:nth-of-type(even) {
+  background-color: var(--ocean-800) !important;
+}
+
+section:nth-of-type(odd) {
+  background-color: var(--ocean-900) !important;
+}
+
+#hero { background-color: var(--ocean-900) !important; }
+#sustainability { background: linear-gradient(180deg, var(--ocean-900), #011a1d, var(--ocean-900)) !important; }
+#contact { background: var(--ocean-800) !important; }
+
+/* Enhanced Section Headings */
+.section-header-wrap {
+  margin-bottom: 4rem;
+  border-left: 4px solid var(--brand-vibrant);
+  padding-left: 2rem;
+}
+@media (max-width: 640px) {
+  .section-header-wrap {
+    border-left: none;
+    border-top: 4px solid var(--brand-vibrant);
+    padding-left: 0;
+    padding-top: 1.5rem;
+    text-align: center;
+  }
 }
 
 /* ─── Navbar ─────────────────────────────────────────────────────────────────── */
