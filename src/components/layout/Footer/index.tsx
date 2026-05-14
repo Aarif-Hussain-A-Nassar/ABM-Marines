@@ -78,12 +78,25 @@ export default function Footer() {
         <div style={{ width: "100%", height: "1px", background: "linear-gradient(90deg, transparent, rgba(34,211,238,0.15), transparent)", marginBottom: "2rem" }} />
 
         {/* Bottom bar */}
-        <div className="footer-bottom" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
-          <p style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>© {new Date().getFullYear()} ABM Marine Products. Approval No. 763. All rights reserved.</p>
-          <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>Palluruthy, Kochi, Kerala 682006, India</span>
-          <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
-            <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>Exporting to:</span>
-            <span style={{ fontSize: "1rem" }}>🇪🇺 🇺🇸 🌏 🇦🇺</span>
+        <div className="footer-bottom" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1.5rem" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
+            <p style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>© {new Date().getFullYear()} ABM Marine Products. Approval No. 763. All rights reserved.</p>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", fontSize: "0.75rem", color: "var(--text-muted)" }}>
+              <span>Website by</span>
+              <a href="https://two-dots-two.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--cyan-400)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.02em" }}>Two Dots</a>
+              <span style={{ opacity: 0.3 }}>|</span>
+              <a href="https://www.instagram.com/twodots.dev" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "0.35rem", color: "var(--text-muted)", textDecoration: "none", transition: "color 0.3s" }} onMouseEnter={(e) => e.currentTarget.style.color = "var(--cyan-400)"} onMouseLeave={(e) => e.currentTarget.style.color = "var(--text-muted)"}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <span>Follow us</span>
+              </a>
+            </div>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "0.25rem" }}>
+            <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>Palluruthy, Kochi, Kerala 682006, India</span>
+            <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+              <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>Exporting to:</span>
+              <span style={{ fontSize: "1rem" }}>🇪🇺 🇺🇸 🌏 🇦🇺</span>
+            </div>
           </div>
         </div>
       </div>

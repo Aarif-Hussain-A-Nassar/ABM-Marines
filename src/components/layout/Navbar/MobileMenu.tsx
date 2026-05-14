@@ -12,16 +12,15 @@ export default function MobileMenu({ links, isOpen, scrollTo }: MobileMenuProps)
   return (
     <div
       id="mobile-menu"
-      onClick={() => scrollTo("")} // Close when clicking background
+      onClick={() => scrollTo("")} 
       style={{
         position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
-        backgroundColor: "#010810", // Pure opaque background color
-        backgroundImage: "radial-gradient(circle at 50% 20%, rgba(89, 194, 238, 0.1) 0%, transparent 80%)",
+        backgroundColor: "#010810", 
         backdropFilter: "blur(30px)", 
         WebkitBackdropFilter: "blur(30px)",
         display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
         gap: "2.5rem",
-        zIndex: 9999, // Absolute top
+        zIndex: 9999, 
         opacity: isOpen ? 1 : 0,
         visibility: isOpen ? "visible" : "hidden",
         transform: isOpen ? "scale(1)" : "scale(1.05)", 
@@ -29,8 +28,24 @@ export default function MobileMenu({ links, isOpen, scrollTo }: MobileMenuProps)
         transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
       }}
     >
+      {/* Dedicated Close Button */}
+      <button
+        onClick={(e) => { e.stopPropagation(); scrollTo(""); }}
+        style={{
+          position: "absolute", top: "2rem", right: "2rem",
+          background: "none", border: "none", color: "#fff", cursor: "pointer",
+          padding: "1rem"
+        }}
+        aria-label="Close menu"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
       <div 
-        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking links
+        onClick={(e) => e.stopPropagation()} 
         style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", width: "100%" }}
       >
         {links.map((link) => (

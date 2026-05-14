@@ -52,10 +52,10 @@ export default function Navbar() {
   }, []);
 
   const scrollTo = useCallback((href: string) => {
-    if (href.startsWith("/#") || href.startsWith("#")) {
+    setMenuOpen(false); // Always close on any click/call
+    if (href && (href.startsWith("/#") || href.startsWith("#"))) {
       const id = href.replace("/", "");
       document.querySelector(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-      setMenuOpen(false);
     }
   }, []);
 
