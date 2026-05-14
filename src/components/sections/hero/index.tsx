@@ -1,71 +1,195 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import HeroStats from "./HeroStats";
 import { globalStats } from "@/data/globalReach";
+import Image from "next/image";
 
 const scrollTo = (id: string) =>
   document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
 
 export default function HeroSection() {
-  const bgRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
 
-  useEffect(() => {
-    const onScroll = () => {
-      if (bgRef.current) bgRef.current.style.transform = `translateY(${window.scrollY * 0.3}px)`;
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  // Parallax for background
+  const bgY = useTransform(scrollY, [0, 800], [0, 200]);
 
   return (
-    <section id="hero" aria-label="Hero" style={{ position: "relative", minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", overflow: "hidden", background: "var(--ocean-900)" }}>
+    <section 
+      id="hero" 
+      ref={containerRef}
+      style={{ 
+        position: "relative", 
+        minHeight: "120vh", // Increased height for breathing room
+        display: "flex", 
+        flexDirection: "column",
+        alignItems: "center", 
+        justifyContent: "center", 
+        overflow: "hidden", 
+        background: "var(--ocean-900)",
+        padding: "120px 0 100px 0"
+      }}
+    >
+      {/* 1. Deep Background Layer */}
+      <motion.div 
+        style={{ 
+          position: "absolute", 
+          inset: "-10%", 
+          backgroundImage: "url('/hero-bg.png')", 
+          backgroundSize: "cover", 
+          backgroundPosition: "center", 
+          opacity: 0.35, 
+          y: bgY,
+          filter: "brightness(0.4) contrast(1.2)"
+        }} 
+      />
 
-      {/* Parallax background */}
-      <div ref={bgRef} aria-hidden="true" style={{ position: "absolute", inset: "-20%", backgroundImage: "url('/hero-bg.jpg')", backgroundSize: "cover", backgroundPosition: "center 30%", opacity: 0.45, transition: "transform 0.1s linear" }} />
-      <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg,rgba(2,11,24,0.7) 0%,rgba(2,11,24,0.3) 40%,rgba(2,11,24,0.6) 70%,rgba(2,11,24,0.95) 100%)" }} />
-      <div className="orb orb-cyan" aria-hidden="true" style={{ top: "10%", left: "-5%", width: "400px", height: "400px", opacity: 0.25 }} />
-      <div className="orb orb-teal" aria-hidden="true" style={{ bottom: "20%", right: "-5%", width: "350px", height: "350px", opacity: 0.2 }} />
+      {/* 2. Deep Sea Light Rays */}
+      <div className="light-rays" aria-hidden="true" />
 
-      {/* Content */}
-      <div className="container-xl" style={{ position: "relative", zIndex: 10, textAlign: "center", paddingTop: "8rem", paddingBottom: "4rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "1.5rem", width: "100%" }}>
+      {/* 3. Content Container */}
+      <div className="container-xl" style={{ position: "relative", zIndex: 10, width: "100%" }}>
+        
+        {/* Upper Part: Title + Image Split */}
+        <div className="rg-split-lg" style={{ alignItems: "center", gap: "4rem", marginBottom: "4rem" }}>
+          
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="label-tag" style={{ background: "rgba(89, 194, 238, 0.1)", borderColor: "rgba(89, 194, 238, 0.2)", marginBottom: "1.5rem", display: "inline-flex" }}>
+              <span style={{ color: "var(--brand-light)" }}>●</span> PREMIUM SEAFOOD EXPORTS SINCE 2004
+            </div>
 
-        <div className="label-tag animate-fade">
-          <span style={{ color: "var(--cyan-400)" }}>●</span> EU Approved · HACCP · USFDA Registered · Since 2004
+            <h1 style={{ 
+              fontFamily: "var(--font-display)", 
+              fontSize: "clamp(2.8rem, 6vw, 5.5rem)", 
+              fontWeight: 900, 
+              lineHeight: 1.05, 
+              color: "#f8fafc", 
+              marginBottom: "1.5rem"
+            }}>
+              Mastering The Art Of <br />
+              <span className="gradient-text" style={{ backgroundImage: "linear-gradient(to right, var(--brand-light), var(--brand-vibrant))" }}>
+                Seafood Excellence
+              </span>
+            </h1>
+
+            <p style={{ 
+              fontFamily: "var(--font-sans)", 
+              fontSize: "clamp(1rem, 2vw, 1.2rem)", 
+              color: "rgba(203, 213, 225, 0.85)", 
+              maxWidth: "580px", 
+              lineHeight: 1.8,
+              marginBottom: "2.5rem",
+              borderLeft: "3px solid var(--brand-vibrant)",
+              paddingLeft: "1.5rem"
+            }}>
+              From Kerala&apos;s pristine coast to global dinner tables. ABM Marine Products delivers the world&apos;s finest frozen seafood with trusted quality and sustainability.
+            </p>
+
+            <div className="hero-ctas" style={{ display: "flex", gap: "1.25rem", flexWrap: "wrap" }}>
+              <button onClick={() => scrollTo("#products")} className="btn-primary" style={{ padding: "1rem 2.5rem", fontSize: "1rem" }}>
+                View Collection
+              </button>
+              <button onClick={() => scrollTo("#contact")} className="btn-ghost" style={{ padding: "1rem 2.5rem", fontSize: "1rem" }}>
+                Get a Quote
+              </button>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, delay: 0.2 }}
+            style={{ position: "relative" }}
+          >
+            <div style={{ position: "absolute", width: "120%", height: "120%", top: "-10%", left: "-10%", background: "radial-gradient(circle, rgba(0, 150, 214, 0.15), transparent 70%)", filter: "blur(50px)", zIndex: -1 }} />
+            <motion.div
+              animate={{ y: [0, -25, 0], rotate: [0, 1, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              style={{ width: "100%", maxWidth: "580px", aspectRatio: "1/1", position: "relative" }}
+            >
+              <Image 
+                src="/hero-item.png" 
+                alt="Premium Seafood" 
+                fill 
+                style={{ objectFit: "contain", filter: "drop-shadow(0 20px 60px rgba(0,0,0,0.5))" }}
+                priority
+              />
+            </motion.div>
+          </motion.div>
         </div>
 
-        <h1 className="animate-fade-up" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.2rem, 6vw, 5.5rem)", fontWeight: 900, lineHeight: 1.08, color: "#f0f9ff", maxWidth: "900px", animationDelay: "0.1s", wordBreak: "break-word" }}>
-          Premium Seafood Exports{" "}
-          <span className="gradient-text">From Kerala</span>
-          <br />
-          <span style={{ fontStyle: "italic", fontWeight: 700 }}>To The World</span>
-        </h1>
+        {/* Lower Part: Stats in their own clean row */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          style={{ width: "100%", borderTop: "1px solid rgba(89, 194, 238, 0.1)", paddingTop: "3rem" }}
+        >
+          <HeroStats stats={globalStats} />
+        </motion.div>
+      </div>
 
-        <p className="animate-fade-up" style={{ fontFamily: "var(--font-sans)", fontSize: "clamp(0.9rem, 2vw, 1.15rem)", color: "rgba(148,163,184,0.9)", maxWidth: "640px", lineHeight: 1.8, animationDelay: "0.2s" }}>
-          Delivering world-class Block Frozen &amp; IQF seafood — Shrimps, Cuttlefish, Squid, Octopus &amp; more — with trusted quality, sustainability, and international compliance since 2004.
-        </p>
+      {/* Decorative Orbs */}
+      <div className="orb orb-cyan" style={{ top: "10%", left: "-10%", width: "500px", height: "500px", opacity: 0.08 }} />
+      <div className="orb orb-blue" style={{ bottom: "10%", right: "-10%", width: "600px", height: "600px", opacity: 0.06 }} />
 
-        <div className="hero-ctas animate-fade-up" style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center", animationDelay: "0.3s" }}>
-          <button onClick={() => scrollTo("#products")} className="btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-            Explore Products
-          </button>
-          <button onClick={() => scrollTo("#contact")} className="btn-ghost">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16l.19.92z"/></svg>
-            Contact Us
-          </button>
+      {/* Scroll indicator - Moved to side on desktop, center on mobile */}
+      <motion.div 
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="hero-scroll-btn"
+        style={{ position: "absolute", bottom: "3rem", zIndex: 10, opacity: 0.4 }}
+      >
+        <div style={{ width: "22px", height: "38px", border: "1.5px solid var(--brand-light)", borderRadius: "11px", display: "flex", justifyContent: "center", padding: "5px" }}>
+          <motion.div 
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            style={{ width: "2px", height: "6px", background: "var(--brand-light)", borderRadius: "2px" }}
+          />
         </div>
+      </motion.div>
 
-        <HeroStats stats={globalStats} />
-      </div>
-
-      {/* Scroll indicator */}
-      <div aria-hidden="true" style={{ position: "absolute", bottom: "2.5rem", left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem", opacity: 0.6, zIndex: 10 }}>
-        <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.6rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--cyan-400)" }}>Scroll</span>
-        <div style={{ width: "1px", height: "50px", background: "linear-gradient(180deg, var(--cyan-400), transparent)" }} />
-      </div>
-
-      <div className="section-gradient-bottom" aria-hidden="true" />
+      <div className="section-gradient-bottom" style={{ height: "15vh" }} aria-hidden="true" />
+      
+      <style>{`
+        .light-rays {
+          position: absolute;
+          inset: 0;
+          background: repeating-conic-gradient(from 0deg at 50% -10%, transparent 0deg 10deg, rgba(89, 194, 238, 0.015) 15deg 20deg);
+          mask-image: radial-gradient(circle at 50% -10%, black, transparent 80%);
+          -webkit-mask-image: radial-gradient(circle at 50% -10%, black, transparent 80%);
+          animation: raysRotate 100s linear infinite;
+          pointer-events: none;
+        }
+        @keyframes raysRotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .hero-scroll-btn {
+          right: 4rem;
+        }
+        @media (max-width: 1024px) {
+          #hero { min-height: auto !important; padding: 120px 0 60px 0 !important; }
+          .rg-split-lg { grid-template-columns: 1fr !important; gap: 3rem !important; text-align: center !important; }
+          .hero-ctas { justify-content: center !important; }
+          p { margin: 0 auto 2.5rem !important; border-left: none !important; border-top: 2px solid var(--brand-vibrant) !important; padding: 1rem 0 0 0 !important; }
+          .container-xl > div:last-child { border-top: none !important; }
+          .hero-scroll-btn {
+            right: auto !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+          }
+        }
+        @media (max-width: 640px) {
+          .hero-scroll-btn { display: none !important; } /* Hide on small mobile to avoid blocking content */
+        }
+      `}</style>
     </section>
   );
 }
