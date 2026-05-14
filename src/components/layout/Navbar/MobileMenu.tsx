@@ -52,7 +52,12 @@ export default function MobileMenu({ links, isOpen, scrollTo }: MobileMenuProps)
           <a
             key={link.href}
             href={link.href}
-            onClick={(e) => { e.preventDefault(); scrollTo(link.href); }}
+            onClick={(e) => { 
+              if (link.href.includes("#")) {
+                e.preventDefault(); 
+              }
+              scrollTo(link.href); 
+            }}
             style={{ 
               fontFamily: "var(--font-display)", 
               fontSize: "2rem", 
