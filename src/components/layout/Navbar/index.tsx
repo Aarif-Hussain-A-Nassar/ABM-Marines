@@ -13,8 +13,15 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
+    const onResize = () => {
+      if (window.innerWidth > 1024) setMenuOpen(false);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+    };
   }, []);
 
   // Active-section tracker
@@ -101,6 +108,9 @@ export default function Navbar() {
       </header>
 
       <style>{`
+        @media (min-width: 1025px) {
+          #mobile-menu { display: none !important; }
+        }
         @media (max-width: 1024px) {
           #desktop-nav     { display: none !important; }
           #mobile-menu-btn { display: flex !important; }

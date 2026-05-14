@@ -6,25 +6,29 @@
 
 /* ─── Design Tokens ─────────────────────────────────────────────────────────── */
 :root {
-  /* Ocean Palette */
-  --ocean-900:    #020b18;
-  --ocean-800:    #040f20;
-  --ocean-700:    #061629;
-  --ocean-600:    #0a1f3a;
-  --ocean-500:    #0e2b52;
-  --cyan-400:     #22d3ee;
-  --cyan-300:     #67e8f9;
-  --cyan-200:     #a5f3fc;
-  --teal-400:     #2dd4bf;
-  --teal-300:     #5eead4;
-  --blue-500:     #3b82f6;
-  --blue-400:     #60a5fa;
-  --blue-300:     #93c5fd;
+  /* Ocean Palette - Deep Midnight Theme */
+  --ocean-900:    #010810;  /* Midnight Black-Blue */
+  --ocean-800:    #020c1a;  /* Deep Navy */
+  --ocean-700:    #031224;  /* Dark Ocean */
+  --ocean-600:    #051830;
+  /* Brand Palette (Extracted from Logo) */
+  --brand-deep:   #005da3;  /* Deep Azure - Main Text */
+  --brand-vibrant: #0096d6;  /* Cerulean - Waves */
+  --brand-light:   #59c2ee;  /* Sky Blue - Highlights */
 
-  /* Glass */
-  --glass-bg:     rgba(6, 22, 41, 0.7);
-  --glass-border: rgba(34, 211, 238, 0.15);
-  --glass-hover:  rgba(6, 22, 41, 0.9);
+  /* Updated UI Accents */
+  --cyan-400:     var(--brand-light);
+  --cyan-300:     #8ed9f7;
+  --teal-400:     var(--brand-vibrant);
+  --teal-300:     #57c1ef;
+  --blue-500:     var(--brand-deep);
+  --blue-400:     #2b8cdb;
+
+
+  /* Glass - Enhanced for darker BG */
+  --glass-bg:     rgba(2, 11, 24, 0.85);
+  --glass-border: rgba(34, 211, 238, 0.12);
+  --glass-hover:  rgba(1, 8, 16, 0.95);
 
   /* Text */
   --text-primary:   #f0f9ff;
