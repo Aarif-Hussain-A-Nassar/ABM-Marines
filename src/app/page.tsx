@@ -1,38 +1,46 @@
 import HeroSection from "@/components/HeroSection";
-import StatsBar from "@/components/StatsBar";
 import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import WhyUsSection from "@/components/WhyUsSection";
+import ExpertiseSection from "@/components/ExpertiseSection";
+import QualitySection from "@/components/QualitySection";
+import SustainabilitySection from "@/components/SustainabilitySection";
+import GlobalReachSection from "@/components/GlobalReachSection";
+import CertificationsSection from "@/components/CertificationsSection";
 import ProductsSection from "@/components/ProductsSection";
-import ClientsSection from "@/components/ClientsSection";
-import CTABanner from "@/components/CTABanner";
+import InfrastructureSection from "@/components/InfrastructureSection";
+import ContactSection from "@/components/ContactSection";
 
 export default function HomePage() {
   return (
     <>
-      {/* 1. Full-screen hero with headline + CTA */}
+      {/* 1. Full-screen cinematic hero */}
       <HeroSection />
 
-      {/* 2. Key stats bar */}
-      <StatsBar />
-
-      {/* 3. About ABM Marine — two-column with image */}
+      {/* 2. About — Kerala story & timeline */}
       <AboutSection />
 
-      {/* 4. Core Services — 6-card grid */}
-      <ServicesSection />
+      {/* 3. Expertise — 6 animated cards */}
+      <ExpertiseSection />
 
-      {/* 5. Why Choose Us — numbered features + image */}
-      <WhyUsSection />
+      {/* 4. Quality Control — 6-step process */}
+      <QualitySection />
 
-      {/* 6. Products — 6-card grid with image thumbs */}
+      {/* 5. Sustainability — ocean-themed */}
+      <SustainabilitySection />
+
+      {/* 6. Global Reach — world map */}
+      <GlobalReachSection />
+
+      {/* 7. Certifications — cert showcase */}
+      <CertificationsSection />
+
+      {/* 8. Products — filterable grid (modular) */}
       <ProductsSection />
 
-      {/* 7. Clients + Testimonials */}
-      <ClientsSection />
+      {/* 9. Infrastructure — facility cards */}
+      <InfrastructureSection />
 
-      {/* 8. Full-width CTA Banner */}
-      <CTABanner />
+      {/* 10. Contact — form + map + WhatsApp */}
+      <ContactSection />
     </>
   );
 }
