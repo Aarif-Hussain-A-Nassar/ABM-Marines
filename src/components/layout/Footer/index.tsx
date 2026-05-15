@@ -1,11 +1,16 @@
-"use client";
+﻿"use client";
 
 import FooterBrand from "./FooterBrand";
 import { quickLinks, footerProducts, footerMarkets, footerCerts } from "@/data/footer";
 
 
-const scrollTo = (href: string) =>
-  document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+const handleQuickLink = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  e.preventDefault();
+  if (href === '/') { window.location.href = '/'; return; }
+  const el = document.querySelector(href);
+  if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  else { window.location.href = '/' + href; }
+};
 
 export default function Footer() {
   return (
@@ -14,7 +19,7 @@ export default function Footer() {
 
       <div className="container-xl footer-compact-mobile" style={{ paddingTop: "5rem", paddingBottom: "3rem", position: "relative", zIndex: 2 }}>
 
-        {/* rg-footer: 4col → 2col tablet → 1col mobile */}
+        {/* rg-footer: 4col â†’ 2col tablet â†’ 1col mobile */}
         <div className="rg-footer" style={{ marginBottom: "4rem" }}>
 
           <FooterBrand quickLinks={quickLinks} />
@@ -26,7 +31,7 @@ export default function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a href={link.href}
-                    onClick={(e) => { e.preventDefault(); scrollTo(link.href); }}
+                    onClick={(e) => handleQuickLink(e, link.href)}
                     style={{ fontSize: "0.875rem", color: "var(--text-secondary)", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem", transition: "all 0.3s ease" }}
                     onMouseEnter={(e) => { e.currentTarget.style.color = "var(--cyan-400)"; e.currentTarget.style.paddingLeft = "0.25rem"; }}
                     onMouseLeave={(e) => { e.currentTarget.style.color = "var(--text-secondary)"; e.currentTarget.style.paddingLeft = "0"; }}>
@@ -44,7 +49,7 @@ export default function Footer() {
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.65rem", marginBottom: "2rem" }}>
               {footerProducts.map((p) => (
                 <li key={p.label}>
-                  <a href={p.href} onClick={(e) => { e.preventDefault(); scrollTo(p.href); }}
+                  <a href={p.href} onClick={(e) => handleQuickLink(e, p.href)}
                     style={{ fontSize: "0.875rem", color: "var(--text-secondary)", textDecoration: "none", transition: "color 0.3s" }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = "var(--teal-400)")}
                     onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}>
@@ -74,7 +79,7 @@ export default function Footer() {
             <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
               {footerCerts.map((cert) => (
                 <div key={cert} style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.875rem", color: "var(--text-secondary)" }}>
-                  <span style={{ color: "var(--cyan-400)", fontWeight: 700 }}>✓</span>{cert}
+                  <span style={{ color: "var(--cyan-400)", fontWeight: 700 }}>âœ“</span>{cert}
                 </div>
               ))}
             </div>
@@ -87,7 +92,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="footer-bottom" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1.5rem" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-            <p style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>© {new Date().getFullYear()} ABM Marine Products. Approval No. 763. All rights reserved.</p>
+            <p style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Â© {new Date().getFullYear()} ABM Marine Products. Approval No. 763. All rights reserved.</p>
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", fontSize: "0.75rem", color: "var(--text-muted)" }}>
               <span>Website by</span>
               <a href="https://two-dots-two.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--cyan-400)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.02em" }}>Two Dots</a>
@@ -117,3 +122,4 @@ export default function Footer() {
     </footer>
   );
 }
+
