@@ -9,15 +9,7 @@ export default function CategoryShowcase() {
 
   return (
     <div>
-      <div
-        style={{
-          display:             "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap:                 "2.5rem",
-          maxWidth:            "780px",
-          margin:              "0 auto",
-        }}
-      >
+      <div className="cat-grid">
         {homepageCategories.map((cat) => (
           <button
             key={cat.id}
@@ -112,20 +104,47 @@ export default function CategoryShowcase() {
       </div>
 
       <style>{`
-        .cat-plate:hover {
-          border-color: rgba(34,211,238,0.4) !important;
-          box-shadow: 0 20px 60px rgba(0,0,0,0.65), 0 0 40px rgba(34,211,238,0.12) !important;
-          transform: translateY(-8px) scale(1.02);
+        /* Grid layout */
+        .cat-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2.5rem;
+          max-width: 780px;
+          margin: 0 auto;
         }
-        .cat-plate:hover .cat-plate-img  { transform: scale(1.06); }
-        .cat-plate:hover .cat-plate-cta  { opacity: 1 !important; }
-        button:hover .cat-label {
-          border-color: rgba(34,211,238,0.4) !important;
-          color: var(--cyan-400) !important;
-          background: rgba(34,211,238,0.07) !important;
+
+        /* Tablet: tighten up */
+        @media (max-width: 768px) {
+          .cat-grid {
+            gap: 1.5rem;
+            max-width: 560px;
+          }
+          .cat-label { font-size: 0.78rem !important; padding: 0.5rem 0.5rem !important; }
         }
-        @media (max-width: 600px) {
-          .cat-plate { max-width: 160px; margin: 0 auto; }
+
+        /* Mobile: stack vertically */
+        @media (max-width: 500px) {
+          .cat-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 240px;
+          }
+        }
+
+        /* Hover (desktop only) */
+        @media (hover: hover) {
+          .cat-plate:hover {
+            border-color: rgba(34,211,238,0.4) !important;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.65), 0 0 40px rgba(34,211,238,0.12) !important;
+            transform: translateY(-8px) scale(1.02);
+          }
+          .cat-plate:hover .cat-plate-img  { transform: scale(1.06); }
+          .cat-plate:hover .cat-plate-cta  { opacity: 1 !important; }
+          button:hover .cat-label {
+            border-color: rgba(34,211,238,0.4) !important;
+            color: var(--cyan-400) !important;
+            background: rgba(34,211,238,0.07) !important;
+          }
         }
       `}</style>
     </div>
