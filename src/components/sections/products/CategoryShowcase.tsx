@@ -161,11 +161,8 @@ export default function CategoryShowcase() {
           .cat-btn:hover .cat-label-arrow { opacity: 1; }
         }
 
-        /* ── Touch devices: always show CTA + active press ────── */
+        /* ── Touch: press feedback only ─────────────────────── */
         @media (hover: none) {
-          .cat-plate-cta {
-            opacity: 0.75;   /* always visible */
-          }
           .cat-btn:active .cat-plate {
             transform: scale(0.97);
             border-color: rgba(34,211,238,0.4);
