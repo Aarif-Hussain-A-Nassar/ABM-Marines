@@ -16,6 +16,7 @@ export const cuttlefishProducts: CatalogProduct[] = [
     markets:      ["EU", "Far East", "US"],
     tags:         ["Premium", "IQF", "EU Approved", "High Demand"],
     emoji:        "🦑",
+    image:        "/7R503857.jpg",
   },
   {
     id:           "baby-cuttlefish",
@@ -32,6 +33,7 @@ export const cuttlefishProducts: CatalogProduct[] = [
     markets:      ["EU", "Far East"],
     tags:         ["Premium", "IQF", "Restaurant Grade"],
     emoji:        "🦑",
+    image:        "/7R503900.jpg",
   },
 ];
 
@@ -51,5 +53,6 @@ export const octopusProducts: CatalogProduct[] = [
     markets:      ["EU", "Far East"],
     tags:         ["Premium", "Wild Caught", "IQF", "Best Seller"],
     emoji:        "🐙",
+    image:        "/7R503912.jpg",
   },
 ];

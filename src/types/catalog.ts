@@ -30,6 +30,7 @@ export interface CatalogProduct {
   markets?:     string[];         // ["EU", "US", "Japan"]
   tags:         string[];         // ["Best Seller", "Premium", …]
   emoji:        string;
+  image?:       string;           // /public path e.g. "/19. Tiger Shrimps.jpg"
 }
 
 export type Presentation = "Raw" | "Cooked" | "Blanched" | "Processed";

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { CatalogProduct } from "@/types/catalog";
 
 const PRESENTATION_COLORS: Record<string, string> = {
@@ -57,20 +58,35 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
           overflow:    "hidden",
         }}
       >
-        <div
-          aria-hidden="true"
-          style={{
-            position:   "absolute",
-            inset:      0,
-            background: "radial-gradient(circle at 50% 50%, rgba(34,211,238,0.07), transparent 70%)",
-          }}
-        />
-        <span style={{ position: "relative", zIndex: 1, filter: "drop-shadow(0 4px 16px rgba(34,211,238,0.25))" }}>
-          {product.emoji}
-        </span>
+        {product.image ? (
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            style={{
+              objectFit: "cover",
+              zIndex: 0,
+            }}
+          />
+        ) : (
+          <>
+            <div
+              aria-hidden="true"
+              style={{
+                position:   "absolute",
+                inset:      0,
+                background: "radial-gradient(circle at 50% 50%, rgba(34,211,238,0.07), transparent 70%)",
+              }}
+            />
+            <span style={{ position: "relative", zIndex: 1, filter: "drop-shadow(0 4px 16px rgba(34,211,238,0.25))" }}>
+              {product.emoji}
+            </span>
+          </>
+        )}
 
         {/* Tags */}
-        <div style={{ position: "absolute", top: "0.65rem", left: "0.65rem", display: "flex", gap: "0.3rem", flexWrap: "wrap" }}>
+        <div style={{ position: "absolute", top: "0.65rem", left: "0.65rem", display: "flex", gap: "0.3rem", flexWrap: "wrap", zIndex: 2 }}>
           {product.tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
@@ -104,6 +120,7 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
             fontWeight:    700,
             color:         presColor,
             backdropFilter:"blur(8px)",
+            zIndex:        2,
           }}
         >
           {product.presentation}
@@ -123,6 +140,7 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
             color:      "var(--text-muted)",
             letterSpacing: "0.1em",
             textTransform:  "uppercase",
+            zIndex:     2,
           }}
         >
           {product.freezeType} · {product.subcategory}

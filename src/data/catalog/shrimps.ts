@@ -17,6 +17,7 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["EU", "US", "Japan", "Australia"],
     tags:         ["Best Seller", "EU Approved", "Premium"],
     emoji:        "🦐",
+    image:        "/19. Tiger Shrimps.jpg",
   },
   {
     id:           "vannamei-hoso",
@@ -33,6 +34,7 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["EU", "US", "Australia"],
     tags:         ["Popular", "IQF", "BAP Certified"],
     emoji:        "🦐",
+    image:        "/7R500682.jpg",
   },
   {
     id:           "poovalan-hoso",
@@ -49,6 +51,7 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["Far East", "Middle East"],
     tags:         ["Local Specialty", "Block Frozen"],
     emoji:        "🦐",
+    image:        "/21. Poovalan Shrimps.jpg",
   },
   {
     id:           "kazhanthan-hoso",
@@ -65,6 +68,7 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["Far East", "Middle East"],
     tags:         ["Wild Caught", "Block Frozen"],
     emoji:        "🦐",
+    image:        "/22. Kazhanthan Shrimps.jpg",
   },
   {
     id:           "karikkadi-hoso",
@@ -81,6 +85,7 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["Far East", "Middle East", "EU"],
     tags:         ["Wild Caught", "Block Frozen"],
     emoji:        "🦐",
+    image:        "/20. Karikkadi Shrimps.jpg",
   },
   {
     id:           "naran-hoso",
@@ -97,6 +102,7 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["EU", "Far East"],
     tags:         ["Wild Caught", "Block Frozen"],
     emoji:        "🦐",
+    image:        "/23. Naran Shrimps.jpg",
   },
 
   // ── Headless ─────────────────────────────────────────────────────────────
@@ -115,6 +121,7 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["US", "EU", "Australia"],
     tags:         ["Best Seller", "Premium", "USFDA"],
     emoji:        "🦐",
+    image:        "/17. Head Less Tiger Shrimps.jpg",
   },
   {
     id:           "naran-hlso",
@@ -131,6 +138,7 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["EU", "Far East"],
     tags:         ["Wild Caught", "Block Frozen"],
     emoji:        "🦐",
+    image:        "/16. Head Less Naran Shrimps.jpg",
   },
 
   // ── Peeled ────────────────────────────────────────────────────────────────
@@ -148,6 +156,7 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["EU", "US"],
     tags:         ["IQF", "Retail Ready"],
     emoji:        "🦐",
+    image:        "/13. Peeled Deepsea Shrimps.jpg",
   },
   {
     id:           "karikkadi-peeled",
@@ -164,6 +173,7 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["Far East", "EU"],
     tags:         ["Block Frozen", "Bulk Export"],
     emoji:        "🦐",
+    image:        "/14. Frozen Peeled Karikkadi Shrimps.jpg",
   },
   {
     id:           "poovalan-peeled",
@@ -180,6 +190,7 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["Far East", "Middle East"],
     tags:         ["Block Frozen", "Local Specialty"],
     emoji:        "🦐",
+    image:        "/15. Frozen Peeled Poovalan Shrimps.jpg",
   },
 
   // ── Peeled & Deveined ────────────────────────────────────────────────────
@@ -198,5 +209,6 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["EU", "US", "Australia"],
     tags:         ["Best Seller", "IQF", "BAP Certified", "Retail Ready"],
     emoji:        "🦐",
+    image:        "/7R500702.jpg",
   },
 ];

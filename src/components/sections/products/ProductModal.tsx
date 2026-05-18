@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { CatalogProduct } from "@/types/catalog";
 
 interface ProductModalProps {
@@ -71,22 +72,37 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
         <div
           style={{
             background:   "var(--card-grad)",
-            padding:      "3rem 2rem",
+            padding:      product.image ? "6rem 2rem" : "3rem 2rem",
             textAlign:    "center",
             fontSize:     "5rem",
             position:     "relative",
             overflow:     "hidden",
           }}
         >
-          <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at 50% 50%, rgba(34,211,238,0.08), transparent 70%)" }} />
-          <span style={{ position: "relative", filter: "drop-shadow(0 4px 24px rgba(34,211,238,0.3))" }}>
-            {product.emoji}
-          </span>
+          {product.image ? (
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              sizes="(max-width: 600px) 100vw, 600px"
+              style={{
+                objectFit: "cover",
+                zIndex: 0,
+              }}
+            />
+          ) : (
+            <>
+              <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at 50% 50%, rgba(34,211,238,0.08), transparent 70%)" }} />
+              <span style={{ position: "relative", zIndex: 1, filter: "drop-shadow(0 4px 24px rgba(34,211,238,0.3))" }}>
+                {product.emoji}
+              </span>
+            </>
+          )}
 
           {/* Tags */}
-          <div style={{ position: "absolute", bottom: "0.75rem", left: "0.75rem", display: "flex", gap: "0.35rem", flexWrap: "wrap" }}>
+          <div style={{ position: "absolute", bottom: "0.75rem", left: "0.75rem", display: "flex", gap: "0.35rem", flexWrap: "wrap", zIndex: 2 }}>
             {product.tags.map((tag) => (
-              <span key={tag} style={{ padding: "0.12rem 0.5rem", background: "rgba(34,211,238,0.18)", border: "1px solid rgba(34,211,238,0.3)", borderRadius: "100px", fontSize: "0.6rem", fontWeight: 700, color: "var(--cyan-400)" }}>
+              <span key={tag} style={{ padding: "0.12rem 0.5rem", background: "rgba(34,211,238,0.18)", border: "1px solid rgba(34,211,238,0.3)", borderRadius: "100px", fontSize: "0.6rem", fontWeight: 700, color: "var(--cyan-400)", backdropFilter: "blur(8px)" }}>
                 {tag}
               </span>
             ))}
