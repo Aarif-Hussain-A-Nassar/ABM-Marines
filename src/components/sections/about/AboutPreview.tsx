@@ -38,7 +38,7 @@ export default function AboutPreview() {
           </div>
 
           <div style={{ position: "relative", width: "100%" }}>
-            <div style={{ borderRadius: "24px", overflow: "hidden", border: "1px solid rgba(34,211,238,0.2)", boxShadow: "0 30px 80px rgba(0,0,0,0.4)", position: "relative" }}>
+            <div style={{ borderRadius: "24px", overflow: "hidden", border: "1px solid rgba(34,211,238,0.2)", boxShadow: "0 30px 80px rgba(0,0,0,0.4)", position: "relative", background: "var(--ocean-900)" }}>
               <Image
                 src="/facility_exterior.png"
                 alt="ABM Marine Products facility headquarters"
@@ -46,7 +46,7 @@ export default function AboutPreview() {
                 height={480}
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
-              <div style={{ position: "absolute", inset: 0, background: "var(--fade-grad)" }} />
+              <div className="image-fade-overlay" style={{ position: "absolute", inset: 0, background: "var(--fade-grad)" }} />
             </div>
 
             {/* Overlapping legacy badge */}
