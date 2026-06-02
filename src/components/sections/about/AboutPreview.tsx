@@ -2,6 +2,7 @@
 
 import SectionHeader from "@/components/ui/SectionHeader";
 import Link from "next/link";
+import Image from "next/image";
 import { highlights } from "@/data/about";
 import { motion } from "framer-motion";
 
@@ -36,12 +37,38 @@ export default function AboutPreview() {
             </Link>
           </div>
 
-          <div style={{ position: "relative", display: "flex", justifyContent: "center" }}>
-            <div className="glass-card" style={{ padding: "1.5rem 2.5rem", textAlign: "center", border: "1px solid var(--brand-vibrant)", background: "rgba(0, 93, 163, 0.05)", borderRadius: "30px" }}>
-              <h3 style={{ fontSize: "2.5rem", fontWeight: 800, color: "var(--brand-light)", lineHeight: 1, marginBottom: "0.25rem" }}>20+</h3>
-              <p style={{ fontSize: "0.7rem", fontWeight: 700, color: "var(--text-secondary)", textTransform: "uppercase", letterSpacing: "0.15em" }}>Years of Global Heritage</p>
+          <div style={{ position: "relative", width: "100%" }}>
+            <div style={{ borderRadius: "24px", overflow: "hidden", border: "1px solid rgba(34,211,238,0.2)", boxShadow: "0 30px 80px rgba(0,0,0,0.4)", position: "relative" }}>
+              <Image
+                src="/facility_exterior.png"
+                alt="ABM Marine Products facility headquarters"
+                width={640}
+                height={480}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+              <div style={{ position: "absolute", inset: 0, background: "var(--fade-grad)" }} />
             </div>
-            <div className="orb orb-cyan" style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "200px", height: "200px", opacity: 0.15 }} />
+
+            {/* Overlapping legacy badge */}
+            <div
+              className="glass-card"
+              style={{ 
+                position: "absolute", 
+                bottom: "-1.5rem", 
+                right: "-1rem", 
+                padding: "1.25rem 1.5rem", 
+                borderRadius: "16px", 
+                textAlign: "center",
+                border: "1px solid rgba(34,211,238,0.3)",
+                zIndex: 2,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
+              }}
+            >
+              <div style={{ fontFamily: "var(--font-display)", fontSize: "2.2rem", fontWeight: 900, color: "var(--cyan-400)", lineHeight: 1 }}>20+</div>
+              <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.65rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-secondary)", marginTop: "0.25rem" }}>Years of Legacy</div>
+            </div>
+            
+            <div className="orb orb-cyan" style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "300px", height: "300px", opacity: 0.1 }} />
           </div>
         </div>
       </div>
