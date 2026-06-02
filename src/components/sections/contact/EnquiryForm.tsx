@@ -31,8 +31,28 @@ export default function EnquiryForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    await new Promise((r) => setTimeout(r, 1500)); // replace with real API call
-    setStatus("sent");
+    try {
+      const response = await fetch("https://formspree.io/f/mrejvvgb", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (response.ok) {
+        setStatus("sent");
+        setForm(INITIAL);
+      } else {
+        setStatus("idle");
+        alert("Oops! There was a problem submitting your form. Please try again.");
+      }
+    } catch (error) {
+      setStatus("idle");
+      console.error("Form submission error:", error);
+      alert("Oops! There was a problem submitting your form. Please try again.");
+    }
   };
 
   if (status === "sent") {
