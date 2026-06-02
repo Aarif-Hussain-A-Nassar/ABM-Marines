@@ -113,14 +113,18 @@ export default function Footer() {
                     e.currentTarget.style.boxShadow = "0 2px 8px rgba(0,0,0,0.12)";
                   }}
                 >
-                  <div style={{ position: "relative", width: "100%", height: "100%" }}>
-                    <Image
-                      src={cert.logo}
-                      alt={cert.abbr}
-                      fill
-                      style={{ objectFit: "contain" }}
-                      sizes="60px"
-                    />
+                  <div style={{ position: "relative", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    {cert.logo ? (
+                      <Image
+                        src={cert.logo}
+                        alt={cert.abbr}
+                        fill
+                        style={{ objectFit: "contain" }}
+                        sizes="60px"
+                      />
+                    ) : (
+                      <span style={{ fontSize: "1.2rem" }}>{cert.icon || cert.abbr}</span>
+                    )}
                   </div>
                 </div>
               ))}
