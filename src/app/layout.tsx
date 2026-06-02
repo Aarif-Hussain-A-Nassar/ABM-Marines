@@ -83,7 +83,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body style={{ minHeight: "100vh", display: "flex", flexDirection: "column", fontFamily: "var(--font-inter, Inter, sans-serif)" }}>
-        <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem={false}>
+        <ThemeProvider attribute="data-theme" defaultTheme="light" enableSystem={false}>
           {/* JSON-LD Schema */}
           <script
             type="application/ld+json"
