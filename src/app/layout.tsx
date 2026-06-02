@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "ABM Marine Products — Premium Frozen Seafood Exporter from Kerala, India",
+  title: "ABM Marine",
   description:
     "ABM Marine Products is a premier Indian seafood exporter based in Kochi, Kerala, supplying premium IQF & Block Frozen shrimp, cuttlefish, squid, octopus & fish to Europe, USA, Far East & Australia since 2004. HACCP & USFDA certified.",
   keywords: [
@@ -38,8 +38,13 @@ export const metadata: Metadata = {
     "Kerala seafood export",
     "frozen shrimp India",
   ].join(", "),
+  icons: {
+    icon: "/logo.jpeg",
+    shortcut: "/logo.jpeg",
+    apple: "/logo.jpeg",
+  },
   openGraph: {
-    title: "ABM Marine Products — Premium Frozen Seafood Exporter from Kerala",
+    title: "ABM Marine",
     description:
       "Delivering world-class IQF and Block Frozen seafood from Kerala, India to global markets since 2004. HACCP | USFDA | EU Approved.",
     type: "website",
@@ -49,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ABM Marine Products — Premium Frozen Seafood Exporter",
+    title: "ABM Marine",
     description:
       "Kerala's trusted seafood exporter since 2004. Supplying premium frozen seafood to Europe, USA, Far East & Australia.",
   },

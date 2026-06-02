@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 import ProductsCatalog from "@/components/sections/products/ProductsCatalog";
 
 export const metadata = {
-  title: "Products — ABM Marine Products | Premium Frozen Seafood Exporter",
+  title: "Products | ABM Marine",
   description: "Browse ABM Marine's full frozen seafood export catalog — Shrimps & Prawns, Cephalopods (Squid, Cuttlefish, Octopus) and more. IQF & Block Frozen, USFDA & BRCGS certified.",
 };
 
