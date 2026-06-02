@@ -227,6 +227,6 @@ export const shrimpProducts: CatalogProduct[] = [
     markets:      ["EU", "US", "Australia"],
     tags:         ["Best Seller", "IQF", "BAP Certified", "Retail Ready"],
     emoji:        "🦐",
-    image:        "/7R500702.jpg",
+    image:        "/7R500786.jpg",
   },
 ];

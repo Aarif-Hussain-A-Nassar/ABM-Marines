@@ -50,7 +50,7 @@ export const cookedProducts: CatalogProduct[] = [
     markets:      ["EU", "US", "Australia"],
     tags:         ["Cooked", "IQF", "Best Seller", "Retail Ready", "BAP Certified"],
     emoji:        "🍤",
-    image:        "/7R500732.jpg",
+    image:        "/7R500755.jpg",
   },
   {
     id:           "cooked-vannamei-hlso",
@@ -67,7 +67,7 @@ export const cookedProducts: CatalogProduct[] = [
     markets:      ["EU", "US", "Australia"],
     tags:         ["Cooked", "IQF", "BBQ Grade"],
     emoji:        "🍤",
-    image:        "/7R500707.jpg",
+    image:        "/7R500761.jpg",
   },
   {
     id:           "cooked-vannamei-hoso",
@@ -84,7 +84,7 @@ export const cookedProducts: CatalogProduct[] = [
     markets:      ["EU", "US", "Far East"],
     tags:         ["Cooked", "IQF", "Premium", "Restaurant Grade"],
     emoji:        "🍤",
-    image:        "/7R500690.jpg",
+    image:        "/7R500769.jpg",
   },
   {
     id:           "cooked-karikkadi",
