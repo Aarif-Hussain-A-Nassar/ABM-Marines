@@ -100,7 +100,7 @@ export const cookedProducts: CatalogProduct[] = [
     markets:      ["EU", "US", "Australia"],
     tags:         ["Blanched", "IQF", "Value Added", "Retail Ready"],
     emoji:        "🦑",
-    image:        "/7R500841.jpg",
+    image:        "/06_Squid_Rings_With_Garnish.jpg",
   },
   {
     id:           "breaded-shrimps",
@@ -150,7 +150,7 @@ export const cookedProducts: CatalogProduct[] = [
     markets:      ["EU", "US", "Australia"],
     tags:         ["Processed", "IQF", "Value Added", "Best Seller"],
     emoji:        "🦑",
-    image:        "/Breaded Squid Rings.jpg",
+    image:        "/01_Squid_Rings_Breaded_Fried.jpg",
   },
   {
     id:           "breaded-popcorn-shrimps",

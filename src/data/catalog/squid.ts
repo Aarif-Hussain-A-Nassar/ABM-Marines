@@ -15,7 +15,7 @@ export const squidProducts: CatalogProduct[] = [
     markets:      ["Far East", "EU", "Middle East"],
     tags:         ["Wild Caught", "Block Frozen", "High Demand"],
     emoji:        "🦑",
-    image:        "/7R500761.jpg",
+    image:        "/09_Squid_Tube_Whole.jpg",
   },
   {
     id:           "squid-whole-cleaned",
@@ -31,7 +31,7 @@ export const squidProducts: CatalogProduct[] = [
     markets:      ["EU", "Far East", "US"],
     tags:         ["Cleaned", "IQF", "Premium"],
     emoji:        "🦑",
-    image:        "/7R500786.jpg",
+    image:        "/02_Squid_Whole_Cleaned.jpg",
   },
   {
     id:           "squid-rings-raw",
@@ -47,7 +47,7 @@ export const squidProducts: CatalogProduct[] = [
     markets:      ["EU", "US", "Australia"],
     tags:         ["IQF", "Retail Ready", "High Demand"],
     emoji:        "🦑",
-    image:        "/7R500813.jpg",
+    image:        "/04_Squid_Rings_Cleaned.jpg",
   },
   {
     id:           "squid-rings-blanched",
@@ -63,6 +63,6 @@ export const squidProducts: CatalogProduct[] = [
     markets:      ["EU", "US", "Australia"],
     tags:         ["Blanched", "IQF", "Value Added", "Retail Ready"],
     emoji:        "🦑",
-    image:        "/7R500820.jpg",
+    image:        "/05_Squid_Rings_Premium.jpg",
   },
 ];

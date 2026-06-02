@@ -16,11 +16,11 @@ export default function ProductsPage() {
       {/* Page header */}
       <div
         style={{
-          paddingTop:    "140px",
+          paddingTop: "140px",
           paddingBottom: "50px",
-          textAlign:     "center",
-          background:    "linear-gradient(180deg, rgba(34,211,238,0.04) 0%, transparent 100%)",
-          borderBottom:  "1px solid rgba(34,211,238,0.07)",
+          textAlign: "center",
+          background: "linear-gradient(180deg, rgba(34,211,238,0.04) 0%, transparent 100%)",
+          borderBottom: "1px solid rgba(34,211,238,0.07)",
         }}
       >
         <div className="container-xl">
@@ -30,10 +30,10 @@ export default function ProductsPage() {
           <h1
             style={{
               fontFamily: "var(--font-display)",
-              fontSize:   "clamp(2.2rem, 5vw, 3.5rem)",
+              fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
               fontWeight: 900,
-              color:      "var(--text-primary)",
-              marginBottom:"0.75rem",
+              color: "var(--text-primary)",
+              marginBottom: "0.75rem",
             }}
           >
             Our Premium <span className="gradient-text">Seafood Collection</span>
