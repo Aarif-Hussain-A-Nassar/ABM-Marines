@@ -1,232 +1,493 @@
-import type { CatalogProduct } from "@/types/catalog";
+import type { CatalogProduct, Presentation, FreezeType } from "@/types/catalog";
 
 export const shrimpProducts: CatalogProduct[] = [
-  // ── Head On ──────────────────────────────────────────────────────────────
   {
-    id:           "head-on-shrimp-whole",
-    slug:         "head-on-shrimp-whole",
-    name:         "Head-On Shrimp — Whole",
-    categoryId:   "shrimps",
-    subcategory:  "Head On Shrimps",
-    species:      "Penaeus monodon",
-    presentation: "Raw",
-    freezeType:   "Both",
-    shortDesc:    "Wild-caught black tiger prawns, whole head-on shell-on.",
-    description:  "Premium wild-caught Penaeus monodon (Black Tiger Shrimp) from the Kerala coast. Processed head-on shell-on to retain original juices and full flavour. IQF and block frozen formats available — widely exported to European fish markets and Asian premium retail.",
-    sizes:        ["U8", "8/12", "13/15", "16/20", "21/25", "26/30"],
-    markets:      ["EU", "US", "Japan", "Australia"],
-    tags:         ["Best Seller", "EU Approved", "Premium"],
-    emoji:        "🦐",
-    image:        "/products/11_Head_On_Shrimp_Whole.jpg",
+    "id": "head-on-shrimp-whole",
+    "slug": "head-on-shrimp-whole",
+    "name": "Head-On Shrimp — Whole",
+    "categoryId": "shrimps",
+    "subcategory": "Head On Shrimps",
+    "species": "Penaeus monodon",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Both" as FreezeType,
+    "shortDesc": "Wild-caught black tiger prawns, whole head-on shell-on.",
+    "description": "Wild-caught Black Tiger Shrimp (Penaeus monodon) from the pristine Kerala coast. Processed head-on shell-on to retain original juices and full flavor. IQF and block frozen formats available.",
+    "sizes": [
+      "U8",
+      "8/12",
+      "13/15",
+      "16/20",
+      "21/25",
+      "26/30"
+    ],
+    "markets": [
+      "EU",
+      "Japan",
+      "US"
+    ],
+    "tags": [
+      "Wild Caught",
+      "Best Seller",
+      "Premium"
+    ],
+    "emoji": "🦐",
+    "image": "/products/11_Head_On_Shrimp_Whole.jpg"
   },
   {
-    id:           "head-on-shrimp-display",
-    slug:         "head-on-shrimp-display-cut",
-    name:         "Head-On Shrimp — Display Cut",
-    categoryId:   "shrimps",
-    subcategory:  "Head On Shrimps",
-    species:      "Litopenaeus vannamei",
-    presentation: "Raw",
-    freezeType:   "Both",
-    shortDesc:    "Farm-raised Vannamei shrimp, head-on — premium display presentation.",
-    description:  "Sustainably farm-raised Vannamei shrimp in head-on shell-on display presentation. Uniform grading and vibrant colour, preferred by European and US retail buyers looking for premium seafood counter presentation.",
-    sizes:        ["26/30", "31/40", "41/50", "51/60"],
-    markets:      ["EU", "US", "Australia"],
-    tags:         ["Popular", "IQF", "BAP Certified"],
-    emoji:        "🦐",
-    image:        "/products/12_Head_On_Shrimp_Display.jpg",
+    "id": "head-on-shrimp-display",
+    "slug": "head-on-shrimp-display-cut",
+    "name": "Head-On Shrimp — Display Cut",
+    "categoryId": "shrimps",
+    "subcategory": "Head On Shrimps",
+    "species": "Litopenaeus vannamei",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Both" as FreezeType,
+    "shortDesc": "Farm-raised Vannamei shrimp, head-on, premium display presentation.",
+    "description": "Sustainably farm-raised Vannamei shrimp in head-on shell-on display presentation. Uniform grading and vibrant colour, preferred by European and US retail buyers.",
+    "sizes": [
+      "26/30",
+      "31/40",
+      "41/50",
+      "51/60"
+    ],
+    "markets": [
+      "EU",
+      "US",
+      "Australia"
+    ],
+    "tags": [
+      "Sustainably Sourced",
+      "IQF",
+      "BAP Certified"
+    ],
+    "emoji": "🦐",
+    "image": "/products/12_Head_On_Shrimp_Display.jpg"
   },
   {
-    id:           "poovalan-hoso",
-    slug:         "poovalan-shrimps-head-on",
-    name:         "Poovalan Shrimps — Head On",
-    categoryId:   "shrimps",
-    subcategory:  "Head On Shrimps",
-    species:      "Metapenaeus dobsonii",
-    presentation: "Raw",
-    freezeType:   "Block Frozen",
-    shortDesc:    "Kerala's Poovalan shrimp — delicate flavour, head-on block frozen.",
-    description:  "Metapenaeus dobsonii — locally known as Poovalan — is a prized small coastal shrimp from the Kerala backwaters with a naturally sweet, delicate flavor. Ideal for Asian and Middle Eastern seafood markets.",
-    sizes:        ["100/200", "200/300", "300/500"],
-    markets:      ["Far East", "Middle East"],
-    tags:         ["Local Specialty", "Block Frozen"],
-    emoji:        "🦐",
-    image:        "/21. Poovalan Shrimps.jpg",
+    "id": "peeled-shrimp-raw",
+    "slug": "peeled-shrimp-raw",
+    "name": "Peeled Shrimp — Raw",
+    "categoryId": "shrimps",
+    "subcategory": "Peeled & Deveined Shrimps",
+    "species": "Litopenaeus vannamei",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "IQF" as FreezeType,
+    "shortDesc": "Peeled and deveined Vannamei shrimp, IQF frozen.",
+    "description": "Peeled and deveined Vannamei shrimp, fully cleaned and individually quick frozen (IQF). Excellent choice for retail packs and catering distribution worldwide.",
+    "sizes": [
+      "16/20",
+      "21/25",
+      "26/30",
+      "31/40"
+    ],
+    "markets": [
+      "EU",
+      "US",
+      "Australia"
+    ],
+    "tags": [
+      "IQF",
+      "Convenient",
+      "P&D"
+    ],
+    "emoji": "🦐",
+    "image": "/products/13_Peeled_Shrimp_Raw.jpg"
   },
   {
-    id:           "kazhanthan-hoso",
-    slug:         "kazhanthan-shrimps-head-on",
-    name:         "Kazhanthan Shrimps — Head On",
-    categoryId:   "shrimps",
-    subcategory:  "Head On Shrimps",
-    species:      "Metapenaeus brevicornis",
-    presentation: "Raw",
-    freezeType:   "Block Frozen",
-    shortDesc:    "Wild-caught Kazhanthan shrimp, head-on, block frozen export grade.",
-    description:  "Wild-caught Metapenaeus brevicornis from Kerala inshore waters. Rich flavour profile and vibrant natural colour make Kazhanthan shrimps popular in South Asian and Middle Eastern culinary markets.",
-    sizes:        ["200/300", "300/500", "500/700"],
-    markets:      ["Far East", "Middle East"],
-    tags:         ["Wild Caught", "Block Frozen"],
-    emoji:        "🦐",
-    image:        "/22. Kazhanthan Shrimps.jpg",
+    "id": "peeled-shrimp-on-ice",
+    "slug": "peeled-shrimp-on-ice",
+    "name": "Peeled Shrimp — On Ice",
+    "categoryId": "shrimps",
+    "subcategory": "Peeled Shrimps",
+    "species": "Metapenaeus dobsonii",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "IQF" as FreezeType,
+    "shortDesc": "Peeled shrimp displayed on crushed ice — premium fresh presentation.",
+    "description": "Peeled undeveined (PUD) shrimp displayed on crushed ice. Sourced from coastal fishermen and peeled under sanitized conditions to preserve sweet seafood flavor and tender texture.",
+    "sizes": [
+      "100/200",
+      "200/300",
+      "300/500"
+    ],
+    "markets": [
+      "Far East",
+      "Middle East"
+    ],
+    "tags": [
+      "Local Catch",
+      "IQF"
+    ],
+    "emoji": "🦐",
+    "image": "/products/14_Peeled_Shrimp_On_Ice.jpg"
   },
   {
-    id:           "karikkadi-hoso",
-    slug:         "karikkadi-shrimps-head-on",
-    name:         "Karikkadi Shrimps — Head On",
-    categoryId:   "shrimps",
-    subcategory:  "Head On Shrimps",
-    species:      "Parapenaeopsis stylifera",
-    presentation: "Raw",
-    freezeType:   "Block Frozen",
-    shortDesc:    "Tiny coastal Karikkadi shrimps — head-on, intensely flavourful.",
-    description:  "Parapenaeopsis stylifera — the Karikkadi shrimp — is a small, intensely flavourful coastal shrimp widely used in traditional South Asian seafood cooking and dry-shrimp exports. Block frozen to lock in peak freshness.",
-    sizes:        ["300/500", "500/700", "700/UP"],
-    markets:      ["Far East", "Middle East", "EU"],
-    tags:         ["Wild Caught", "Block Frozen"],
-    emoji:        "🦐",
-    image:        "/20. Karikkadi Shrimps.jpg",
+    "id": "tiger-shrimp-hoso",
+    "slug": "tiger-shrimps-head-on",
+    "name": "Tiger Shrimps — Head On Shell On",
+    "categoryId": "shrimps",
+    "subcategory": "Head On Shrimps",
+    "species": "Penaeus monodon",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Both" as FreezeType,
+    "shortDesc": "Kerala black tiger prawns, wild-caught HOSO — best seller.",
+    "description": "Premium wild-caught Penaeus monodon (Black Tiger Shrimp) from the Kerala coast. Processed head-on shell-on under HACCP standards within hours of harvest.",
+    "sizes": [
+      "U/8",
+      "8/12",
+      "13/15",
+      "16/20",
+      "21/25",
+      "26/30"
+    ],
+    "markets": [
+      "EU",
+      "US",
+      "Japan",
+      "Australia"
+    ],
+    "tags": [
+      "Best Seller",
+      "EU Approved",
+      "Premium"
+    ],
+    "emoji": "🦐",
+    "image": "/products/19. Tiger Shrimps.JPG"
   },
   {
-    id:           "naran-hoso",
-    slug:         "naran-shrimps-head-on",
-    name:         "Naran Shrimps — Head On",
-    categoryId:   "shrimps",
-    subcategory:  "Head On Shrimps",
-    species:      "Metapenaeus monoceros",
-    presentation: "Raw",
-    freezeType:   "Block Frozen",
-    shortDesc:    "Brown shrimps (Naran) from Kerala — head-on, block frozen.",
-    description:  "Metapenaeus monoceros, the Speckled Shrimp or Naran, is a medium-sized wild-caught species with firm flesh and distinctive flavour. Available head-on block frozen for export to European and Asian markets.",
-    sizes:        ["31/40", "41/50", "51/70", "71/90"],
-    markets:      ["EU", "Far East"],
-    tags:         ["Wild Caught", "Block Frozen"],
-    emoji:        "🦐",
-    image:        "/23. Naran Shrimps.jpg",
-  },
-
-  // ── Headless ─────────────────────────────────────────────────────────────
-  {
-    id:           "tiger-shrimp-hlso",
-    slug:         "tiger-shrimps-headless",
-    name:         "Tiger Shrimps — Headless Shell On",
-    categoryId:   "shrimps",
-    subcategory:  "Headless Shrimps",
-    species:      "Penaeus monodon",
-    presentation: "Raw",
-    freezeType:   "Both",
-    shortDesc:    "Wild tiger prawns, headless shell-on — popular US & EU export cut.",
-    description:  "Headless Shell On (HLSO) Tiger Shrimps from Kerala's wild catch. The headless cut reduces freight costs while preserving the shell for presentation grilling and BBQ applications. Premium grade USFDA-registered export.",
-    sizes:        ["U/8", "8/12", "13/15", "16/20", "21/25", "26/30", "31/40"],
-    markets:      ["US", "EU", "Australia"],
-    tags:         ["Best Seller", "Premium", "USFDA"],
-    emoji:        "🦐",
-    image:        "/17. Head Less Tiger Shrimps.jpg",
+    "id": "poovalan-hoso",
+    "slug": "poovalan-shrimps-head-on",
+    "name": "Poovalan Shrimps — Head On",
+    "categoryId": "shrimps",
+    "subcategory": "Head On Shrimps",
+    "species": "Metapenaeus dobsonii",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Block Frozen" as FreezeType,
+    "shortDesc": "Kerala's Poovalan shrimp — delicate flavour, head-on block frozen.",
+    "description": "Metapenaeus dobsonii — locally known as Poovalan — is a prized small coastal shrimp from the Kerala backwaters with a naturally sweet, delicate flavor.",
+    "sizes": [
+      "100/200",
+      "200/300",
+      "300/500"
+    ],
+    "markets": [
+      "Far East",
+      "Middle East"
+    ],
+    "tags": [
+      "Local Specialty",
+      "Block Frozen"
+    ],
+    "emoji": "🦐",
+    "image": "/products/21. Poovalan Shrimps.JPG"
   },
   {
-    id:           "naran-hlso",
-    slug:         "naran-shrimps-headless",
-    name:         "Naran Shrimps — Headless",
-    categoryId:   "shrimps",
-    subcategory:  "Headless Shrimps",
-    species:      "Metapenaeus monoceros",
-    presentation: "Raw",
-    freezeType:   "Block Frozen",
-    shortDesc:    "Naran shrimps, headless shell-on, block frozen for export.",
-    description:  "Wild-caught Naran (Metapenaeus monoceros) presented headless for economical cold-chain export. Firm texture, consistent grade, block frozen under HACCP supervision.",
-    sizes:        ["41/50", "51/70", "71/90", "91/120"],
-    markets:      ["EU", "Far East"],
-    tags:         ["Wild Caught", "Block Frozen"],
-    emoji:        "🦐",
-    image:        "/16. Head Less Naran Shrimps.jpg",
-  },
-
-  // ── Peeled ────────────────────────────────────────────────────────────────
-  {
-    id:           "peeled-shrimp-raw",
-    slug:         "peeled-shrimp-raw",
-    name:         "Peeled Shrimp — Raw",
-    categoryId:   "shrimps",
-    subcategory:  "Peeled Shrimps",
-    species:      "Litopenaeus vannamei",
-    presentation: "Raw",
-    freezeType:   "IQF",
-    shortDesc:    "Peeled and deveined Vannamei shrimp, IQF frozen.",
-    description:  "Peeled and deveined Vannamei shrimp, fully cleaned and individually quick frozen (IQF). Excellent choice for retail packs and catering distribution worldwide. Clean white appearance with firm texture.",
-    sizes:        ["16/20", "21/25", "26/30", "31/40"],
-    markets:      ["EU", "US", "Australia"],
-    tags:         ["IQF", "Retail Ready", "P&D"],
-    emoji:        "🦐",
-    image:        "/products/13_Peeled_Shrimp_Raw.jpg",
+    "id": "kazhanthan-hoso",
+    "slug": "kazhanthan-shrimps-head-on",
+    "name": "Kazhanthan Shrimps — Head On",
+    "categoryId": "shrimps",
+    "subcategory": "Head On Shrimps",
+    "species": "Metapenaeus brevicornis",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Block Frozen" as FreezeType,
+    "shortDesc": "Wild-caught Kazhanthan shrimp, head-on, block frozen export grade.",
+    "description": "Wild-caught Metapenaeus brevicornis from Kerala inshore waters. Rich flavour profile and vibrant natural colour, popular in South Asian and Middle Eastern markets.",
+    "sizes": [
+      "200/300",
+      "300/500",
+      "500/700"
+    ],
+    "markets": [
+      "Far East",
+      "Middle East"
+    ],
+    "tags": [
+      "Wild Caught",
+      "Block Frozen"
+    ],
+    "emoji": "🦐",
+    "image": "/products/22. Kazhanthan Shrimps.JPG"
   },
   {
-    id:           "peeled-shrimp-on-ice",
-    slug:         "peeled-shrimp-on-ice",
-    name:         "Peeled Shrimp — On Ice",
-    categoryId:   "shrimps",
-    subcategory:  "Peeled Shrimps",
-    species:      "Metapenaeus dobsonii",
-    presentation: "Raw",
-    freezeType:   "IQF",
-    shortDesc:    "Peeled shrimp on crushed ice — premium fresh presentation.",
-    description:  "Peeled undeveined (PUD) shrimp, sourced from coastal fishermen and peeled under sanitized conditions to preserve sweet seafood flavour and tender texture. Popular with Far East and Middle East buyers.",
-    sizes:        ["100/200", "200/300", "300/500"],
-    markets:      ["Far East", "Middle East"],
-    tags:         ["IQF", "Local Catch"],
-    emoji:        "🦐",
-    image:        "/products/14_Peeled_Shrimp_On_Ice.jpg",
+    "id": "karikkadi-hoso",
+    "slug": "karikkadi-shrimps-head-on",
+    "name": "Karikkadi Shrimps — Head On",
+    "categoryId": "shrimps",
+    "subcategory": "Head On Shrimps",
+    "species": "Parapenaeopsis stylifera",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Block Frozen" as FreezeType,
+    "shortDesc": "Tiny coastal Karikkadi shrimps — intensely flavourful, head-on.",
+    "description": "Parapenaeopsis stylifera — the Karikkadi shrimp — is a small, intensely flavourful coastal shrimp widely used in traditional South Asian seafood cooking and dry-shrimp exports.",
+    "sizes": [
+      "300/500",
+      "500/700",
+      "700/UP"
+    ],
+    "markets": [
+      "Far East",
+      "Middle East",
+      "EU"
+    ],
+    "tags": [
+      "Wild Caught",
+      "Block Frozen"
+    ],
+    "emoji": "🦐",
+    "image": "/products/20. Karikkadi Shrimps.JPG"
   },
   {
-    id:           "karikkadi-peeled",
-    slug:         "frozen-peeled-karikkadi-shrimps",
-    name:         "Frozen Peeled Karikkadi Shrimps",
-    categoryId:   "shrimps",
-    subcategory:  "Peeled Shrimps",
-    species:      "Parapenaeopsis stylifera",
-    presentation: "Raw",
-    freezeType:   "Block Frozen",
-    shortDesc:    "Peeled Karikkadi shrimps, IQF block frozen for bulk buyers.",
-    description:  "Small coastal Karikkadi shrimps, shell-off and vein-in, individually peeled and block frozen. Favored by Asian food processors and retail packers for their distinctive small size and intense natural flavour.",
-    sizes:        ["500/700", "700/UP"],
-    markets:      ["Far East", "EU"],
-    tags:         ["Block Frozen", "Bulk Export"],
-    emoji:        "🦐",
-    image:        "/14. Frozen Peeled Karikkadi Shrimps.jpg",
+    "id": "naran-hoso",
+    "slug": "naran-shrimps-head-on",
+    "name": "Naran Shrimps — Head On",
+    "categoryId": "shrimps",
+    "subcategory": "Head On Shrimps",
+    "species": "Metapenaeus monoceros",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Block Frozen" as FreezeType,
+    "shortDesc": "Brown Naran shrimps from Kerala — head-on, block frozen.",
+    "description": "Metapenaeus monoceros, the Speckled Shrimp or Naran, is a medium-sized wild-caught species with firm flesh and distinctive flavour, popular in European and Asian markets.",
+    "sizes": [
+      "100/200",
+      "200/300"
+    ],
+    "markets": [
+      "EU",
+      "Far East",
+      "Middle East"
+    ],
+    "tags": [
+      "Wild Caught",
+      "Block Frozen"
+    ],
+    "emoji": "🦐",
+    "image": "/products/23. Naran Shrimps.JPG"
   },
   {
-    id:           "poovalan-peeled",
-    slug:         "frozen-peeled-poovalan-shrimps",
-    name:         "Frozen Peeled Poovalan Shrimps",
-    categoryId:   "shrimps",
-    subcategory:  "Peeled Shrimps",
-    species:      "Metapenaeus dobsonii",
-    presentation: "Raw",
-    freezeType:   "Block Frozen",
-    shortDesc:    "Delicate Poovalan shrimps — peeled, block frozen for bulk distribution.",
-    description:  "Poovalan (Metapenaeus dobsonii) shrimps peeled and block frozen. Sweet, delicate flavour profile ideal for Asian stir-fry and seafood processing markets. Exported in bulk master cartons.",
-    sizes:        ["200/300", "300/500"],
-    markets:      ["Far East", "Middle East"],
-    tags:         ["Block Frozen", "Local Specialty"],
-    emoji:        "🦐",
-    image:        "/15. Frozen Peeled Poovalan Shrimps.jpg",
+    "id": "tiger-hlso",
+    "slug": "tiger-shrimps-headless",
+    "name": "Tiger Shrimps — Headless Shell On",
+    "categoryId": "shrimps",
+    "subcategory": "Headless Shrimps",
+    "species": "Penaeus monodon",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Both" as FreezeType,
+    "shortDesc": "Headless shell-on Black Tiger prawns — IQF & block frozen.",
+    "description": "Premium Black Tiger shrimps processed without heads but with shell intact. Retains exceptional moisture and texture during grilling, popular in US/EU markets.",
+    "sizes": [
+      "U8",
+      "8/12",
+      "13/15",
+      "16/20",
+      "21/25"
+    ],
+    "markets": [
+      "EU",
+      "US",
+      "Japan"
+    ],
+    "tags": [
+      "Premium",
+      "IQF",
+      "HLSO"
+    ],
+    "emoji": "🦐",
+    "image": "/products/17. Head Less Tiger Shrimps.JPG"
   },
-
-  // ── Peeled & Deveined ────────────────────────────────────────────────────
   {
-    id:           "vannamei-pud",
-    slug:         "peeled-deveined-vannamei-shrimps",
-    name:         "Vannamei Shrimps — Peeled & Deveined",
-    categoryId:   "shrimps",
-    subcategory:  "Peeled & Deveined Shrimps",
-    species:      "Litopenaeus vannamei",
-    presentation: "Raw",
-    freezeType:   "IQF",
-    shortDesc:    "Farm-raised Vannamei, peeled & deveined — IQF, retail & food-service grade.",
-    description:  "Litopenaeus vannamei processed to PUD (Peeled Un-Deveined) and PD (Peeled Deveined) specification. Clean white appearance, firm texture, individually quick frozen — the preferred format for retail seafood packs, restaurants, and catering chains globally.",
-    sizes:        ["16/20", "21/25", "26/30", "31/40", "41/50", "51/60"],
-    markets:      ["EU", "US", "Australia"],
-    tags:         ["Best Seller", "IQF", "BAP Certified", "Retail Ready"],
-    emoji:        "🦐",
-    image:        "/7R500786.jpg",
+    "id": "naran-hlso",
+    "slug": "naran-shrimps-headless",
+    "name": "Naran Shrimps — Headless Shell On",
+    "categoryId": "shrimps",
+    "subcategory": "Headless Shrimps",
+    "species": "Metapenaeus monoceros",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Block Frozen" as FreezeType,
+    "shortDesc": "Headless Naran shrimp, sorted and block frozen for export.",
+    "description": "Speckled brown Naran shrimp in headless shell-on presentation. Uniformly graded, packed and block frozen to meet BRCGS certified standards for European retail.",
+    "sizes": [
+      "100/200",
+      "200/300"
+    ],
+    "markets": [
+      "EU",
+      "Middle East"
+    ],
+    "tags": [
+      "Export Grade",
+      "Block Frozen"
+    ],
+    "emoji": "🦐",
+    "image": "/products/16. Head Less Naran Shrimps.JPG"
   },
+  {
+    "id": "peeled-deepsea",
+    "slug": "peeled-deepsea-shrimps",
+    "name": "Deepsea Shrimps — Peeled & Deveined",
+    "categoryId": "shrimps",
+    "subcategory": "Peeled & Deveined Shrimps",
+    "species": "Aristeus alcocki",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "IQF" as FreezeType,
+    "shortDesc": "Wild-caught deep-sea pink shrimp, hand peeled & deveined.",
+    "description": "Aristeus alcocki wild-caught from the deep waters of the Indian Ocean. Skilled peelers hand-peel and devein these delicate shrimps before rapid IQF freezing.",
+    "sizes": [
+      "41/50",
+      "51/60",
+      "61/70",
+      "71/90"
+    ],
+    "markets": [
+      "EU",
+      "US",
+      "Japan"
+    ],
+    "tags": [
+      "Wild Caught",
+      "IQF",
+      "PND"
+    ],
+    "emoji": "🦐",
+    "image": "/products/13. Peeled Deepsea Shrimps.JPG"
+  },
+  {
+    "id": "karikkadi-peeled",
+    "slug": "karikkadi-shrimps-peeled",
+    "name": "Karikkadi Shrimps — Peeled & Deveined",
+    "categoryId": "shrimps",
+    "subcategory": "Peeled & Deveined Shrimps",
+    "species": "Parapenaeopsis stylifera",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Both" as FreezeType,
+    "shortDesc": "Peeled and deveined Karikkadi shrimps — ideal for culinary packs.",
+    "description": "Cleaned, peeled, and deveined Karikkadi shrimps. Concentrated seafood flavor makes them the preferred choice for convenience retail bags and stir-fry applications.",
+    "sizes": [
+      "100/200",
+      "200/300",
+      "300/500"
+    ],
+    "markets": [
+      "Far East",
+      "Middle East",
+      "EU"
+    ],
+    "tags": [
+      "Wild Caught",
+      "IQF",
+      "PND"
+    ],
+    "emoji": "🦐",
+    "image": "/products/14. Frozen Peeled Karikkadi Shrimps.JPG"
+  },
+  {
+    "id": "poovalan-peeled",
+    "slug": "poovalan-shrimps-peeled",
+    "name": "Poovalan Shrimps — Peeled & Deveined",
+    "categoryId": "shrimps",
+    "subcategory": "Peeled & Deveined Shrimps",
+    "species": "Metapenaeus dobsonii",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Both" as FreezeType,
+    "shortDesc": "Peeled and deveined Poovalan shrimps — sweet and tender.",
+    "description": "Peeled and deveined Poovalan shrimps, processed immediately upon landing. Naturally sweet flavor and tender bite, a staple export for European ready-meal lines.",
+    "sizes": [
+      "100/200",
+      "200/300",
+      "300/500"
+    ],
+    "markets": [
+      "EU",
+      "US",
+      "Australia"
+    ],
+    "tags": [
+      "IQF",
+      "PND",
+      "Export Quality"
+    ],
+    "emoji": "🦐",
+    "image": "/products/15. Frozen Peeled Poovalan Shrimps.JPG"
+  },
+  {
+    "id": "poovalan-shrimp-peeled-raw",
+    "slug": "poovalan-shrimp-peeled-raw",
+    "name": "Poovalan Shrimp — Peeled Raw",
+    "categoryId": "shrimps",
+    "subcategory": "Peeled Shrimps",
+    "species": "Metapenaeus dobsonii",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Block Frozen" as FreezeType,
+    "shortDesc": "Kerala Poovalan shrimp, peeled and block frozen.",
+    "description": "Metapenaeus dobsonii wild-caught from Kerala coast, peeled and block frozen immediately to preserve natural sweet flavour.",
+    "sizes": [
+      "100/200",
+      "200/300",
+      "300/500"
+    ],
+    "markets": [
+      "Far East",
+      "Middle East"
+    ],
+    "tags": [
+      "Local Catch",
+      "Block Frozen"
+    ],
+    "emoji": "🦐",
+    "image": "/products/11_Poovalan_Shrimp_Peeled_Raw.jpg"
+  },
+  {
+    "id": "poovalan-shrimp-peeled-cleaned",
+    "slug": "poovalan-shrimp-peeled-cleaned",
+    "name": "Poovalan Shrimp — Peeled & Cleaned",
+    "categoryId": "shrimps",
+    "subcategory": "Peeled Shrimps",
+    "species": "Metapenaeus dobsonii",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "Both" as FreezeType,
+    "shortDesc": "Fully cleaned and peeled Poovalan shrimp, IQF frozen.",
+    "description": "Premium graded Poovalan shrimp, fully peeled, cleaned and individually quick frozen. Excellent choice for retail convenience packaging and value-added manufacturing.",
+    "sizes": [
+      "100/200",
+      "200/300"
+    ],
+    "markets": [
+      "EU",
+      "US",
+      "Far East"
+    ],
+    "tags": [
+      "IQF",
+      "Cleaned",
+      "Export Grade"
+    ],
+    "emoji": "🦐",
+    "image": "/products/12_Poovalan_Shrimp_Peeled_Cleaned_Raw.jpg"
+  },
+  {
+    "id": "baby-shrimp-raw-peeled",
+    "slug": "baby-shrimp-raw-peeled",
+    "name": "Baby Shrimp — Raw Peeled",
+    "categoryId": "shrimps",
+    "subcategory": "Peeled Shrimps",
+    "species": "Metapenaeus dobsonii",
+    "presentation": "Raw" as Presentation,
+    "freezeType": "IQF" as FreezeType,
+    "shortDesc": "Wild-caught baby shrimps, peeled and IQF frozen.",
+    "description": "Tiny wild-caught baby shrimps (PUD), peeled and frozen individually. Prized for sweet flavor and tender bite, perfect for fillings, soups, and rice dishes.",
+    "sizes": [
+      "200/300",
+      "300/500"
+    ],
+    "markets": [
+      "Far East",
+      "Middle East",
+      "EU"
+    ],
+    "tags": [
+      "Wild Caught",
+      "IQF",
+      "Sweet Flavor"
+    ],
+    "emoji": "🦐",
+    "image": "/products/03_Baby_Shrimp_Raw_Peeled.jpg"
+  }
 ];
