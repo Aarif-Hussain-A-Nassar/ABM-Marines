@@ -337,6 +337,11 @@ body {
   box-shadow: 0 8px 30px rgba(34, 211, 238, 0.15);
 }
 
+.btn-lg {
+  padding: 1.1rem 2.8rem;
+  font-size: 1rem;
+}
+
 /* ─── Glow Orbs ─────────────────────────────────────────────────────────────── */
 .orb {
   position: absolute;
@@ -468,9 +473,18 @@ body {
   }
 
   .btn-primary,
+  .btn-outline,
   .btn-ghost {
-    width: 100%;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.8rem;
+    width: auto;
     justify-content: center;
+  }
+
+  .btn-lg {
+    padding: 0.85rem 2rem;
+    font-size: 0.9rem;
+    width: auto;
   }
 
   :root {
@@ -490,6 +504,18 @@ body {
 
   .section-pad {
     padding: 3.5rem 0;
+  }
+
+  .btn-primary,
+  .btn-outline,
+  .btn-ghost {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  .btn-lg {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.825rem;
   }
 }
 

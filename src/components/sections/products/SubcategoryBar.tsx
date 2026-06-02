@@ -1,6 +1,5 @@
 "use client";
 
-import type { CatalogProduct } from "@/types/catalog";
 
 interface SubcategoryBarProps {
   subcategories: string[];

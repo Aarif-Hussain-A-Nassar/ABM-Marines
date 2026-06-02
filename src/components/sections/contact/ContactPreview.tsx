@@ -22,10 +22,8 @@ export default function ContactPreview() {
           >
             <Link 
               href="/contact" 
-              className="btn-primary" 
+              className="btn-primary btn-lg" 
               style={{ 
-                padding: "1.25rem 3rem", 
-                fontSize: "1.1rem", 
                 textDecoration: "none",
                 display: "inline-flex",
                 alignItems: "center",

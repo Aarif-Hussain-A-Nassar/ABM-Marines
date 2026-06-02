@@ -15,6 +15,12 @@ interface FormState {
 
 const INITIAL: FormState = { name: "", company: "", country: "", email: "", phone: "", product: "", message: "" };
 
+const Label = ({ htmlFor, text }: { htmlFor: string; text: string }) => (
+  <label htmlFor={htmlFor} style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "var(--cyan-400)", marginBottom: "0.4rem", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+    {text}
+  </label>
+);
+
 export default function EnquiryForm() {
   const [form, setForm]     = useState<FormState>(INITIAL);
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
@@ -28,12 +34,6 @@ export default function EnquiryForm() {
     await new Promise((r) => setTimeout(r, 1500)); // replace with real API call
     setStatus("sent");
   };
-
-  const Label = ({ htmlFor, text }: { htmlFor: string; text: string }) => (
-    <label htmlFor={htmlFor} style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "var(--cyan-400)", marginBottom: "0.4rem", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-      {text}
-    </label>
-  );
 
   if (status === "sent") {
     return (

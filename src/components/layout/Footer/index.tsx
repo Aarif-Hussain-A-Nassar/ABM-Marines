@@ -1,8 +1,9 @@
-﻿"use client";
+"use client";
 
 import FooterBrand from "./FooterBrand";
-import { quickLinks, footerProducts, footerMarkets, footerCerts } from "@/data/footer";
-
+import { quickLinks, footerProducts, footerMarkets } from "@/data/footer";
+import { certifications } from "@/data/certifications";
+import Image from "next/image";
 
 const handleQuickLink = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
   e.preventDefault();
@@ -19,7 +20,7 @@ export default function Footer() {
 
       <div className="container-xl footer-compact-mobile" style={{ paddingTop: "5rem", paddingBottom: "3rem", position: "relative", zIndex: 2 }}>
 
-        {/* rg-footer: 4col â†’ 2col tablet â†’ 1col mobile */}
+        {/* rg-footer: 4col → 2col tablet → 1col mobile */}
         <div className="rg-footer" style={{ marginBottom: "4rem" }}>
 
           <FooterBrand quickLinks={quickLinks} />
@@ -76,10 +77,51 @@ export default function Footer() {
           {/* Certifications */}
           <div>
             <h4 style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--blue-400)", marginBottom: "1.5rem" }}>Certifications</h4>
-            <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-              {footerCerts.map((cert) => (
-                <div key={cert} style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.875rem", color: "var(--text-secondary)" }}>
-                  <span style={{ color: "var(--cyan-400)", fontWeight: 700 }}>âœ“</span>{cert}
+            <div style={{ 
+              display: "grid", 
+              gridTemplateColumns: "repeat(3, 1fr)", 
+              gap: "0.6rem", 
+              maxWidth: "220px",
+              marginTop: "0.5rem" 
+            }}>
+              {certifications.map((cert) => (
+                <div
+                  key={cert.abbr}
+                  title={`${cert.abbr} - ${cert.name}`}
+                  style={{
+                    aspectRatio: "4/3",
+                    background: cert.logoBg ?? "rgba(255, 255, 255, 0.95)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "6px",
+                    position: "relative",
+                    transition: "all 0.3s ease",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
+                    overflow: "hidden"
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-3px)";
+                    e.currentTarget.style.borderColor = "var(--cyan-400)";
+                    e.currentTarget.style.boxShadow = "0 8px 20px rgba(34,211,238,0.25)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "none";
+                    e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
+                    e.currentTarget.style.boxShadow = "0 2px 8px rgba(0,0,0,0.12)";
+                  }}
+                >
+                  <div style={{ position: "relative", width: "100%", height: "100%" }}>
+                    <Image
+                      src={cert.logo}
+                      alt={cert.abbr}
+                      fill
+                      style={{ objectFit: "contain" }}
+                      sizes="60px"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -92,7 +134,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="footer-bottom" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1.5rem" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-            <p style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Â© {new Date().getFullYear()} ABM Marine Products. Approval No. 763. All rights reserved.</p>
+            <p style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>© {new Date().getFullYear()} ABM Marine Products. Approval No. 763. All rights reserved.</p>
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", fontSize: "0.75rem", color: "var(--text-muted)" }}>
               <span>Website by</span>
               <a href="https://two-dots-two.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--cyan-400)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.02em" }}>Two Dots</a>
@@ -122,4 +164,3 @@ export default function Footer() {
     </footer>
   );
 }
-

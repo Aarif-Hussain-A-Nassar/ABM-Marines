@@ -19,16 +19,13 @@ export default function ProductsCatalog() {
   const urlCat        = searchParams.get("cat"); // "shrimps" | "cephalopods" | "fish" | null
 
   // Active top-level tab: null = "All"
-  const [activeCat,       setActiveCat]       = useState<HomepageCategory | null>(null);
-  const [activeSecondary, setActiveSecondary] = useState<HomepageSecondaryFilter>({ label: "All" });
-
-  // Sync URL param → active category on mount
-  useEffect(() => {
+  const [activeCat,       setActiveCat]       = useState<HomepageCategory | null>(() => {
     if (urlCat) {
-      const found = homepageCategories.find((c) => c.id === urlCat) ?? null;
-      setActiveCat(found);
+      return homepageCategories.find((c) => c.id === urlCat) ?? null;
     }
-  }, [urlCat]);
+    return null;
+  });
+  const [activeSecondary, setActiveSecondary] = useState<HomepageSecondaryFilter>({ label: "All" });
 
   const handleTabChange = (cat: HomepageCategory | null) => {
     setActiveCat(cat);

@@ -92,10 +92,10 @@ export default function HeroSection() {
             </p>
 
             <div className="hero-ctas" style={{ display: "flex", gap: "1.25rem", flexWrap: "wrap" }}>
-              <button onClick={() => scrollTo("#products")} className="btn-primary" style={{ padding: "1rem 2.5rem", fontSize: "1rem" }}>
+              <button onClick={() => scrollTo("#products")} className="btn-primary btn-lg">
                 View Collection
               </button>
-              <button onClick={() => scrollTo("#contact")} className="btn-ghost" style={{ padding: "1rem 2.5rem", fontSize: "1rem" }}>
+              <button onClick={() => scrollTo("#contact")} className="btn-ghost btn-lg">
                 Get a Quote
               </button>
             </div>
