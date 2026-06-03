@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import ProductCard from "@/components/sections/products/ProductCard";
 import ProductModal from "@/components/sections/products/ProductModal";
@@ -13,11 +13,9 @@ import {
 import type { HomepageCategory, HomepageSecondaryFilter } from "@/data/catalog";
 import type { CatalogProduct } from "@/types/catalog";
 
-const scrollToContact = () =>
-  document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-
 export default function ProductsCatalog() {
   const searchParams  = useSearchParams();
+  const router        = useRouter();
   const urlCat        = searchParams.get("cat"); // "shrimps" | "cephalopods" | "fish" | null
 
   const [selectedProduct, setSelectedProduct] = useState<CatalogProduct | null>(null);
@@ -186,7 +184,7 @@ export default function ProductsCatalog() {
           <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", maxWidth: "420px", margin: "0 auto 1.5rem" }}>
             Our fish product range is being added. Contact us for current availability and specifications.
           </p>
-          <button onClick={scrollToContact} className="btn-primary">Enquire Now</button>
+          <button onClick={() => router.push("/contact")} className="btn-primary">Enquire Now</button>
         </div>
       ) : (
         <div className="rg-3 product-grid" style={{ marginBottom: "3rem" }}>
