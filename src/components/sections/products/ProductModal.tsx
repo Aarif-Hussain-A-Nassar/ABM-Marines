@@ -27,7 +27,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
       style={{
         position:        "fixed",
         inset:           0,
-        zIndex:          1000,
+        zIndex:          15000,
         background:      "rgba(2,8,20,0.85)",
         backdropFilter:  "blur(12px)",
         display:         "flex",
@@ -44,7 +44,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           borderRadius:   "24px",
           width:          "100%",
           maxWidth:       "520px",
-          margin:         "auto 0",
+          margin:         "auto",
           overflow:       "hidden",
           position:       "relative",
           border:         "1px solid rgba(34,211,238,0.2)",
@@ -126,26 +126,26 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           </div>
 
           {/* Name */}
-          <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 900, fontSize: "1.4rem", color: "var(--text-primary)", marginBottom: product.species ? "0.25rem" : "0.75rem", lineHeight: 1.2 }}>
+          <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 900, fontSize: "1.4rem", color: "var(--text-primary)", marginBottom: product.species ? "0.2rem" : "0.5rem", lineHeight: 1.2 }}>
             {product.name}
           </h2>
 
           {product.species && (
-            <div style={{ fontSize: "0.75rem", fontStyle: "italic", color: "var(--text-muted)", marginBottom: "0.75rem" }}>
+            <div style={{ fontSize: "0.75rem", fontStyle: "italic", color: "var(--text-muted)", marginBottom: "0.5rem" }}>
               {product.species}
             </div>
           )}
 
           {/* Divider */}
-          <div style={{ height: "1px", background: "linear-gradient(90deg, var(--cyan-400)40, transparent)", marginBottom: "1rem" }} />
+          <div style={{ height: "1px", background: "linear-gradient(90deg, var(--cyan-400)40, transparent)", marginBottom: "0.75rem" }} />
 
           {/* Description */}
-          <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+          <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.8, marginBottom: "1rem" }}>
             {product.description}
           </p>
 
           {/* Details grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1.5rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1rem" }}>
             <div>
               <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "0.4rem" }}>
                 Presentation
@@ -166,7 +166,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
           {/* Sizes */}
           {product.sizes && (
-            <div style={{ marginBottom: "1.25rem" }}>
+            <div style={{ marginBottom: "0.75rem" }}>
               <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "0.5rem" }}>
                 Available Sizes / Grades
               </div>
@@ -182,7 +182,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
           {/* Export markets */}
           {product.markets && (
-            <div style={{ marginBottom: "1.75rem" }}>
+            <div style={{ marginBottom: "1.25rem" }}>
               <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "0.5rem" }}>
                 Export Markets
               </div>
