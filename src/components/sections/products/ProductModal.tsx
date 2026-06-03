@@ -23,9 +23,9 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
         background:      "rgba(2,8,20,0.85)",
         backdropFilter:  "blur(12px)",
         display:         "flex",
-        alignItems:      "center",
+        alignItems:      "flex-start",
         justifyContent:  "center",
-        padding:         "1rem",
+        padding:         "2rem 1rem",
         overflowY:       "auto",
       }}
       onClick={(e) => e.target === e.currentTarget && onClose()}
@@ -36,6 +36,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           borderRadius:   "24px",
           width:          "100%",
           maxWidth:       "600px",
+          margin:         "auto 0",
           overflow:       "hidden",
           position:       "relative",
           border:         "1px solid rgba(34,211,238,0.2)",
@@ -70,9 +71,9 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
         {/* Header visual */}
         <div
+          className={product.image ? "product-modal-header" : "product-modal-header-no-image"}
           style={{
             background:   "var(--card-grad)",
-            padding:      product.image ? "6rem 2rem" : "3rem 2rem",
             textAlign:    "center",
             fontSize:     "5rem",
             position:     "relative",
@@ -110,7 +111,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
         </div>
 
         {/* Content */}
-        <div style={{ padding: "1.75rem 2rem 2rem" }}>
+        <div className="product-modal-body">
           {/* Category breadcrumb */}
           <div style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--teal-400)", marginBottom: "0.4rem" }}>
             {product.subcategory}

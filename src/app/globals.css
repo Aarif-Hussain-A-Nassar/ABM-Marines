@@ -1275,3 +1275,31 @@ section:nth-of-type(odd) {
     gap: 1.5rem !important;
   }
 }
+
+/* Product Modal responsive styling */
+.product-modal-header {
+  padding: 4rem 1.5rem;
+}
+@media (min-width: 640px) {
+  .product-modal-header {
+    padding: 6rem 2rem;
+  }
+}
+
+.product-modal-header-no-image {
+  padding: 2.25rem 1.5rem;
+}
+@media (min-width: 640px) {
+  .product-modal-header-no-image {
+    padding: 3rem 2rem;
+  }
+}
+
+.product-modal-body {
+  padding: 1.5rem;
+}
+@media (min-width: 640px) {
+  .product-modal-body {
+    padding: 1.75rem 2rem 2rem;
+  }
+}
