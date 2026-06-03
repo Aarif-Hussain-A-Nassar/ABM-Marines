@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import type { CatalogProduct } from "@/types/catalog";
 
 interface ProductModalProps {
@@ -9,9 +10,16 @@ interface ProductModalProps {
 }
 
 export default function ProductModal({ product, onClose }: ProductModalProps) {
-  const scrollToContact = () => {
+  const router = useRouter();
+
+  const handleRequestQuote = () => {
     onClose();
-    setTimeout(() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" }), 200);
+    const contactEl = document.querySelector("#contact");
+    if (contactEl) {
+      setTimeout(() => contactEl.scrollIntoView({ behavior: "smooth" }), 200);
+    } else {
+      router.push(`/contact?product=${encodeURIComponent(product.name)}`);
+    }
   };
 
   return (
@@ -190,7 +198,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
           {/* CTA */}
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-            <button onClick={scrollToContact} className="btn-primary" style={{ flex: 1, minWidth: "140px" }}>
+            <button onClick={handleRequestQuote} className="btn-primary" style={{ flex: 1, minWidth: "140px" }}>
               Request Quote
             </button>
             <button onClick={onClose} className="btn-outline" style={{ flex: 1, minWidth: "100px" }}>

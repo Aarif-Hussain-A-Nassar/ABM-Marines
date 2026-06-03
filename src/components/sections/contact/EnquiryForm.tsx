@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { productOptions } from "@/data/products";
 
 interface FormState {
@@ -24,6 +24,28 @@ const Label = ({ htmlFor, text }: { htmlFor: string; text: string }) => (
 export default function EnquiryForm() {
   const [form, setForm]     = useState<FormState>(INITIAL);
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const prod = params.get("product");
+      if (prod) {
+        let matchedCategory = "";
+        const lowerProd = prod.toLowerCase();
+        if (lowerProd.includes("cuttlefish")) matchedCategory = "Cuttlefish";
+        else if (lowerProd.includes("squid") || lowerProd.includes("calamari")) matchedCategory = "Squid";
+        else if (lowerProd.includes("octopus")) matchedCategory = "Octopus";
+        else if (lowerProd.includes("tiger")) matchedCategory = "Tiger Prawns";
+        else if (lowerProd.includes("shrimp") || lowerProd.includes("prawn")) matchedCategory = "Vannamei Shrimp";
+
+        setForm((prev) => ({
+          ...prev,
+          product: matchedCategory,
+          message: `Dear ABM Marine team,\n\nI am interested in requesting a quote and product specifications for the following product:\n- ${prod}\n\nPlease provide availability, size details, and packing options.`,
+        }));
+      }
+    }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
