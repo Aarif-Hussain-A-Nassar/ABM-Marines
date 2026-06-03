@@ -1267,3 +1267,11 @@ section:nth-of-type(odd) {
 [data-theme='light'] .image-fade-overlay {
   opacity: 0 !important; /* Prevent images from being washed out by white gradients in light mode */
 }
+
+/* Custom product-grid media queries to improve mobile layout */
+@media (max-width: 640px) {
+  .product-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}

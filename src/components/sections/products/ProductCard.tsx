@@ -157,7 +157,20 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
         <h3 style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "0.95rem", color: "var(--text-primary)", marginBottom: "0.5rem", lineHeight: 1.35 }}>
           {product.name}
         </h3>
-        <p style={{ fontSize: "0.78rem", color: "var(--text-secondary)", lineHeight: 1.65, marginBottom: "1rem", flex: 1 }}>
+        <p
+          style={{
+            fontSize:       "0.78rem",
+            color:          "var(--text-secondary)",
+            lineHeight:     1.65,
+            marginBottom:   "1rem",
+            flex:           1,
+            display:        "-webkit-box",
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: "vertical",
+            overflow:       "hidden",
+            textOverflow:   "ellipsis",
+          }}
+        >
           {product.shortDesc}
         </p>
 

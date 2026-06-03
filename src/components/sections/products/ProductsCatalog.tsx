@@ -4,12 +4,14 @@ import { useState, useEffect, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import ProductCard from "@/components/sections/products/ProductCard";
+import ProductModal from "@/components/sections/products/ProductModal";
 import {
   allCatalogProducts,
   homepageCategories,
   filterProducts,
 } from "@/data/catalog";
 import type { HomepageCategory, HomepageSecondaryFilter } from "@/data/catalog";
+import type { CatalogProduct } from "@/types/catalog";
 
 const scrollToContact = () =>
   document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
@@ -17,6 +19,8 @@ const scrollToContact = () =>
 export default function ProductsCatalog() {
   const searchParams  = useSearchParams();
   const urlCat        = searchParams.get("cat"); // "shrimps" | "cephalopods" | "fish" | null
+
+  const [selectedProduct, setSelectedProduct] = useState<CatalogProduct | null>(null);
 
   // Active top-level tab: null = "All"
   const [activeCat,       setActiveCat]       = useState<HomepageCategory | null>(() => {
@@ -185,11 +189,15 @@ export default function ProductsCatalog() {
           <button onClick={scrollToContact} className="btn-primary">Enquire Now</button>
         </div>
       ) : (
-        <div className="rg-3" style={{ marginBottom: "3rem" }}>
+        <div className="rg-3 product-grid" style={{ marginBottom: "3rem" }}>
           {filtered.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} onClick={setSelectedProduct} />
           ))}
         </div>
+      )}
+
+      {selectedProduct && (
+        <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
       )}
     </div>
   );
