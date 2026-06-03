@@ -35,7 +35,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
         style={{
           borderRadius:   "24px",
           width:          "100%",
-          maxWidth:       "600px",
+          maxWidth:       "520px",
           margin:         "auto 0",
           overflow:       "hidden",
           position:       "relative",
