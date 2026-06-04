@@ -13,7 +13,8 @@ export default function FounderSection() {
         position: "relative", 
         overflow: "hidden",
         borderTop: "1px solid rgba(34,211,238,0.05)",
-        borderBottom: "1px solid rgba(34,211,238,0.05)"
+        borderBottom: "1px solid rgba(34,211,238,0.05)",
+        scrollMarginTop: "80px"
       }}
     >
       {/* Background glow effects */}
@@ -44,6 +45,36 @@ export default function FounderSection() {
               }} 
             />
 
+            {/* Decorative Frame Accents */}
+            <div 
+              style={{
+                position: "absolute",
+                top: "-12px",
+                left: "-12px",
+                width: "30px",
+                height: "30px",
+                borderTop: "3px solid var(--cyan-400)",
+                borderLeft: "3px solid var(--cyan-400)",
+                borderTopLeftRadius: "12px",
+                zIndex: 0,
+                opacity: 0.8
+              }}
+            />
+            <div 
+              style={{
+                position: "absolute",
+                bottom: "-12px",
+                left: "-12px",
+                width: "30px",
+                height: "30px",
+                borderBottom: "3px solid var(--cyan-400)",
+                borderLeft: "3px solid var(--cyan-400)",
+                borderBottomLeftRadius: "12px",
+                zIndex: 0,
+                opacity: 0.8
+              }}
+            />
+
             {/* Main Image Container */}
             <div 
               style={{ 
@@ -57,25 +88,33 @@ export default function FounderSection() {
                 background: "var(--ocean-800)"
               }}
             >
-              <Image
-                src="/founder_portrait.png"
-                alt="Xavier P.A., Managing Partner of ABM Marine Products"
-                width={500}
-                height={625}
-                priority
-                style={{ 
-                  width: "100%", 
-                  height: "100%", 
-                  objectFit: "cover", 
-                  display: "block" 
-                }}
-              />
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                style={{ width: "100%", height: "100%" }}
+              >
+                <Image
+                  src="/Founder 9.png"
+                  alt="Xavier P.A., Managing Partner of ABM Marine Products"
+                  width={500}
+                  height={625}
+                  priority
+                  style={{ 
+                    width: "100%", 
+                    height: "100%", 
+                    objectFit: "cover", 
+                    objectPosition: "top",
+                    display: "block" 
+                  }}
+                />
+              </motion.div>
               {/* Subtle overlay gradient */}
               <div 
                 style={{ 
                   position: "absolute", 
                   inset: 0, 
-                  background: "linear-gradient(to top, rgba(2, 11, 24, 0.7) 0%, rgba(2, 11, 24, 0) 50%)" 
+                  background: "linear-gradient(to top, rgba(2, 11, 24, 0.7) 0%, rgba(2, 11, 24, 0) 50%)",
+                  pointerEvents: "none"
                 }} 
               />
             </div>
@@ -86,6 +125,7 @@ export default function FounderSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.5 }}
+              whileHover={{ y: -5, scale: 1.02 }}
               className="glass-card"
               style={{ 
                 position: "absolute", 
@@ -95,7 +135,8 @@ export default function FounderSection() {
                 borderRadius: "16px",
                 border: "1px solid rgba(34,211,238,0.3)",
                 zIndex: 2,
-                boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
+                boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
+                cursor: "default"
               }}
             >
               <h4 style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem", fontWeight: 700, color: "var(--text-primary)", margin: 0 }}>
