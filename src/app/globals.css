@@ -33,6 +33,7 @@
 
   /* Glass - Enhanced for darker BG */
   --glass-bg: rgba(2, 11, 24, 0.85);
+  --glass-bg-opaque: rgba(2, 12, 26, 0.95);
   --glass-border: rgba(34, 211, 238, 0.12);
   --glass-hover: rgba(1, 8, 16, 0.95);
 
@@ -88,6 +89,7 @@
 
   /* Glass - Light variants */
   --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg-opaque: rgba(255, 255, 255, 0.95);
   --glass-border: rgba(0, 93, 163, 0.15);
   --glass-hover: rgba(255, 255, 255, 0.95);
 

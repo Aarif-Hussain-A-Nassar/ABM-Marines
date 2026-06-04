@@ -94,7 +94,7 @@ export default function FounderSection() {
                 style={{ width: "100%", height: "100%" }}
               >
                 <Image
-                  src="/Founder 9.png"
+                  src="/Founder-9-new.png"
                   alt="Xavier P.A., Managing Partner of ABM Marine Products"
                   width={500}
                   height={625}
@@ -134,6 +134,7 @@ export default function FounderSection() {
                 padding: "1rem 1.5rem", 
                 borderRadius: "16px",
                 border: "1px solid rgba(34,211,238,0.3)",
+                background: "var(--glass-bg-opaque)",
                 zIndex: 2,
                 boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
                 cursor: "default"
