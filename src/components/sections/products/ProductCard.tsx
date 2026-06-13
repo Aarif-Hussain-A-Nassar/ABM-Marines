@@ -87,6 +87,22 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
 
         {/* Tags */}
         <div style={{ position: "absolute", top: "0.65rem", left: "0.65rem", display: "flex", gap: "0.3rem", flexWrap: "wrap", zIndex: 2 }}>
+          {product.categoryId === "shrimps" && product.presentation === "Processed" && (
+            <span
+              style={{
+                padding:       "0.12rem 0.45rem",
+                background:    "rgba(239, 68, 68, 0.22)",
+                border:        "1px solid rgba(239, 68, 68, 0.4)",
+                borderRadius:  "100px",
+                fontSize:      "0.58rem",
+                fontWeight:    700,
+                color:         "#f87171",
+                backdropFilter:"blur(8px)",
+              }}
+            >
+              ⏱️ Future Availability
+            </span>
+          )}
           {product.tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
@@ -177,7 +193,21 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
         {/* Sizes */}
         {product.sizes && (
           <div style={{ display: "flex", gap: "0.3rem", flexWrap: "wrap", marginBottom: "1rem" }}>
-            {product.sizes[0] === "As per customer requirements" ? (
+            {product.categoryId === "shrimps" && product.presentation === "Processed" ? (
+              <span
+                style={{
+                  padding:      "0.15rem 0.55rem",
+                  background:   "rgba(239, 68, 68, 0.05)",
+                  border:       "1px solid rgba(239, 68, 68, 0.18)",
+                  borderRadius: "6px",
+                  fontSize:     "0.7rem",
+                  fontWeight:   600,
+                  color:        "#f87171",
+                }}
+              >
+                Future Availability · Contact Us
+              </span>
+            ) : product.sizes[0] === "As per customer requirements" ? (
               <span
                 style={{
                   padding:      "0.15rem 0.55rem",

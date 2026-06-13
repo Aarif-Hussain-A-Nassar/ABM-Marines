@@ -139,6 +139,23 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           {/* Divider */}
           <div style={{ height: "1px", background: "linear-gradient(90deg, var(--cyan-400)40, transparent)", marginBottom: "0.75rem" }} />
 
+          {product.categoryId === "shrimps" && product.presentation === "Processed" && (
+            <div
+              style={{
+                padding: "0.75rem 1rem",
+                background: "rgba(239, 68, 68, 0.08)",
+                border: "1px solid rgba(239, 68, 68, 0.25)",
+                borderRadius: "10px",
+                fontSize: "0.82rem",
+                color: "#f87171",
+                marginBottom: "1rem",
+                lineHeight: 1.5,
+              }}
+            >
+              📢 <strong>Future Availability:</strong> This value-added product is currently in development and not in stock. Please contact us to register your interest, inquire about future availability, or request details.
+            </div>
+          )}
+
           {/* Description */}
           <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.8, marginBottom: "1rem" }}>
             {product.description}
@@ -189,7 +206,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           {/* CTA */}
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
             <button onClick={handleRequestQuote} className="btn-primary" style={{ flex: 1, minWidth: "140px" }}>
-              Request Quote
+              {product.categoryId === "shrimps" && product.presentation === "Processed" ? "Enquire Now" : "Request Quote"}
             </button>
             <button onClick={onClose} className="btn-outline" style={{ flex: 1, minWidth: "100px" }}>
               Back to Catalog
