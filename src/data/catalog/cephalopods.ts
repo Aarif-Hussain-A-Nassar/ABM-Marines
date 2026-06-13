@@ -12,10 +12,16 @@ export const cuttlefishProducts: CatalogProduct[] = [
     "shortDesc": "Premium whole cleaned cuttlefish — ink-sac removed, IQF frozen.",
     "description": "Wild-caught Sepia pharaonis from the Arabian Sea. Hand-cleaned, ink-sac removed, and individually quick frozen (IQF) to lock in peak marine freshness and delicate texture.",
     "sizes": [
-      "100-200g",
-      "200-300g",
-      "300-500g",
-      "500g+"
+      "U/2",
+      "U/1",
+      "1/2",
+      "2/4",
+      "5/7",
+      "8/12",
+      "13/20",
+      "20/40",
+      "40/60",
+      "60/80"
     ],
     "markets": [
       "EU",
@@ -41,9 +47,16 @@ export const cuttlefishProducts: CatalogProduct[] = [
     "shortDesc": "Tender baby cuttlefish, fully cleaned.",
     "description": "Wild-caught baby cuttlefish, cleaned and gutted. Ready for gourmet culinary preparations. Exported to Spain, Italy, and Japan.",
     "sizes": [
-      "10-20g",
-      "20-40g",
-      "40-60g"
+      "U/2",
+      "U/1",
+      "1/2",
+      "2/4",
+      "5/7",
+      "8/12",
+      "13/20",
+      "20/40",
+      "40/60",
+      "60/80"
     ],
     "markets": [
       "EU",
@@ -67,14 +80,15 @@ export const octopusProducts: CatalogProduct[] = [
     "name": "Octopus Whole Cleaned",
     "categoryId": "octopus",
     "subcategory": "Octopus",
-    "species": "Cistopus indicus",
+    "species": "Octopus membranaceus",
     "presentation": "Raw" as Presentation,
     "shortDesc": "Wild-caught baby octopus — beak and ink-sac removed, IQF frozen.",
     "description": "Wild-caught baby octopus from the Indian Ocean, fully cleaned (beak and ink-sac removed) and frozen individually. Sweet ocean flavor and tender, firm texture, popular in Mediterranean cuisine and Japanese restaurants.",
     "sizes": [
-      "20-40g",
-      "40-60g",
-      "60-80g"
+      "5/15",
+      "16/25",
+      "20/40",
+      "40/60"
     ],
     "markets": [
       "EU",

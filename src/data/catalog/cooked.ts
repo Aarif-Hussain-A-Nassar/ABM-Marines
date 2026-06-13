@@ -56,7 +56,7 @@ export const cookedProducts: CatalogProduct[] = [
     "name": "Poovalan Shrimps - Cooked",
     "categoryId": "shrimps",
     "subcategory": "Cooked Shrimps",
-    "species": "Metapenaeus dobsonii",
+    "species": "Metapenaeus dobsoni",
     "presentation": "Cooked" as Presentation,
     "shortDesc": "Cooked Poovalan shrimps, delicate and sweet.",
     "description": "Small Poovalan shrimps cooked and IQF frozen. Their naturally sweet, delicate flavour is perfectly preserved through gentle cooking and rapid blast-freeze.",
