@@ -99,12 +99,6 @@ function ProductCard({ product, onClick }: { product: CatalogProduct; onClick: (
           {product.presentation}
         </span>
 
-        {/* Freeze type strip */}
-        <div className="absolute bottom-0 left-0 right-0 px-3 py-1.5 z-10">
-          <span className="text-[0.58rem] font-semibold tracking-widest uppercase text-white/50">
-            {product.freezeType}
-          </span>
-        </div>
       </div>
 
       {/* Body */}

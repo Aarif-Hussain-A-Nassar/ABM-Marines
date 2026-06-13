@@ -143,7 +143,7 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
             zIndex:     2,
           }}
         >
-          {product.freezeType} · {product.subcategory}
+          {product.subcategory}
         </div>
       </div>
 
@@ -177,25 +177,43 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
         {/* Sizes */}
         {product.sizes && (
           <div style={{ display: "flex", gap: "0.3rem", flexWrap: "wrap", marginBottom: "1rem" }}>
-            {product.sizes.slice(0, 4).map((s) => (
+            {product.sizes[0] === "As per customer requirements" ? (
               <span
-                key={s}
                 style={{
-                  padding:      "0.1rem 0.4rem",
+                  padding:      "0.15rem 0.55rem",
                   background:   "rgba(34,211,238,0.05)",
-                  border:       "1px solid rgba(34,211,238,0.12)",
-                  borderRadius: "4px",
-                  fontSize:     "0.65rem",
-                  color:        "var(--text-muted)",
+                  border:       "1px solid rgba(34,211,238,0.15)",
+                  borderRadius: "6px",
+                  fontSize:     "0.7rem",
+                  fontWeight:   600,
+                  color:        "var(--cyan-400)",
                 }}
               >
-                {s}
+                Grades Availability: As per customer requirements
               </span>
-            ))}
-            {product.sizes.length > 4 && (
-              <span style={{ fontSize: "0.65rem", color: "var(--cyan-400)", padding: "0.1rem 0.25rem" }}>
-                +{product.sizes.length - 4} more
-              </span>
+            ) : (
+              <>
+                {product.sizes.slice(0, 4).map((s) => (
+                  <span
+                    key={s}
+                    style={{
+                      padding:      "0.1rem 0.4rem",
+                      background:   "rgba(34,211,238,0.05)",
+                      border:       "1px solid rgba(34,211,238,0.12)",
+                      borderRadius: "4px",
+                      fontSize:     "0.65rem",
+                      color:        "var(--text-muted)",
+                    }}
+                  >
+                    {s}
+                  </span>
+                ))}
+                {product.sizes.length > 4 && (
+                  <span style={{ fontSize: "0.65rem", color: "var(--cyan-400)", padding: "0.1rem 0.25rem" }}>
+                    +{product.sizes.length - 4} more
+                  </span>
+                )}
+              </>
             )}
           </div>
         )}

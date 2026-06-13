@@ -23,7 +23,7 @@ export interface CatalogProduct {
   subcategory:  string;           // "Head On Shrimps"
   species?:     string;           // "Penaeus monodon"
   presentation: Presentation;     // "Raw" | "Cooked" | "Blanched"
-  freezeType:   FreezeType;       // "IQF" | "Block Frozen" | "Both"
+  freezeType?:  FreezeType;       // "IQF" | "Block Frozen" | "Both"
   description:  string;           // export-grade description
   shortDesc:    string;           // 1-liner for cards
   sizes?:       string[];         // ["16/20", "21/25", …]

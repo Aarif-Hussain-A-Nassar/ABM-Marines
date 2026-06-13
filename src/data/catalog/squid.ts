@@ -1,4 +1,4 @@
-import type { CatalogProduct, Presentation, FreezeType } from "@/types/catalog";
+import type { CatalogProduct, Presentation } from "@/types/catalog";
 
 export const squidProducts: CatalogProduct[] = [
   {
@@ -9,7 +9,6 @@ export const squidProducts: CatalogProduct[] = [
     "subcategory": "Squid Whole Cleaned",
     "species": "Loligo duvauceli",
     "presentation": "Raw" as Presentation,
-    "freezeType": "Both" as FreezeType,
     "shortDesc": "Hand-cleaned whole squid tubes with tentacles — IQF & block frozen.",
     "description": "Whole squid, cleaned and gutted, skin-on with tentacles attached. Ready for stuffing, frying, or grilling. IQF and block frozen formats available — widely exported to Spain, Italy, and East Asian markets.",
     "sizes": [
@@ -39,7 +38,6 @@ export const squidProducts: CatalogProduct[] = [
     "subcategory": "Raw Squid Rings",
     "species": "Loligo spp.",
     "presentation": "Raw" as Presentation,
-    "freezeType": "IQF" as FreezeType,
     "shortDesc": "Tender cross-cut squid strips, fully cleaned and skinned.",
     "description": "Cross-cut squid strips, fully cleaned and skinned. Excellent for stir-fries, noodle dishes, or breading lines in retail and catering markets worldwide.",
     "sizes": [
@@ -67,7 +65,6 @@ export const squidProducts: CatalogProduct[] = [
     "subcategory": "Raw Squid Rings",
     "species": "Loligo duvauceli",
     "presentation": "Raw" as Presentation,
-    "freezeType": "IQF" as FreezeType,
     "shortDesc": "Uniform raw squid rings, IQF frozen — ideal for calamari frying.",
     "description": "Squid tubes cross-cut into uniform rings, IQF frozen for premium retail and food service applications. Excellent natural white colour, consistent ring width, zero additives.",
     "sizes": [
@@ -96,7 +93,6 @@ export const squidProducts: CatalogProduct[] = [
     "subcategory": "Raw Squid Rings",
     "species": "Loligo duvauceli",
     "presentation": "Raw" as Presentation,
-    "freezeType": "IQF" as FreezeType,
     "shortDesc": "Premium vessel-frozen squid rings — superior texture and natural colour.",
     "description": "Premium grade calamari rings processed immediately after catch to preserve texture. Natural white presentation, zero chemical treatments, ideal for high-end gourmet dining.",
     "sizes": [
@@ -124,7 +120,6 @@ export const squidProducts: CatalogProduct[] = [
     "subcategory": "Blanched Squid Rings",
     "species": "Loligo duvauceli",
     "presentation": "Blanched" as Presentation,
-    "freezeType": "IQF" as FreezeType,
     "shortDesc": "Blanched squid rings with culinary garnishing — premium presentation.",
     "description": "Squid rings precision-blanched and IQF frozen with premium garnish presentation. Shortens end-user cooking time and locks in natural marine sweetness. Popular in EU ready-meal formats.",
     "sizes": [
@@ -152,7 +147,6 @@ export const squidProducts: CatalogProduct[] = [
     "subcategory": "Blanched Squid Rings",
     "species": "Loligo duvauceli",
     "presentation": "Blanched" as Presentation,
-    "freezeType": "IQF" as FreezeType,
     "shortDesc": "Tender blanched calamari rings, plated and ready for serving.",
     "description": "Plated and pre-cooked tender calamari rings, perfect for premium seafood platters, salad bars, and quick-service food operations worldwide.",
     "sizes": [
@@ -180,7 +174,6 @@ export const squidProducts: CatalogProduct[] = [
     "subcategory": "Squid Whole",
     "species": "Loligo duvauceli",
     "presentation": "Raw" as Presentation,
-    "freezeType": "Block Frozen" as FreezeType,
     "shortDesc": "Wild-caught whole squid tubes, block frozen for export.",
     "description": "Whole squid body tubes, wild-caught in coastal waters. Blast-frozen in blocks to ensure maximum freshness. Ideal for large-scale processors and retail packers worldwide.",
     "sizes": [
@@ -209,7 +202,6 @@ export const squidProducts: CatalogProduct[] = [
     "subcategory": "Squid Whole",
     "species": "Loligo duvauceli",
     "presentation": "Raw" as Presentation,
-    "freezeType": "IQF" as FreezeType,
     "shortDesc": "Premium cleaned squid tubes, fully skinned — export grade.",
     "description": "Ultra-premium cleaned squid tubes without tentacles, fully skinned and processed under strict export standards. Glistening white color and tender meat, preferred by Japanese and European importers.",
     "sizes": [
@@ -238,7 +230,6 @@ export const squidProducts: CatalogProduct[] = [
     "subcategory": "Raw Squid Rings",
     "species": "Loligo duvauceli",
     "presentation": "Processed" as Presentation,
-    "freezeType": "IQF" as FreezeType,
     "shortDesc": "Pre-fried breaded calamari rings — golden, crispy, ready to serve.",
     "description": "Premium squid rings coated in seasoned breading and flash-fried to a golden crunch. Easy oven or air-fry prep, ideal for foodservice operators and retail freezer sections.",
     "sizes": [
@@ -266,7 +257,6 @@ export const squidProducts: CatalogProduct[] = [
     "subcategory": "Raw Squid Rings",
     "species": "Loligo duvauceli",
     "presentation": "Processed" as Presentation,
-    "freezeType": "IQF" as FreezeType,
     "shortDesc": "Light-coated calamari rings, flash-fried — tempura style.",
     "description": "Lightly coated squid rings with a tempura-style thin batter. Flash fried to lock in squid sweetness and texture while reducing greasiness for a healthier profile.",
     "sizes": [
@@ -293,7 +283,6 @@ export const squidProducts: CatalogProduct[] = [
     "subcategory": "Raw Squid Rings",
     "species": "Loligo duvauceli",
     "presentation": "Processed" as Presentation,
-    "freezeType": "IQF" as FreezeType,
     "shortDesc": "Premium breaded squid rings ready for frying.",
     "description": "Premium squid rings coated in breading. Delivered raw-frozen, ready to fry for a crisp golden exterior and tender bite. Preferred by retail and foodservice buyers.",
     "sizes": [
@@ -321,7 +310,6 @@ export const squidProducts: CatalogProduct[] = [
     "subcategory": "Raw Squid Rings",
     "species": "Loligo duvauceli",
     "presentation": "Processed" as Presentation,
-    "freezeType": "IQF" as FreezeType,
     "shortDesc": "Pre-fried breaded squid rings — golden and crispy.",
     "description": "Pre-fried crispy breaded squid rings. Fully prepared to heat and serve, locking in the natural sweetness of premium Loligo squid.",
     "sizes": [

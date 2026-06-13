@@ -17,6 +17,7 @@ export interface HomepageSecondaryFilter {
   /** null = "All" — no extra filter */
   categoryId?: string;
   subcategory?: string;
+  presentation?: string;
 }
 
 export const homepageCategories: HomepageCategory[] = [
@@ -25,14 +26,12 @@ export const homepageCategories: HomepageCategory[] = [
     label:       "Crustaceans",
     icon:        "🦐",
     image:       "/cat-shrimps.png",
-    categoryIds: ["shrimps", "cooked"],
+    categoryIds: ["shrimps"],
     secondaryFilters: [
       { label: "All" },
-      { label: "Head On",          subcategory: "Head On Shrimps" },
-      { label: "Headless",         subcategory: "Headless Shrimps" },
-      { label: "Peeled",           subcategory: "Peeled Shrimps" },
-      { label: "Peeled & Deveined",subcategory: "Peeled & Deveined Shrimps" },
-      { label: "Cooked",           subcategory: "Cooked Shrimps" },
+      { label: "Raw",         presentation: "Raw" },
+      { label: "Cooked",      presentation: "Cooked" },
+      { label: "Value added", presentation: "Processed" },
     ],
   },
   {
@@ -71,8 +70,12 @@ export function filterProducts(
 
   if (!secondary || secondary.label === "All") return list;
 
+  // Filter by presentation
+  if (secondary.presentation) {
+    list = list.filter((p) => p.presentation === secondary.presentation);
+  }
   // Filter by subcategory string
-  if (secondary.subcategory) {
+  else if (secondary.subcategory) {
     list = list.filter((p) => p.subcategory === secondary.subcategory);
   }
   // Filter by categoryId within the group (e.g. "Squid" within Cephalopods)

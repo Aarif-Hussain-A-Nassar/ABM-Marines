@@ -145,22 +145,12 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           </p>
 
           {/* Details grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1rem" }}>
-            <div>
-              <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "0.4rem" }}>
-                Presentation
-              </div>
-              <div style={{ fontSize: "0.85rem", color: "var(--cyan-400)", fontWeight: 600 }}>
-                {product.presentation}
-              </div>
+          <div style={{ marginBottom: "1rem" }}>
+            <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "0.4rem" }}>
+              Presentation
             </div>
-            <div>
-              <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "0.4rem" }}>
-                Freeze Type
-              </div>
-              <div style={{ fontSize: "0.85rem", color: "var(--teal-400)", fontWeight: 600 }}>
-                {product.freezeType}
-              </div>
+            <div style={{ fontSize: "0.85rem", color: "var(--cyan-400)", fontWeight: 600 }}>
+              {product.presentation}
             </div>
           </div>
 
