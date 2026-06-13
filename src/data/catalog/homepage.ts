@@ -42,9 +42,9 @@ export const homepageCategories: HomepageCategory[] = [
     categoryIds: ["squid", "cuttlefish", "octopus"],
     secondaryFilters: [
       { label: "All" },
-      { label: "Squid",      categoryId: "squid" },
-      { label: "Cuttlefish", categoryId: "cuttlefish" },
-      { label: "Octopus",    categoryId: "octopus" },
+      { label: "Cuttle fish", categoryId: "cuttlefish" },
+      { label: "Squid",       categoryId: "squid" },
+      { label: "Octopus",     categoryId: "octopus" },
     ],
   },
   {

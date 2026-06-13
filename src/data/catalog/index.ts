@@ -17,8 +17,8 @@ import type { CatalogProduct } from "@/types/catalog";
 /** All products flattened — use for search / "All" filter */
 export const allCatalogProducts: CatalogProduct[] = [
   ...shrimpProducts,
-  ...squidProducts,
   ...cuttlefishProducts,
+  ...squidProducts,
   ...octopusProducts,
   ...cookedProducts,
 ];
