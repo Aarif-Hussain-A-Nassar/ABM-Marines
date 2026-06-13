@@ -108,22 +108,33 @@ export default function Navbar() {
             alignItems: "center", 
             justifyContent: "space-between", 
             height: (scrolled || menuOpen) ? "68px" : "80px", 
-            transition: "height 0.4s ease" 
+            transition: "height 0.4s ease",
+            paddingLeft: "1rem",
+            paddingRight: "1rem"
           }}
         >
           {/* Logo */}
-          <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}>
+          <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.6rem", textDecoration: "none" }}>
             <div style={{ width: scrolled ? "44px" : "52px", height: scrolled ? "44px" : "52px", borderRadius: "12px", overflow: "hidden", border: "1.5px solid rgba(34,211,238,0.3)", transition: "all 0.4s ease", flexShrink: 0, background: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <Image src="/logo.jpeg" alt="ABM Marine Products" width={52} height={52} style={{ objectFit: "contain", width: "100%", height: "100%" }} priority />
             </div>
-            <div>
-              <div style={{ fontFamily: "var(--font-sans)", fontWeight: 800, fontSize: scrolled ? "1rem" : "1.1rem", color: "var(--text-primary)", lineHeight: 1.2, letterSpacing: "-0.01em", transition: "font-size 0.4s ease" }}>ABM Marine</div>
-              <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.65rem", fontWeight: 500, color: "var(--cyan-400)", letterSpacing: "0.18em", textTransform: "uppercase" }}>Products</div>
+            <div style={{
+              fontFamily: "var(--font-sans)",
+              fontWeight: 800,
+              fontSize: scrolled ? "0.85rem" : "0.95rem",
+              lineHeight: 1.2,
+              letterSpacing: "0.04em",
+              transition: "all 0.4s ease",
+              whiteSpace: "nowrap",
+              textTransform: "uppercase",
+              color: "var(--cyan-400)"
+            }}>
+              ABM Marine Products
             </div>
           </Link>
 
           {/* Desktop nav */}
-          <nav id="desktop-nav" style={{ display: "flex", alignItems: "center", gap: "2rem" }} aria-label="Main navigation">
+          <nav id="desktop-nav" style={{ display: "flex", alignItems: "center", gap: "1.25rem" }} aria-label="Main navigation">
             {isHome ? (
               <>
                 {navLinks.map((link) => (

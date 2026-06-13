@@ -21,9 +21,17 @@ export default function FooterBrand({ quickLinks }: FooterBrandProps) {
         <div style={{ width: "48px", height: "48px", borderRadius: "12px", border: "1.5px solid rgba(34,211,238,0.25)", overflow: "hidden", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
           <Image src="/logo.jpeg" alt="ABM Marine Products" width={48} height={48} style={{ objectFit: "contain", width: "100%", height: "100%" }} />
         </div>
-        <div>
-          <div style={{ fontFamily: "var(--font-sans)", fontWeight: 800, fontSize: "1.1rem", color: "#f0f9ff", lineHeight: 1.2 }}>ABM Marine</div>
-          <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.6rem", fontWeight: 600, color: "var(--cyan-400)", letterSpacing: "0.18em", textTransform: "uppercase" }}>Products</div>
+        <div style={{
+          fontFamily: "var(--font-sans)",
+          fontWeight: 800,
+          fontSize: "1.2rem",
+          lineHeight: 1.2,
+          letterSpacing: "0.04em",
+          whiteSpace: "nowrap",
+          textTransform: "uppercase",
+          color: "var(--cyan-400)"
+        }}>
+          ABM Marine Products
         </div>
       </Link>
 
