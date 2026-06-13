@@ -4,7 +4,7 @@ export const products: Product[] = [
   {
     id:          "tiger-prawn",
     name:        "Tiger Prawns",
-    category:    "Shrimps & Prawns",
+    category:    "Crustaceans",
     type:        "Both",
     description: "Premium wild-caught tiger prawns from the Kerala coast, available in HOSO, HLSO, PUD and other cuts.",
     sizes:       ["16/20", "21/25", "26/30", "31/40"],
@@ -14,7 +14,7 @@ export const products: Product[] = [
   {
     id:          "vannamei",
     name:        "Vannamei Shrimp",
-    category:    "Shrimps & Prawns",
+    category:    "Crustaceans",
     type:        "IQF",
     description: "Farm-raised white leg shrimp processed under HACCP standards. Available in multiple value-added formats.",
     sizes:       ["26/30", "31/40", "41/50", "51/60"],
@@ -63,7 +63,7 @@ export const products: Product[] = [
   },
 ];
 
-export const productCategories = ["All", "Shrimps & Prawns", "Cephalopods", "Fish"] as const;
+export const productCategories = ["All", "Crustaceans", "Cephalopods", "Fish"] as const;
 export type ProductCategory = (typeof productCategories)[number];
 
 export const productOptions = [

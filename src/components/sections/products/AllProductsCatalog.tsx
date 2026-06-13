@@ -29,7 +29,7 @@ const CATEGORIES = [
   },
   {
     id: "shrimps",
-    name: "Shrimps & Prawns",
+    name: "Crustaceans",
     emoji: "🦐",
     description: "Farm-raised and wild-caught shrimps in all international export presentations — head-on, headless, peeled, cooked, and more.",
     gradient: "from-blue-500/15 via-indigo-500/10 to-transparent",

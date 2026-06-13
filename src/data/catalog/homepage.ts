@@ -22,7 +22,7 @@ export interface HomepageSecondaryFilter {
 export const homepageCategories: HomepageCategory[] = [
   {
     id:          "shrimps",
-    label:       "Shrimps & Prawns",
+    label:       "Crustaceans",
     icon:        "🦐",
     image:       "/cat-shrimps.png",
     categoryIds: ["shrimps", "cooked"],

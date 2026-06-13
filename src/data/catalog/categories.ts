@@ -5,7 +5,7 @@ export const catalogCategories: CatalogCategory[] = [
   {
     id:          "shrimps",
     slug:        "shrimps-prawns",
-    label:       "Shrimps & Prawns",
+    label:       "Crustaceans",
     icon:        "🦐",
     color:       "var(--cyan-400)",
     image:       "/cat-shrimps.png",
