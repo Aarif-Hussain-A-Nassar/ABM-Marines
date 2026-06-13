@@ -24,9 +24,8 @@ export const cuttlefishProducts: CatalogProduct[] = [
       "60/80"
     ],
     "markets": [
-      "EU",
-      "Far East",
-      "US"
+      "USA",
+      "Europe"
     ],
     "tags": [
       "Premium",
@@ -59,9 +58,8 @@ export const cuttlefishProducts: CatalogProduct[] = [
       "60/80"
     ],
     "markets": [
-      "EU",
-      "Far East",
-      "US"
+      "USA",
+      "Europe"
     ],
     "tags": [
       "Baby Cuttlefish",
@@ -91,9 +89,8 @@ export const octopusProducts: CatalogProduct[] = [
       "40/60"
     ],
     "markets": [
-      "EU",
-      "Far East",
-      "US"
+      "USA",
+      "Europe"
     ],
     "tags": [
       "Premium",

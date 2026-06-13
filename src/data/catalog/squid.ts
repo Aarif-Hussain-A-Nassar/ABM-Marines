@@ -20,9 +20,8 @@ export const squidProducts: CatalogProduct[] = [
       "40/60"
     ],
     "markets": [
-      "EU",
-      "Far East",
-      "US"
+      "USA",
+      "Europe"
     ],
     "tags": [
       "Whole",
@@ -50,9 +49,8 @@ export const squidProducts: CatalogProduct[] = [
       "40/60"
     ],
     "markets": [
-      "EU",
-      "Far East",
-      "US"
+      "USA",
+      "Europe"
     ],
     "tags": [
       "Cleaned",
@@ -78,9 +76,8 @@ export const squidProducts: CatalogProduct[] = [
       "10-12mm rings"
     ],
     "markets": [
-      "EU",
-      "US",
-      "Australia"
+      "USA",
+      "Europe"
     ],
     "tags": [
       "IQF",
@@ -105,9 +102,8 @@ export const squidProducts: CatalogProduct[] = [
       "8-10mm rings"
     ],
     "markets": [
-      "EU",
-      "US",
-      "Australia"
+      "USA",
+      "Europe"
     ],
     "tags": [
       "Blanched",
@@ -132,9 +128,8 @@ export const squidProducts: CatalogProduct[] = [
       "10-12mm rings"
     ],
     "markets": [
-      "EU",
-      "US",
-      "Australia"
+      "USA",
+      "Europe"
     ],
     "tags": [
       "Value Added",
@@ -159,9 +154,8 @@ export const squidProducts: CatalogProduct[] = [
       "10-12mm rings"
     ],
     "markets": [
-      "EU",
-      "US",
-      "Australia"
+      "USA",
+      "Europe"
     ],
     "tags": [
       "Value Added",
