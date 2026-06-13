@@ -14,11 +14,15 @@ import { cuttlefishProducts, octopusProducts } from "./cephalopods";
 import { cookedProducts }    from "./cooked";
 import type { CatalogProduct } from "@/types/catalog";
 
+const cookedShrimps = cookedProducts.filter((p) => p.presentation === "Cooked");
+const valueAddedShrimps = cookedProducts.filter((p) => p.presentation === "Processed");
+
 /** All products flattened — use for search / "All" filter */
 export const allCatalogProducts: CatalogProduct[] = [
   ...shrimpProducts,
+  ...cookedShrimps,
+  ...valueAddedShrimps,
   ...cuttlefishProducts,
   ...squidProducts,
   ...octopusProducts,
-  ...cookedProducts,
 ];

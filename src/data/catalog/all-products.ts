@@ -748,10 +748,17 @@ const valueAddedProducts: CatalogProduct[] = [
   },
 ];
 
+const rawShrimps = shrimpProducts.filter((p) => p.presentation === "Raw");
+const cookedShrimps = shrimpProducts.filter((p) => p.presentation === "Cooked");
+const cuttlefish = cephalopodProducts.filter((p) => p.subcategory === "Cuttlefish");
+const squid = cephalopodProducts.filter((p) => p.subcategory === "Squid");
+
 // ─── COMBINED EXPORT ─────────────────────────────────────────────────────────
 export const allProducts: CatalogProduct[] = [
-  ...cephalopodProducts,
-  ...octopusProducts,
-  ...shrimpProducts,
+  ...rawShrimps,
+  ...cookedShrimps,
   ...valueAddedProducts,
+  ...cuttlefish,
+  ...squid,
+  ...octopusProducts,
 ];
