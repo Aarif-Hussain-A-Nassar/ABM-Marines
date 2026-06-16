@@ -7,6 +7,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 
 export default function VideoSection() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -23,15 +24,24 @@ export default function VideoSection() {
     const video = videoRef.current;
     if (!video) return;
 
-    const handlePlay = () => setIsPlaying(true);
+    const handlePlay = () => {
+      setIsPlaying(true);
+      setHasStarted(true);
+    };
     const handlePause = () => setIsPlaying(false);
+    const handleEnded = () => {
+      setIsPlaying(false);
+      setHasStarted(false);
+    };
 
     video.addEventListener("play", handlePlay);
     video.addEventListener("pause", handlePause);
+    video.addEventListener("ended", handleEnded);
 
     return () => {
       video.removeEventListener("play", handlePlay);
       video.removeEventListener("pause", handlePause);
+      video.removeEventListener("ended", handleEnded);
     };
   }, []);
 
@@ -137,7 +147,7 @@ export default function VideoSection() {
                 ref={videoRef}
                 src="https://z3xygnfrcbpsnklg.public.blob.vercel-storage.com/Abm%20Vedio.mp4"
                 preload="metadata"
-                controls={isPlaying}
+                controls={hasStarted}
                 playsInline
                 style={{
                   width: "100%",
@@ -149,7 +159,7 @@ export default function VideoSection() {
 
               {/* Custom Poster Overlay / Play Overlay */}
               <AnimatePresence>
-                {!isPlaying && (
+                {!hasStarted && (
                   <motion.div
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
