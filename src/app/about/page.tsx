@@ -3,6 +3,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AboutSection from "@/components/sections/about";
+import VideoSection from "@/components/sections/about/VideoSection";
 import FounderSection from "@/components/sections/about/FounderSection";
 import { motion } from "framer-motion";
 
@@ -29,6 +30,7 @@ export default function AboutPage() {
       </div>
 
       <AboutSection />
+      <VideoSection />
       <FounderSection />
       
       <Footer />
